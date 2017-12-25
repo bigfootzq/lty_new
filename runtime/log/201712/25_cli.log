@@ -1,0 +1,12 @@
+[ 2017-12-25T02:31:22+08:00 ][ error ] [8]Use of undefined constant CMF_ROOT - assumed 'CMF_ROOT'[/home/wwwroot/default/app/config.php:11]
+[ info ] [ LOG ] INIT File
+[ 2017-12-25T02:34:05+08:00 ][ error ] [8]Use of undefined constant APP_DEBUG - assumed 'APP_DEBUG'[/home/wwwroot/default/app/config.php:23]
+[ info ] [ LOG ] INIT File
+[ 2017-12-25T02:34:46+08:00 ][ error ] [8]Use of undefined constant CMF_PATH - assumed 'CMF_PATH'[/home/wwwroot/default/app/config.php:29]
+[ info ] [ LOG ] INIT File
+[ 2017-12-25T02:35:05+08:00 ][ error ] [8]Use of undefined constant PLUGINS_PATH - assumed 'PLUGINS_PATH'[/home/wwwroot/default/app/config.php:29]
+[ info ] [ LOG ] INIT File
+[ 2017-12-25T02:45:12+08:00 ][ error ] [8]Use of undefined constant CMF_ROOT - assumed 'CMF_ROOT'[/home/wwwroot/default/app/config.php:11]
+[ info ] [ LOG ] INIT File
+[ 2017-12-25T02:52:23+08:00 ][ error ] [8]Use of undefined constant CMF_ROOT - assumed 'CMF_ROOT'[/home/wwwroot/default/app/database.php:12]
+[ info ] [ LOG ] INIT File
