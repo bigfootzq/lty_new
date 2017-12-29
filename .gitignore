@@ -14,5 +14,5 @@ composer.lock
 /public/index.php
 /public/robots.txt
 /public/router.php
+/public/pma
 /think
-/pma
