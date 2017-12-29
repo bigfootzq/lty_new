@@ -220,7 +220,7 @@ class SchemeController extends BaseController
 	
 	protected function pushSchemeNum($shopid){
 		
-		dump($shopid);
+		// dump($shopid);
 		$map['shopid'] = $shopid;
 		$map['getcounter'] = 0;
 		$result = Db::name('lottery_scheme')->where($map)->find();
@@ -234,7 +234,7 @@ class SchemeController extends BaseController
 			// 发送数据，注意5678端口是Text协议的端口，Text协议需要在数据末尾加上换行符
 			fwrite($client, json_encode($data)."\n");
 			// 读取推送结果
-			echo fread($client, 8192);
+			// echo fread($client, 8192);
 		}
 		
 		
