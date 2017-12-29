@@ -1,0 +1,1376 @@
+2017-12-25 13:32:44 pid:3422 Workerman[server.php] start in DEBUG mode
+2017-12-25 13:33:18 pid:3429 Workerman[server.php] start in DEBUG mode
+2017-12-25 13:36:49 pid:3459 Workerman[server.php] start in DEBUG mode
+2017-12-25 13:39:23 pid:3529 Workerman[server.php] start in DEBUG mode
+2017-12-25 13:41:40 pid:3538 Workerman[server.php] start in DEBUG mode
+2017-12-25 13:41:46 pid:3538 Workerman[server.php] stopping ...
+2017-12-25 13:41:46 pid:3538 worker[none:3541] exit with status 65280
+2017-12-25 13:41:46 pid:3538 worker[none:3542] exit with status 65280
+2017-12-25 13:41:46 pid:3538 Workerman[server.php] has been stopped
+2017-12-25 13:41:58 pid:3544 Workerman[server.php] start in DEBUG mode
+2017-12-25 13:51:20 pid:3544 Workerman[server.php] stopping ...
+2017-12-25 13:51:20 pid:3544 worker[none:3546] exit with status 65280
+2017-12-25 13:51:20 pid:3544 worker[none:3548] exit with status 65280
+2017-12-25 13:51:20 pid:3544 Workerman[server.php] has been stopped
+2017-12-25 13:52:05 pid:3552 Workerman[server.php] status 
+2017-12-25 13:52:05 pid:3552 Workerman[server.php] not run
+2017-12-25 13:52:16 pid:3553 Workerman[server.php] reload 
+2017-12-25 13:52:16 pid:3553 Workerman[server.php] not run
+2017-12-25 13:52:24 pid:3554 Workerman[server.php] restart 
+2017-12-25 13:52:24 pid:3554 Workerman[server.php] is stoping ...
+2017-12-25 13:52:24 pid:3554 Workerman[server.php] stop success
+2017-12-25 13:52:40 pid:3554 Workerman[server.php] stopping ...
+2017-12-25 13:52:41 pid:3554 worker[none:3556] exit with status 65280
+2017-12-25 13:52:41 pid:3554 worker[none:3558] exit with status 65280
+2017-12-25 13:52:41 pid:3554 Workerman[server.php] has been stopped
+2017-12-25 13:53:00 pid:3559 Workerman[server.php] restart 
+2017-12-25 13:53:00 pid:3559 Workerman[server.php] is stoping ...
+2017-12-25 13:53:00 pid:3559 Workerman[server.php] stop success
+2017-12-25 13:54:59 pid:3559 Workerman[server.php] stopping ...
+2017-12-25 13:54:59 pid:3559 worker[none:3563] exit with status 65280
+2017-12-25 13:55:00 pid:3559 worker[none:3562] exit with status 65280
+2017-12-25 13:55:00 pid:3559 Workerman[server.php] has been stopped
+2017-12-25 13:55:05 pid:3565 Workerman[server.php] start in DAEMON mode
+2017-12-25 13:56:44 pid:3572 Workerman[server.php] status 
+2017-12-25 13:56:56 pid:3573 Workerman[server.php] reload 
+2017-12-25 13:56:56 pid:3567 Workerman[server.php] reloading
+2017-12-25 13:56:57 pid:3567 worker[none:3568] exit with status 65280
+2017-12-25 13:56:57 pid:3567 worker[none:3569] exit with status 65280
+2017-12-25 13:56:57 pid:3567 worker[none:3570] exit with status 65280
+2017-12-25 13:56:57 pid:3567 worker[none:3571] exit with status 65280
+2017-12-25 13:57:00 pid:3578 Workerman[server.php] status 
+2017-12-25 14:03:14 pid:3594 Workerman[server.php] status 
+2017-12-25 14:22:11 pid:3598 Workerman[server.php] status 
+2017-12-25 14:30:24 pid:3607 Workerman[server.php] status 
+2017-12-25 14:31:35 pid:3615 Workerman[server.php] stop 
+2017-12-25 14:31:35 pid:3615 Workerman[server.php] is stoping ...
+2017-12-25 14:31:35 pid:3567 Workerman[server.php] stopping ...
+2017-12-25 14:31:35 pid:3567 worker[none:3577] exit with status 65280
+2017-12-25 14:31:35 pid:3567 worker[none:3576] exit with status 65280
+2017-12-25 14:31:35 pid:3567 worker[none:3574] exit with status 65280
+2017-12-25 14:31:35 pid:3567 worker[none:3575] exit with status 65280
+2017-12-25 14:31:35 pid:3567 Workerman[server.php] has been stopped
+2017-12-25 14:31:35 pid:3615 Workerman[server.php] stop success
+2017-12-25 14:31:39 pid:3616 Workerman[server.php] start in DEBUG mode
+2017-12-25 14:34:46 pid:3616 Workerman[server.php] stopping ...
+2017-12-25 14:34:46 pid:3616 worker[none:3619] exit with status 65280
+2017-12-25 14:34:46 pid:3616 worker[none:3620] exit with status 65280
+2017-12-25 14:34:46 pid:3616 Workerman[server.php] has been stopped
+2017-12-25 14:34:53 pid:3622 Workerman[server.php] start in DAEMON mode
+2017-12-25 15:11:07 pid:3666 Workerman[server.php] status 
+2017-12-25 22:06:56 pid:3739 Workerman[server.php] restart 
+2017-12-25 22:06:56 pid:3739 Workerman[server.php] is stoping ...
+2017-12-25 22:06:56 pid:3624 Workerman[server.php] stopping ...
+2017-12-25 22:06:56 pid:3624 worker[none:3625] exit with status 65280
+2017-12-25 22:06:56 pid:3624 worker[none:3628] exit with status 65280
+2017-12-25 22:06:56 pid:3624 worker[none:3627] exit with status 65280
+2017-12-25 22:06:56 pid:3624 worker[none:3626] exit with status 65280
+2017-12-25 22:06:56 pid:3624 Workerman[server.php] has been stopped
+2017-12-25 22:06:56 pid:3739 Workerman[server.php] stop success
+2017-12-25 22:06:56 pid:3740 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:06:56 pid:3739 worker[none:3740] exit with status 65280
+2017-12-25 22:06:56 pid:3747 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:06:57 pid:3739 worker[none:3747] exit with status 65280
+2017-12-25 22:06:57 pid:3754 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:06:57 pid:3739 worker[none:3754] exit with status 65280
+2017-12-25 22:06:57 pid:3761 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:06:57 pid:3739 worker[none:3761] exit with status 65280
+2017-12-25 22:06:57 pid:3768 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:06:57 pid:3739 worker[none:3768] exit with status 65280
+2017-12-25 22:06:57 pid:3775 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:06:57 pid:3739 worker[none:3775] exit with status 65280
+2017-12-25 22:06:57 pid:3782 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:06:57 pid:3739 worker[none:3782] exit with status 65280
+2017-12-25 22:06:57 pid:3789 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:06:57 pid:3739 worker[none:3789] exit with status 65280
+2017-12-25 22:06:57 pid:3796 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:06:57 pid:3739 worker[none:3796] exit with status 65280
+2017-12-25 22:06:57 pid:3803 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:06:57 pid:3739 worker[none:3803] exit with status 65280
+2017-12-25 22:06:57 pid:3810 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:06:57 pid:3739 worker[none:3810] exit with status 65280
+2017-12-25 22:06:58 pid:3817 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:06:58 pid:3739 worker[none:3817] exit with status 65280
+2017-12-25 22:06:58 pid:3824 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:06:58 pid:3739 worker[none:3824] exit with status 65280
+2017-12-25 22:06:58 pid:3831 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:06:58 pid:3739 worker[none:3831] exit with status 65280
+2017-12-25 22:06:58 pid:3838 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:06:58 pid:3739 worker[none:3838] exit with status 65280
+2017-12-25 22:06:58 pid:3845 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:06:58 pid:3739 worker[none:3845] exit with status 65280
+2017-12-25 22:06:58 pid:3852 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:06:58 pid:3739 worker[none:3852] exit with status 65280
+2017-12-25 22:06:58 pid:3859 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:06:58 pid:3739 worker[none:3859] exit with status 65280
+2017-12-25 22:06:58 pid:3866 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:06:58 pid:3739 worker[none:3866] exit with status 65280
+2017-12-25 22:06:58 pid:3873 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:06:59 pid:3739 worker[none:3873] exit with status 65280
+2017-12-25 22:06:59 pid:3880 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:06:59 pid:3739 worker[none:3880] exit with status 65280
+2017-12-25 22:06:59 pid:3887 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:06:59 pid:3739 worker[none:3887] exit with status 65280
+2017-12-25 22:06:59 pid:3894 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:06:59 pid:3739 worker[none:3894] exit with status 65280
+2017-12-25 22:06:59 pid:3901 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:06:59 pid:3739 worker[none:3901] exit with status 65280
+2017-12-25 22:06:59 pid:3908 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:06:59 pid:3739 worker[none:3908] exit with status 65280
+2017-12-25 22:06:59 pid:3915 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:06:59 pid:3739 worker[none:3915] exit with status 65280
+2017-12-25 22:06:59 pid:3922 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:06:59 pid:3739 worker[none:3922] exit with status 65280
+2017-12-25 22:06:59 pid:3929 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:06:59 pid:3739 worker[none:3929] exit with status 65280
+2017-12-25 22:06:59 pid:3936 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:00 pid:3739 worker[none:3936] exit with status 65280
+2017-12-25 22:07:00 pid:3943 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:00 pid:3739 worker[none:3943] exit with status 65280
+2017-12-25 22:07:00 pid:3950 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:00 pid:3739 worker[none:3950] exit with status 65280
+2017-12-25 22:07:00 pid:3957 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:00 pid:3739 worker[none:3957] exit with status 65280
+2017-12-25 22:07:00 pid:3964 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:00 pid:3739 worker[none:3964] exit with status 65280
+2017-12-25 22:07:00 pid:3971 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:00 pid:3739 worker[none:3971] exit with status 65280
+2017-12-25 22:07:00 pid:3978 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:00 pid:3739 worker[none:3978] exit with status 65280
+2017-12-25 22:07:01 pid:3985 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:01 pid:3739 worker[none:3985] exit with status 65280
+2017-12-25 22:07:01 pid:3992 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:01 pid:3739 worker[none:3992] exit with status 65280
+2017-12-25 22:07:01 pid:3999 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:01 pid:3739 worker[none:3999] exit with status 65280
+2017-12-25 22:07:01 pid:4006 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:01 pid:3739 worker[none:4006] exit with status 65280
+2017-12-25 22:07:01 pid:4013 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:01 pid:3739 worker[none:4013] exit with status 65280
+2017-12-25 22:07:01 pid:4020 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:01 pid:3739 worker[none:4020] exit with status 65280
+2017-12-25 22:07:01 pid:4027 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:01 pid:3739 worker[none:4027] exit with status 65280
+2017-12-25 22:07:01 pid:4034 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:01 pid:3739 worker[none:4034] exit with status 65280
+2017-12-25 22:07:02 pid:4041 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:02 pid:3739 worker[none:4041] exit with status 65280
+2017-12-25 22:07:02 pid:4048 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:02 pid:3739 worker[none:4048] exit with status 65280
+2017-12-25 22:07:02 pid:4055 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:02 pid:3739 worker[none:4055] exit with status 65280
+2017-12-25 22:07:02 pid:4062 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:02 pid:3739 worker[none:4062] exit with status 65280
+2017-12-25 22:07:02 pid:4069 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:02 pid:3739 worker[none:4069] exit with status 65280
+2017-12-25 22:07:02 pid:4076 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:02 pid:3739 worker[none:4076] exit with status 65280
+2017-12-25 22:07:02 pid:4083 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:02 pid:3739 worker[none:4083] exit with status 65280
+2017-12-25 22:07:02 pid:4090 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:02 pid:3739 worker[none:4090] exit with status 65280
+2017-12-25 22:07:02 pid:4097 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:02 pid:3739 worker[none:4097] exit with status 65280
+2017-12-25 22:07:03 pid:4104 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:03 pid:3739 worker[none:4104] exit with status 65280
+2017-12-25 22:07:03 pid:4111 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:03 pid:3739 worker[none:4111] exit with status 65280
+2017-12-25 22:07:03 pid:4118 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:03 pid:3739 worker[none:4118] exit with status 65280
+2017-12-25 22:07:03 pid:4125 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:03 pid:3739 worker[none:4125] exit with status 65280
+2017-12-25 22:07:03 pid:4132 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:03 pid:3739 worker[none:4132] exit with status 65280
+2017-12-25 22:07:03 pid:4140 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:03 pid:3739 worker[none:4140] exit with status 65280
+2017-12-25 22:07:03 pid:4147 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:03 pid:3739 worker[none:4147] exit with status 65280
+2017-12-25 22:07:03 pid:4154 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:03 pid:3739 worker[none:4154] exit with status 65280
+2017-12-25 22:07:03 pid:4161 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:03 pid:3739 worker[none:4161] exit with status 65280
+2017-12-25 22:07:03 pid:4168 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:03 pid:3739 worker[none:4168] exit with status 65280
+2017-12-25 22:07:04 pid:4175 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:04 pid:3739 worker[none:4175] exit with status 65280
+2017-12-25 22:07:04 pid:4182 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:04 pid:3739 worker[none:4182] exit with status 65280
+2017-12-25 22:07:04 pid:4189 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:04 pid:3739 worker[none:4189] exit with status 65280
+2017-12-25 22:07:04 pid:4196 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:04 pid:3739 worker[none:4196] exit with status 65280
+2017-12-25 22:07:04 pid:4203 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:04 pid:3739 worker[none:4203] exit with status 65280
+2017-12-25 22:07:04 pid:4210 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:04 pid:3739 worker[none:4210] exit with status 65280
+2017-12-25 22:07:04 pid:4217 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:04 pid:3739 worker[none:4217] exit with status 65280
+2017-12-25 22:07:04 pid:4224 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:04 pid:3739 worker[none:4224] exit with status 65280
+2017-12-25 22:07:04 pid:4231 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:05 pid:3739 worker[none:4231] exit with status 65280
+2017-12-25 22:07:05 pid:4238 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:05 pid:3739 worker[none:4238] exit with status 65280
+2017-12-25 22:07:05 pid:4245 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:05 pid:3739 worker[none:4245] exit with status 65280
+2017-12-25 22:07:05 pid:4252 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:05 pid:3739 worker[none:4252] exit with status 65280
+2017-12-25 22:07:05 pid:4259 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:05 pid:3739 worker[none:4259] exit with status 65280
+2017-12-25 22:07:05 pid:4266 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:05 pid:3739 worker[none:4266] exit with status 65280
+2017-12-25 22:07:05 pid:4273 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:05 pid:3739 worker[none:4273] exit with status 65280
+2017-12-25 22:07:05 pid:4280 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:05 pid:3739 worker[none:4280] exit with status 65280
+2017-12-25 22:07:05 pid:4287 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:05 pid:3739 worker[none:4287] exit with status 65280
+2017-12-25 22:07:05 pid:4294 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:05 pid:3739 worker[none:4294] exit with status 65280
+2017-12-25 22:07:06 pid:4301 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:06 pid:3739 worker[none:4301] exit with status 65280
+2017-12-25 22:07:06 pid:4308 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:06 pid:3739 worker[none:4308] exit with status 65280
+2017-12-25 22:07:06 pid:4315 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:06 pid:3739 worker[none:4315] exit with status 65280
+2017-12-25 22:07:06 pid:4322 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:06 pid:3739 worker[none:4322] exit with status 65280
+2017-12-25 22:07:06 pid:4329 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:06 pid:3739 worker[none:4329] exit with status 65280
+2017-12-25 22:07:06 pid:4336 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:06 pid:3739 worker[none:4336] exit with status 65280
+2017-12-25 22:07:06 pid:4343 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:06 pid:3739 worker[none:4343] exit with status 65280
+2017-12-25 22:07:06 pid:4350 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:06 pid:3739 worker[none:4350] exit with status 65280
+2017-12-25 22:07:06 pid:4357 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:06 pid:3739 worker[none:4357] exit with status 65280
+2017-12-25 22:07:06 pid:4364 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:06 pid:3739 worker[none:4364] exit with status 65280
+2017-12-25 22:07:07 pid:4371 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:07 pid:3739 worker[none:4371] exit with status 65280
+2017-12-25 22:07:07 pid:4378 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:07 pid:3739 worker[none:4378] exit with status 65280
+2017-12-25 22:07:07 pid:4385 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:07 pid:3739 worker[none:4385] exit with status 65280
+2017-12-25 22:07:07 pid:4392 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:07 pid:3739 worker[none:4392] exit with status 65280
+2017-12-25 22:07:07 pid:4399 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:07 pid:3739 worker[none:4399] exit with status 65280
+2017-12-25 22:07:07 pid:4406 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:07 pid:3739 worker[none:4406] exit with status 65280
+2017-12-25 22:07:07 pid:4413 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:07 pid:3739 worker[none:4413] exit with status 65280
+2017-12-25 22:07:07 pid:4420 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:07 pid:3739 worker[none:4420] exit with status 65280
+2017-12-25 22:07:07 pid:4427 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:08 pid:3739 worker[none:4427] exit with status 65280
+2017-12-25 22:07:08 pid:4434 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:08 pid:3739 worker[none:4434] exit with status 65280
+2017-12-25 22:07:08 pid:4441 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:08 pid:3739 worker[none:4441] exit with status 65280
+2017-12-25 22:07:08 pid:4448 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:08 pid:3739 worker[none:4448] exit with status 65280
+2017-12-25 22:07:08 pid:4455 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:08 pid:3739 worker[none:4455] exit with status 65280
+2017-12-25 22:07:08 pid:4462 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:08 pid:3739 worker[none:4462] exit with status 65280
+2017-12-25 22:07:08 pid:4469 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:08 pid:3739 worker[none:4469] exit with status 65280
+2017-12-25 22:07:08 pid:3739 Workerman[server.php] stopping ...
+2017-12-25 22:07:08 pid:4476 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:08 pid:3739 worker[none:4476] exit with status 65280
+2017-12-25 22:07:08 pid:3739 Workerman[server.php] has been stopped
+2017-12-25 22:07:11 pid:4483 Workerman[server.php] status 
+2017-12-25 22:07:11 pid:4483 Workerman[server.php] not run
+2017-12-25 22:07:16 pid:4484 Workerman[server.php] start in DEBUG mode
+2017-12-25 22:07:16 pid:4485 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:16 pid:4484 worker[none:4485] exit with status 65280
+2017-12-25 22:07:16 pid:4492 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:16 pid:4484 worker[none:4492] exit with status 65280
+2017-12-25 22:07:16 pid:4499 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:16 pid:4484 worker[none:4499] exit with status 65280
+2017-12-25 22:07:16 pid:4506 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:17 pid:4484 worker[none:4506] exit with status 65280
+2017-12-25 22:07:17 pid:4513 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:17 pid:4484 worker[none:4513] exit with status 65280
+2017-12-25 22:07:17 pid:4520 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:17 pid:4484 worker[none:4520] exit with status 65280
+2017-12-25 22:07:17 pid:4527 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:17 pid:4484 worker[none:4527] exit with status 65280
+2017-12-25 22:07:17 pid:4534 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:17 pid:4484 worker[none:4534] exit with status 65280
+2017-12-25 22:07:17 pid:4541 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:17 pid:4484 worker[none:4541] exit with status 65280
+2017-12-25 22:07:17 pid:4548 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:17 pid:4484 worker[none:4548] exit with status 65280
+2017-12-25 22:07:17 pid:4555 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:17 pid:4484 worker[none:4555] exit with status 65280
+2017-12-25 22:07:17 pid:4562 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:17 pid:4484 worker[none:4562] exit with status 65280
+2017-12-25 22:07:17 pid:4569 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:17 pid:4484 worker[none:4569] exit with status 65280
+2017-12-25 22:07:18 pid:4576 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:18 pid:4484 worker[none:4576] exit with status 65280
+2017-12-25 22:07:18 pid:4583 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:18 pid:4484 worker[none:4583] exit with status 65280
+2017-12-25 22:07:18 pid:4590 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:18 pid:4484 worker[none:4590] exit with status 65280
+2017-12-25 22:07:18 pid:4597 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:18 pid:4484 worker[none:4597] exit with status 65280
+2017-12-25 22:07:18 pid:4604 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:18 pid:4484 worker[none:4604] exit with status 65280
+2017-12-25 22:07:18 pid:4611 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:18 pid:4484 worker[none:4611] exit with status 65280
+2017-12-25 22:07:18 pid:4618 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:18 pid:4484 worker[none:4618] exit with status 65280
+2017-12-25 22:07:18 pid:4625 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:18 pid:4484 worker[none:4625] exit with status 65280
+2017-12-25 22:07:18 pid:4632 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:18 pid:4484 worker[none:4632] exit with status 65280
+2017-12-25 22:07:18 pid:4639 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:19 pid:4484 worker[none:4639] exit with status 65280
+2017-12-25 22:07:19 pid:4646 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:19 pid:4484 worker[none:4646] exit with status 65280
+2017-12-25 22:07:19 pid:4653 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:19 pid:4484 worker[none:4653] exit with status 65280
+2017-12-25 22:07:19 pid:4660 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:19 pid:4484 worker[none:4660] exit with status 65280
+2017-12-25 22:07:19 pid:4667 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:19 pid:4484 worker[none:4667] exit with status 65280
+2017-12-25 22:07:19 pid:4674 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:19 pid:4484 worker[none:4674] exit with status 65280
+2017-12-25 22:07:19 pid:4681 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:19 pid:4484 worker[none:4681] exit with status 65280
+2017-12-25 22:07:19 pid:4688 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:19 pid:4484 worker[none:4688] exit with status 65280
+2017-12-25 22:07:19 pid:4695 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:19 pid:4484 worker[none:4695] exit with status 65280
+2017-12-25 22:07:20 pid:4702 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:20 pid:4484 worker[none:4702] exit with status 65280
+2017-12-25 22:07:20 pid:4709 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:20 pid:4484 worker[none:4709] exit with status 65280
+2017-12-25 22:07:20 pid:4716 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:20 pid:4484 worker[none:4716] exit with status 65280
+2017-12-25 22:07:20 pid:4723 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:20 pid:4484 worker[none:4723] exit with status 65280
+2017-12-25 22:07:20 pid:4730 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:20 pid:4484 worker[none:4730] exit with status 65280
+2017-12-25 22:07:20 pid:4737 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:20 pid:4484 worker[none:4737] exit with status 65280
+2017-12-25 22:07:20 pid:4744 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:20 pid:4484 worker[none:4744] exit with status 65280
+2017-12-25 22:07:20 pid:4751 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:20 pid:4484 worker[none:4751] exit with status 65280
+2017-12-25 22:07:20 pid:4758 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:20 pid:4484 worker[none:4758] exit with status 65280
+2017-12-25 22:07:21 pid:4765 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:21 pid:4484 worker[none:4765] exit with status 65280
+2017-12-25 22:07:21 pid:4772 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:21 pid:4484 worker[none:4772] exit with status 65280
+2017-12-25 22:07:21 pid:4779 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:21 pid:4484 worker[none:4779] exit with status 65280
+2017-12-25 22:07:21 pid:4786 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:21 pid:4484 worker[none:4786] exit with status 65280
+2017-12-25 22:07:21 pid:4793 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:21 pid:4484 worker[none:4793] exit with status 65280
+2017-12-25 22:07:21 pid:4800 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:21 pid:4484 worker[none:4800] exit with status 65280
+2017-12-25 22:07:21 pid:4807 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:21 pid:4484 worker[none:4807] exit with status 65280
+2017-12-25 22:07:21 pid:4814 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:21 pid:4484 worker[none:4814] exit with status 65280
+2017-12-25 22:07:21 pid:4484 Workerman[server.php] stopping ...
+2017-12-25 22:07:21 pid:4821 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:07:21 pid:4484 worker[none:4821] exit with status 65280
+2017-12-25 22:07:21 pid:4484 Workerman[server.php] has been stopped
+2017-12-25 22:08:07 pid:4828 Workerman[server.php] start in DEBUG mode
+2017-12-25 22:08:07 pid:4829 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:07 pid:4828 worker[none:4829] exit with status 65280
+2017-12-25 22:08:08 pid:4836 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:08 pid:4828 worker[none:4836] exit with status 65280
+2017-12-25 22:08:08 pid:4843 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:08 pid:4828 worker[none:4843] exit with status 65280
+2017-12-25 22:08:08 pid:4850 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:08 pid:4828 worker[none:4850] exit with status 65280
+2017-12-25 22:08:08 pid:4857 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:08 pid:4828 worker[none:4857] exit with status 65280
+2017-12-25 22:08:08 pid:4864 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:08 pid:4828 worker[none:4864] exit with status 65280
+2017-12-25 22:08:08 pid:4871 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:08 pid:4828 worker[none:4871] exit with status 65280
+2017-12-25 22:08:08 pid:4878 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:08 pid:4828 worker[none:4878] exit with status 65280
+2017-12-25 22:08:08 pid:4885 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:08 pid:4828 worker[none:4885] exit with status 65280
+2017-12-25 22:08:08 pid:4892 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:09 pid:4828 worker[none:4892] exit with status 65280
+2017-12-25 22:08:09 pid:4899 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:09 pid:4828 worker[none:4899] exit with status 65280
+2017-12-25 22:08:09 pid:4906 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:09 pid:4828 worker[none:4906] exit with status 65280
+2017-12-25 22:08:09 pid:4913 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:09 pid:4828 worker[none:4913] exit with status 65280
+2017-12-25 22:08:09 pid:4920 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:09 pid:4828 worker[none:4920] exit with status 65280
+2017-12-25 22:08:09 pid:4927 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:09 pid:4828 worker[none:4927] exit with status 65280
+2017-12-25 22:08:09 pid:4934 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:09 pid:4828 worker[none:4934] exit with status 65280
+2017-12-25 22:08:09 pid:4941 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:09 pid:4828 worker[none:4941] exit with status 65280
+2017-12-25 22:08:09 pid:4948 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:09 pid:4828 worker[none:4948] exit with status 65280
+2017-12-25 22:08:09 pid:4955 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:09 pid:4828 worker[none:4955] exit with status 65280
+2017-12-25 22:08:10 pid:4962 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:10 pid:4828 worker[none:4962] exit with status 65280
+2017-12-25 22:08:10 pid:4969 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:10 pid:4828 worker[none:4969] exit with status 65280
+2017-12-25 22:08:10 pid:4976 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:10 pid:4828 worker[none:4976] exit with status 65280
+2017-12-25 22:08:10 pid:4983 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:10 pid:4828 worker[none:4983] exit with status 65280
+2017-12-25 22:08:10 pid:4990 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:10 pid:4828 worker[none:4990] exit with status 65280
+2017-12-25 22:08:10 pid:4997 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:10 pid:4828 worker[none:4997] exit with status 65280
+2017-12-25 22:08:10 pid:5004 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:10 pid:4828 worker[none:5004] exit with status 65280
+2017-12-25 22:08:10 pid:5011 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:10 pid:4828 worker[none:5011] exit with status 65280
+2017-12-25 22:08:10 pid:5018 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:11 pid:4828 worker[none:5018] exit with status 65280
+2017-12-25 22:08:11 pid:5025 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:11 pid:4828 worker[none:5025] exit with status 65280
+2017-12-25 22:08:11 pid:5032 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:11 pid:4828 worker[none:5032] exit with status 65280
+2017-12-25 22:08:11 pid:5039 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:11 pid:4828 worker[none:5039] exit with status 65280
+2017-12-25 22:08:11 pid:5046 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:11 pid:4828 worker[none:5046] exit with status 65280
+2017-12-25 22:08:11 pid:5053 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:11 pid:4828 worker[none:5053] exit with status 65280
+2017-12-25 22:08:11 pid:5060 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:11 pid:4828 worker[none:5060] exit with status 65280
+2017-12-25 22:08:11 pid:5067 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:11 pid:4828 worker[none:5067] exit with status 65280
+2017-12-25 22:08:11 pid:5074 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:11 pid:4828 worker[none:5074] exit with status 65280
+2017-12-25 22:08:11 pid:5081 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:11 pid:4828 worker[none:5081] exit with status 65280
+2017-12-25 22:08:11 pid:5088 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:11 pid:4828 worker[none:5088] exit with status 65280
+2017-12-25 22:08:12 pid:5095 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:12 pid:4828 worker[none:5095] exit with status 65280
+2017-12-25 22:08:12 pid:5102 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:12 pid:4828 worker[none:5102] exit with status 65280
+2017-12-25 22:08:12 pid:5109 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:12 pid:4828 worker[none:5109] exit with status 65280
+2017-12-25 22:08:12 pid:5116 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:12 pid:4828 worker[none:5116] exit with status 65280
+2017-12-25 22:08:12 pid:5123 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:12 pid:4828 worker[none:5123] exit with status 65280
+2017-12-25 22:08:12 pid:5130 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:12 pid:4828 worker[none:5130] exit with status 65280
+2017-12-25 22:08:12 pid:5137 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:12 pid:4828 worker[none:5137] exit with status 65280
+2017-12-25 22:08:12 pid:5144 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:12 pid:4828 worker[none:5144] exit with status 65280
+2017-12-25 22:08:12 pid:5151 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:12 pid:4828 worker[none:5151] exit with status 65280
+2017-12-25 22:08:12 pid:5158 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:12 pid:4828 worker[none:5158] exit with status 65280
+2017-12-25 22:08:12 pid:5165 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:12 pid:4828 worker[none:5165] exit with status 65280
+2017-12-25 22:08:12 pid:5172 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:12 pid:4828 worker[none:5172] exit with status 65280
+2017-12-25 22:08:12 pid:5179 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:12 pid:4828 worker[none:5179] exit with status 65280
+2017-12-25 22:08:12 pid:5186 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:12 pid:4828 worker[none:5186] exit with status 65280
+2017-12-25 22:08:12 pid:5193 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:12 pid:4828 worker[none:5193] exit with status 65280
+2017-12-25 22:08:12 pid:5200 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:12 pid:4828 worker[none:5200] exit with status 65280
+2017-12-25 22:08:12 pid:5207 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:12 pid:4828 worker[none:5207] exit with status 65280
+2017-12-25 22:08:12 pid:5214 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:13 pid:4828 worker[none:5214] exit with status 65280
+2017-12-25 22:08:13 pid:5221 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:13 pid:4828 worker[none:5221] exit with status 65280
+2017-12-25 22:08:13 pid:5228 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:13 pid:4828 worker[none:5228] exit with status 65280
+2017-12-25 22:08:13 pid:5235 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:13 pid:4828 worker[none:5235] exit with status 65280
+2017-12-25 22:08:13 pid:5242 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:13 pid:4828 worker[none:5242] exit with status 65280
+2017-12-25 22:08:13 pid:5249 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:13 pid:4828 worker[none:5249] exit with status 65280
+2017-12-25 22:08:13 pid:5256 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:13 pid:4828 worker[none:5256] exit with status 65280
+2017-12-25 22:08:13 pid:5263 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:13 pid:4828 worker[none:5263] exit with status 65280
+2017-12-25 22:08:13 pid:5270 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:13 pid:4828 worker[none:5270] exit with status 65280
+2017-12-25 22:08:13 pid:5277 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:13 pid:4828 worker[none:5277] exit with status 65280
+2017-12-25 22:08:13 pid:5284 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:13 pid:4828 worker[none:5284] exit with status 65280
+2017-12-25 22:08:13 pid:5291 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:13 pid:4828 worker[none:5291] exit with status 65280
+2017-12-25 22:08:13 pid:5298 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:13 pid:4828 worker[none:5298] exit with status 65280
+2017-12-25 22:08:13 pid:5305 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:13 pid:4828 worker[none:5305] exit with status 65280
+2017-12-25 22:08:13 pid:5312 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:13 pid:4828 worker[none:5312] exit with status 65280
+2017-12-25 22:08:13 pid:5319 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:13 pid:4828 worker[none:5319] exit with status 65280
+2017-12-25 22:08:13 pid:5326 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:13 pid:4828 worker[none:5326] exit with status 65280
+2017-12-25 22:08:13 pid:5333 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:13 pid:4828 worker[none:5333] exit with status 65280
+2017-12-25 22:08:14 pid:5340 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:14 pid:4828 worker[none:5340] exit with status 65280
+2017-12-25 22:08:14 pid:5347 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:14 pid:4828 worker[none:5347] exit with status 65280
+2017-12-25 22:08:14 pid:5354 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:14 pid:4828 worker[none:5354] exit with status 65280
+2017-12-25 22:08:14 pid:5361 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:14 pid:4828 worker[none:5361] exit with status 65280
+2017-12-25 22:08:14 pid:5368 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:14 pid:4828 worker[none:5368] exit with status 65280
+2017-12-25 22:08:14 pid:5375 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:14 pid:4828 worker[none:5375] exit with status 65280
+2017-12-25 22:08:14 pid:5382 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:14 pid:4828 worker[none:5382] exit with status 65280
+2017-12-25 22:08:14 pid:5389 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:14 pid:4828 worker[none:5389] exit with status 65280
+2017-12-25 22:08:14 pid:5396 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:14 pid:4828 worker[none:5396] exit with status 65280
+2017-12-25 22:08:14 pid:5403 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:14 pid:4828 worker[none:5403] exit with status 65280
+2017-12-25 22:08:14 pid:5410 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:14 pid:4828 worker[none:5410] exit with status 65280
+2017-12-25 22:08:14 pid:5417 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:14 pid:4828 worker[none:5417] exit with status 65280
+2017-12-25 22:08:14 pid:5424 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:14 pid:4828 worker[none:5424] exit with status 65280
+2017-12-25 22:08:14 pid:5431 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:14 pid:4828 worker[none:5431] exit with status 65280
+2017-12-25 22:08:14 pid:5438 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:14 pid:4828 worker[none:5438] exit with status 65280
+2017-12-25 22:08:14 pid:5445 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:14 pid:4828 worker[none:5445] exit with status 65280
+2017-12-25 22:08:14 pid:5452 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:14 pid:4828 worker[none:5452] exit with status 65280
+2017-12-25 22:08:14 pid:5459 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:14 pid:4828 worker[none:5459] exit with status 65280
+2017-12-25 22:08:14 pid:5466 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:15 pid:4828 worker[none:5466] exit with status 65280
+2017-12-25 22:08:15 pid:5473 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:15 pid:4828 worker[none:5473] exit with status 65280
+2017-12-25 22:08:15 pid:5480 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:15 pid:4828 worker[none:5480] exit with status 65280
+2017-12-25 22:08:15 pid:5487 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:15 pid:4828 worker[none:5487] exit with status 65280
+2017-12-25 22:08:15 pid:5494 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:15 pid:4828 worker[none:5494] exit with status 65280
+2017-12-25 22:08:15 pid:5501 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:15 pid:4828 worker[none:5501] exit with status 65280
+2017-12-25 22:08:15 pid:5508 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:15 pid:4828 worker[none:5508] exit with status 65280
+2017-12-25 22:08:15 pid:5515 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:15 pid:4828 worker[none:5515] exit with status 65280
+2017-12-25 22:08:15 pid:5522 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:15 pid:4828 worker[none:5522] exit with status 65280
+2017-12-25 22:08:15 pid:5529 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:15 pid:4828 worker[none:5529] exit with status 65280
+2017-12-25 22:08:15 pid:5536 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:15 pid:4828 worker[none:5536] exit with status 65280
+2017-12-25 22:08:15 pid:5543 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:15 pid:4828 worker[none:5543] exit with status 65280
+2017-12-25 22:08:15 pid:5550 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:15 pid:4828 worker[none:5550] exit with status 65280
+2017-12-25 22:08:15 pid:5557 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:15 pid:4828 worker[none:5557] exit with status 65280
+2017-12-25 22:08:15 pid:5564 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:15 pid:4828 worker[none:5564] exit with status 65280
+2017-12-25 22:08:15 pid:5571 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:15 pid:4828 worker[none:5571] exit with status 65280
+2017-12-25 22:08:15 pid:5578 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:15 pid:4828 worker[none:5578] exit with status 65280
+2017-12-25 22:08:15 pid:5585 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:15 pid:4828 worker[none:5585] exit with status 65280
+2017-12-25 22:08:15 pid:5592 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:15 pid:4828 worker[none:5592] exit with status 65280
+2017-12-25 22:08:15 pid:5599 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:15 pid:4828 worker[none:5599] exit with status 65280
+2017-12-25 22:08:15 pid:5606 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:16 pid:4828 worker[none:5606] exit with status 65280
+2017-12-25 22:08:16 pid:5613 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:16 pid:4828 worker[none:5613] exit with status 65280
+2017-12-25 22:08:16 pid:5620 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:16 pid:4828 worker[none:5620] exit with status 65280
+2017-12-25 22:08:16 pid:5627 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:16 pid:4828 worker[none:5627] exit with status 65280
+2017-12-25 22:08:16 pid:5634 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:16 pid:4828 worker[none:5634] exit with status 65280
+2017-12-25 22:08:16 pid:5641 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:16 pid:4828 worker[none:5641] exit with status 65280
+2017-12-25 22:08:16 pid:5648 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:16 pid:4828 worker[none:5648] exit with status 65280
+2017-12-25 22:08:16 pid:5655 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:16 pid:4828 worker[none:5655] exit with status 65280
+2017-12-25 22:08:16 pid:5662 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:16 pid:4828 worker[none:5662] exit with status 65280
+2017-12-25 22:08:16 pid:5669 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:16 pid:4828 worker[none:5669] exit with status 65280
+2017-12-25 22:08:16 pid:5676 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:16 pid:4828 worker[none:5676] exit with status 65280
+2017-12-25 22:08:16 pid:5683 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:16 pid:4828 worker[none:5683] exit with status 65280
+2017-12-25 22:08:16 pid:5690 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:16 pid:4828 worker[none:5690] exit with status 65280
+2017-12-25 22:08:16 pid:5697 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:16 pid:4828 worker[none:5697] exit with status 65280
+2017-12-25 22:08:16 pid:5704 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:16 pid:4828 worker[none:5704] exit with status 65280
+2017-12-25 22:08:16 pid:5711 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:16 pid:4828 worker[none:5711] exit with status 65280
+2017-12-25 22:08:16 pid:5718 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:16 pid:4828 worker[none:5718] exit with status 65280
+2017-12-25 22:08:16 pid:5725 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:16 pid:4828 worker[none:5725] exit with status 65280
+2017-12-25 22:08:17 pid:5732 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:17 pid:4828 worker[none:5732] exit with status 65280
+2017-12-25 22:08:17 pid:5739 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:17 pid:4828 worker[none:5739] exit with status 65280
+2017-12-25 22:08:17 pid:5746 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:17 pid:4828 worker[none:5746] exit with status 65280
+2017-12-25 22:08:17 pid:5753 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:17 pid:4828 worker[none:5753] exit with status 65280
+2017-12-25 22:08:17 pid:5760 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:17 pid:4828 worker[none:5760] exit with status 65280
+2017-12-25 22:08:17 pid:5767 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:17 pid:4828 worker[none:5767] exit with status 65280
+2017-12-25 22:08:17 pid:5774 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:17 pid:4828 worker[none:5774] exit with status 65280
+2017-12-25 22:08:17 pid:5781 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:17 pid:4828 worker[none:5781] exit with status 65280
+2017-12-25 22:08:17 pid:5788 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:17 pid:4828 worker[none:5788] exit with status 65280
+2017-12-25 22:08:17 pid:5795 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:17 pid:4828 worker[none:5795] exit with status 65280
+2017-12-25 22:08:17 pid:5802 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:17 pid:4828 worker[none:5802] exit with status 65280
+2017-12-25 22:08:17 pid:5809 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:17 pid:4828 worker[none:5809] exit with status 65280
+2017-12-25 22:08:17 pid:5816 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:17 pid:4828 worker[none:5816] exit with status 65280
+2017-12-25 22:08:17 pid:5823 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:17 pid:4828 worker[none:5823] exit with status 65280
+2017-12-25 22:08:17 pid:5830 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:17 pid:4828 worker[none:5830] exit with status 65280
+2017-12-25 22:08:17 pid:5837 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:17 pid:4828 worker[none:5837] exit with status 65280
+2017-12-25 22:08:17 pid:5844 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:17 pid:4828 worker[none:5844] exit with status 65280
+2017-12-25 22:08:17 pid:5851 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:17 pid:4828 worker[none:5851] exit with status 65280
+2017-12-25 22:08:17 pid:5858 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:18 pid:4828 worker[none:5858] exit with status 65280
+2017-12-25 22:08:18 pid:5865 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:18 pid:4828 worker[none:5865] exit with status 65280
+2017-12-25 22:08:18 pid:5872 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:18 pid:4828 worker[none:5872] exit with status 65280
+2017-12-25 22:08:18 pid:5879 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:18 pid:4828 worker[none:5879] exit with status 65280
+2017-12-25 22:08:18 pid:5886 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:18 pid:4828 worker[none:5886] exit with status 65280
+2017-12-25 22:08:18 pid:5893 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:18 pid:4828 worker[none:5893] exit with status 65280
+2017-12-25 22:08:18 pid:5900 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:18 pid:4828 worker[none:5900] exit with status 65280
+2017-12-25 22:08:18 pid:5907 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:18 pid:4828 worker[none:5907] exit with status 65280
+2017-12-25 22:08:18 pid:5914 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:18 pid:4828 worker[none:5914] exit with status 65280
+2017-12-25 22:08:18 pid:5921 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:18 pid:4828 worker[none:5921] exit with status 65280
+2017-12-25 22:08:18 pid:5928 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:18 pid:4828 worker[none:5928] exit with status 65280
+2017-12-25 22:08:18 pid:5935 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:18 pid:4828 worker[none:5935] exit with status 65280
+2017-12-25 22:08:18 pid:5942 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:18 pid:4828 worker[none:5942] exit with status 65280
+2017-12-25 22:08:18 pid:5949 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:18 pid:4828 worker[none:5949] exit with status 65280
+2017-12-25 22:08:18 pid:5956 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:18 pid:4828 worker[none:5956] exit with status 65280
+2017-12-25 22:08:18 pid:5963 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:18 pid:4828 worker[none:5963] exit with status 65280
+2017-12-25 22:08:18 pid:5970 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:18 pid:4828 worker[none:5970] exit with status 65280
+2017-12-25 22:08:18 pid:5977 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:18 pid:4828 worker[none:5977] exit with status 65280
+2017-12-25 22:08:18 pid:5984 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:18 pid:4828 worker[none:5984] exit with status 65280
+2017-12-25 22:08:18 pid:5991 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:18 pid:4828 worker[none:5991] exit with status 65280
+2017-12-25 22:08:18 pid:5998 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:19 pid:4828 worker[none:5998] exit with status 65280
+2017-12-25 22:08:19 pid:6005 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:19 pid:4828 worker[none:6005] exit with status 65280
+2017-12-25 22:08:19 pid:6012 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:19 pid:4828 worker[none:6012] exit with status 65280
+2017-12-25 22:08:19 pid:6019 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:19 pid:4828 worker[none:6019] exit with status 65280
+2017-12-25 22:08:19 pid:6026 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:19 pid:4828 worker[none:6026] exit with status 65280
+2017-12-25 22:08:19 pid:6033 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:19 pid:4828 worker[none:6033] exit with status 65280
+2017-12-25 22:08:19 pid:6040 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:19 pid:4828 worker[none:6040] exit with status 65280
+2017-12-25 22:08:19 pid:6047 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:19 pid:4828 worker[none:6047] exit with status 65280
+2017-12-25 22:08:19 pid:6054 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:19 pid:4828 worker[none:6054] exit with status 65280
+2017-12-25 22:08:19 pid:6061 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:19 pid:4828 worker[none:6061] exit with status 65280
+2017-12-25 22:08:19 pid:6068 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:19 pid:4828 worker[none:6068] exit with status 65280
+2017-12-25 22:08:19 pid:6075 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:19 pid:4828 worker[none:6075] exit with status 65280
+2017-12-25 22:08:19 pid:6082 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:19 pid:4828 worker[none:6082] exit with status 65280
+2017-12-25 22:08:19 pid:6089 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:19 pid:4828 worker[none:6089] exit with status 65280
+2017-12-25 22:08:19 pid:6096 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:19 pid:4828 worker[none:6096] exit with status 65280
+2017-12-25 22:08:19 pid:6103 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:19 pid:4828 worker[none:6103] exit with status 65280
+2017-12-25 22:08:19 pid:6110 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:19 pid:4828 worker[none:6110] exit with status 65280
+2017-12-25 22:08:19 pid:6117 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:19 pid:4828 worker[none:6117] exit with status 65280
+2017-12-25 22:08:20 pid:6124 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:20 pid:4828 worker[none:6124] exit with status 65280
+2017-12-25 22:08:20 pid:6131 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:20 pid:4828 worker[none:6131] exit with status 65280
+2017-12-25 22:08:20 pid:6138 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:20 pid:4828 worker[none:6138] exit with status 65280
+2017-12-25 22:08:20 pid:6145 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:20 pid:4828 worker[none:6145] exit with status 65280
+2017-12-25 22:08:20 pid:6152 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:20 pid:4828 worker[none:6152] exit with status 65280
+2017-12-25 22:08:20 pid:6159 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:20 pid:4828 worker[none:6159] exit with status 65280
+2017-12-25 22:08:20 pid:6166 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:20 pid:4828 worker[none:6166] exit with status 65280
+2017-12-25 22:08:20 pid:6173 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:20 pid:4828 worker[none:6173] exit with status 65280
+2017-12-25 22:08:20 pid:6180 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:20 pid:4828 worker[none:6180] exit with status 65280
+2017-12-25 22:08:20 pid:6187 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:20 pid:4828 worker[none:6187] exit with status 65280
+2017-12-25 22:08:20 pid:6194 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:20 pid:4828 worker[none:6194] exit with status 65280
+2017-12-25 22:08:20 pid:6201 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:20 pid:4828 worker[none:6201] exit with status 65280
+2017-12-25 22:08:20 pid:6208 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:20 pid:4828 worker[none:6208] exit with status 65280
+2017-12-25 22:08:20 pid:6215 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:20 pid:4828 worker[none:6215] exit with status 65280
+2017-12-25 22:08:20 pid:6222 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:20 pid:4828 worker[none:6222] exit with status 65280
+2017-12-25 22:08:20 pid:6229 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:20 pid:4828 worker[none:6229] exit with status 65280
+2017-12-25 22:08:20 pid:6236 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:20 pid:4828 worker[none:6236] exit with status 65280
+2017-12-25 22:08:20 pid:6243 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:20 pid:4828 worker[none:6243] exit with status 65280
+2017-12-25 22:08:20 pid:6250 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:20 pid:4828 worker[none:6250] exit with status 65280
+2017-12-25 22:08:21 pid:6257 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:21 pid:4828 worker[none:6257] exit with status 65280
+2017-12-25 22:08:21 pid:6264 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:21 pid:4828 worker[none:6264] exit with status 65280
+2017-12-25 22:08:21 pid:6271 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:21 pid:4828 worker[none:6271] exit with status 65280
+2017-12-25 22:08:21 pid:6278 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:21 pid:4828 worker[none:6278] exit with status 65280
+2017-12-25 22:08:21 pid:6285 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:21 pid:4828 worker[none:6285] exit with status 65280
+2017-12-25 22:08:21 pid:6292 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:21 pid:4828 worker[none:6292] exit with status 65280
+2017-12-25 22:08:21 pid:6299 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:21 pid:4828 worker[none:6299] exit with status 65280
+2017-12-25 22:08:21 pid:6306 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:21 pid:4828 worker[none:6306] exit with status 65280
+2017-12-25 22:08:21 pid:6313 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:21 pid:4828 worker[none:6313] exit with status 65280
+2017-12-25 22:08:21 pid:6320 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:21 pid:4828 worker[none:6320] exit with status 65280
+2017-12-25 22:08:21 pid:6327 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:21 pid:4828 worker[none:6327] exit with status 65280
+2017-12-25 22:08:21 pid:6334 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:21 pid:4828 worker[none:6334] exit with status 65280
+2017-12-25 22:08:21 pid:6341 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:21 pid:4828 worker[none:6341] exit with status 65280
+2017-12-25 22:08:21 pid:6348 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:21 pid:4828 worker[none:6348] exit with status 65280
+2017-12-25 22:08:21 pid:6355 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:21 pid:4828 worker[none:6355] exit with status 65280
+2017-12-25 22:08:21 pid:6362 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:21 pid:4828 worker[none:6362] exit with status 65280
+2017-12-25 22:08:21 pid:6369 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:21 pid:4828 worker[none:6369] exit with status 65280
+2017-12-25 22:08:21 pid:6376 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:21 pid:4828 worker[none:6376] exit with status 65280
+2017-12-25 22:08:21 pid:6383 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:21 pid:4828 worker[none:6383] exit with status 65280
+2017-12-25 22:08:21 pid:6390 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:21 pid:4828 worker[none:6390] exit with status 65280
+2017-12-25 22:08:21 pid:6397 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:22 pid:4828 worker[none:6397] exit with status 65280
+2017-12-25 22:08:22 pid:6404 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:22 pid:4828 worker[none:6404] exit with status 65280
+2017-12-25 22:08:22 pid:6411 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:22 pid:4828 worker[none:6411] exit with status 65280
+2017-12-25 22:08:22 pid:6418 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:22 pid:4828 worker[none:6418] exit with status 65280
+2017-12-25 22:08:22 pid:6425 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:22 pid:4828 worker[none:6425] exit with status 65280
+2017-12-25 22:08:22 pid:6432 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:22 pid:4828 worker[none:6432] exit with status 65280
+2017-12-25 22:08:22 pid:6439 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:22 pid:4828 worker[none:6439] exit with status 65280
+2017-12-25 22:08:22 pid:6446 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:22 pid:4828 worker[none:6446] exit with status 65280
+2017-12-25 22:08:22 pid:6453 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:22 pid:4828 worker[none:6453] exit with status 65280
+2017-12-25 22:08:22 pid:6460 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:22 pid:4828 worker[none:6460] exit with status 65280
+2017-12-25 22:08:22 pid:6467 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:22 pid:4828 worker[none:6467] exit with status 65280
+2017-12-25 22:08:22 pid:6474 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:22 pid:4828 worker[none:6474] exit with status 65280
+2017-12-25 22:08:22 pid:6481 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:22 pid:4828 worker[none:6481] exit with status 65280
+2017-12-25 22:08:22 pid:6488 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:22 pid:4828 worker[none:6488] exit with status 65280
+2017-12-25 22:08:22 pid:6495 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:22 pid:4828 worker[none:6495] exit with status 65280
+2017-12-25 22:08:22 pid:6502 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:22 pid:4828 worker[none:6502] exit with status 65280
+2017-12-25 22:08:22 pid:6509 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:22 pid:4828 worker[none:6509] exit with status 65280
+2017-12-25 22:08:22 pid:6516 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:22 pid:4828 worker[none:6516] exit with status 65280
+2017-12-25 22:08:23 pid:6523 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:23 pid:4828 worker[none:6523] exit with status 65280
+2017-12-25 22:08:23 pid:6530 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:23 pid:4828 worker[none:6530] exit with status 65280
+2017-12-25 22:08:23 pid:6537 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:23 pid:4828 worker[none:6537] exit with status 65280
+2017-12-25 22:08:23 pid:6544 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:23 pid:4828 worker[none:6544] exit with status 65280
+2017-12-25 22:08:23 pid:6551 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:23 pid:4828 worker[none:6551] exit with status 65280
+2017-12-25 22:08:23 pid:6558 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:23 pid:4828 worker[none:6558] exit with status 65280
+2017-12-25 22:08:23 pid:6565 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:23 pid:4828 worker[none:6565] exit with status 65280
+2017-12-25 22:08:23 pid:6572 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:23 pid:4828 worker[none:6572] exit with status 65280
+2017-12-25 22:08:23 pid:6579 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:23 pid:4828 worker[none:6579] exit with status 65280
+2017-12-25 22:08:23 pid:6586 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:23 pid:4828 worker[none:6586] exit with status 65280
+2017-12-25 22:08:23 pid:6593 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:23 pid:4828 worker[none:6593] exit with status 65280
+2017-12-25 22:08:23 pid:6600 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:23 pid:4828 worker[none:6600] exit with status 65280
+2017-12-25 22:08:23 pid:6607 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:23 pid:4828 worker[none:6607] exit with status 65280
+2017-12-25 22:08:23 pid:6614 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:24 pid:4828 worker[none:6614] exit with status 65280
+2017-12-25 22:08:24 pid:6621 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:24 pid:4828 worker[none:6621] exit with status 65280
+2017-12-25 22:08:24 pid:6628 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:24 pid:4828 worker[none:6628] exit with status 65280
+2017-12-25 22:08:24 pid:6635 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:24 pid:4828 worker[none:6635] exit with status 65280
+2017-12-25 22:08:24 pid:6642 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:24 pid:4828 worker[none:6642] exit with status 65280
+2017-12-25 22:08:24 pid:6649 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:24 pid:4828 worker[none:6649] exit with status 65280
+2017-12-25 22:08:24 pid:6656 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:24 pid:4828 worker[none:6656] exit with status 65280
+2017-12-25 22:08:24 pid:6663 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:24 pid:4828 worker[none:6663] exit with status 65280
+2017-12-25 22:08:24 pid:6670 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:24 pid:4828 worker[none:6670] exit with status 65280
+2017-12-25 22:08:24 pid:6677 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:24 pid:4828 worker[none:6677] exit with status 65280
+2017-12-25 22:08:25 pid:6684 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:25 pid:4828 worker[none:6684] exit with status 65280
+2017-12-25 22:08:25 pid:6691 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:25 pid:4828 worker[none:6691] exit with status 65280
+2017-12-25 22:08:25 pid:6698 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:25 pid:4828 worker[none:6698] exit with status 65280
+2017-12-25 22:08:25 pid:6705 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:25 pid:4828 worker[none:6705] exit with status 65280
+2017-12-25 22:08:25 pid:6712 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:25 pid:4828 worker[none:6712] exit with status 65280
+2017-12-25 22:08:25 pid:6719 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:25 pid:4828 worker[none:6719] exit with status 65280
+2017-12-25 22:08:25 pid:6726 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:25 pid:4828 worker[none:6726] exit with status 65280
+2017-12-25 22:08:25 pid:6733 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:25 pid:4828 worker[none:6733] exit with status 65280
+2017-12-25 22:08:25 pid:6740 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:25 pid:4828 worker[none:6740] exit with status 65280
+2017-12-25 22:08:26 pid:6747 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:26 pid:4828 worker[none:6747] exit with status 65280
+2017-12-25 22:08:26 pid:6754 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:26 pid:4828 worker[none:6754] exit with status 65280
+2017-12-25 22:08:26 pid:6761 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:26 pid:4828 worker[none:6761] exit with status 65280
+2017-12-25 22:08:26 pid:6768 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:26 pid:4828 worker[none:6768] exit with status 65280
+2017-12-25 22:08:26 pid:6775 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:26 pid:4828 worker[none:6775] exit with status 65280
+2017-12-25 22:08:26 pid:6782 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:26 pid:4828 worker[none:6782] exit with status 65280
+2017-12-25 22:08:26 pid:6789 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:26 pid:4828 worker[none:6789] exit with status 65280
+2017-12-25 22:08:26 pid:6796 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:26 pid:4828 worker[none:6796] exit with status 65280
+2017-12-25 22:08:26 pid:6803 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:26 pid:4828 worker[none:6803] exit with status 65280
+2017-12-25 22:08:26 pid:6810 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:27 pid:4828 worker[none:6810] exit with status 65280
+2017-12-25 22:08:27 pid:6817 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:27 pid:4828 worker[none:6817] exit with status 65280
+2017-12-25 22:08:27 pid:6824 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:27 pid:4828 worker[none:6824] exit with status 65280
+2017-12-25 22:08:27 pid:6831 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:27 pid:4828 worker[none:6831] exit with status 65280
+2017-12-25 22:08:27 pid:6838 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:27 pid:4828 worker[none:6838] exit with status 65280
+2017-12-25 22:08:27 pid:6845 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:27 pid:4828 worker[none:6845] exit with status 65280
+2017-12-25 22:08:27 pid:6852 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:27 pid:4828 worker[none:6852] exit with status 65280
+2017-12-25 22:08:27 pid:6859 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:27 pid:4828 worker[none:6859] exit with status 65280
+2017-12-25 22:08:27 pid:6866 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:27 pid:4828 worker[none:6866] exit with status 65280
+2017-12-25 22:08:27 pid:6873 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:27 pid:4828 worker[none:6873] exit with status 65280
+2017-12-25 22:08:27 pid:6880 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:27 pid:4828 worker[none:6880] exit with status 65280
+2017-12-25 22:08:28 pid:6887 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:28 pid:4828 worker[none:6887] exit with status 65280
+2017-12-25 22:08:28 pid:6894 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:28 pid:4828 worker[none:6894] exit with status 65280
+2017-12-25 22:08:28 pid:6901 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:28 pid:4828 worker[none:6901] exit with status 65280
+2017-12-25 22:08:28 pid:6908 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:28 pid:4828 worker[none:6908] exit with status 65280
+2017-12-25 22:08:28 pid:6915 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:28 pid:4828 worker[none:6915] exit with status 65280
+2017-12-25 22:08:28 pid:6922 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:28 pid:4828 worker[none:6922] exit with status 65280
+2017-12-25 22:08:28 pid:6929 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:28 pid:4828 worker[none:6929] exit with status 65280
+2017-12-25 22:08:28 pid:6936 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:28 pid:4828 worker[none:6936] exit with status 65280
+2017-12-25 22:08:28 pid:6943 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:28 pid:4828 worker[none:6943] exit with status 65280
+2017-12-25 22:08:29 pid:6950 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:29 pid:4828 worker[none:6950] exit with status 65280
+2017-12-25 22:08:29 pid:6957 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:29 pid:4828 worker[none:6957] exit with status 65280
+2017-12-25 22:08:29 pid:6964 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:29 pid:4828 worker[none:6964] exit with status 65280
+2017-12-25 22:08:29 pid:6971 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:29 pid:4828 worker[none:6971] exit with status 65280
+2017-12-25 22:08:29 pid:6978 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:29 pid:4828 worker[none:6978] exit with status 65280
+2017-12-25 22:08:29 pid:6985 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:29 pid:4828 worker[none:6985] exit with status 65280
+2017-12-25 22:08:29 pid:6992 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:29 pid:4828 worker[none:6992] exit with status 65280
+2017-12-25 22:08:29 pid:6999 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:29 pid:4828 worker[none:6999] exit with status 65280
+2017-12-25 22:08:29 pid:7006 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:29 pid:4828 worker[none:7006] exit with status 65280
+2017-12-25 22:08:29 pid:7013 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:29 pid:4828 worker[none:7013] exit with status 65280
+2017-12-25 22:08:30 pid:7020 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:30 pid:4828 worker[none:7020] exit with status 65280
+2017-12-25 22:08:30 pid:7027 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:30 pid:4828 worker[none:7027] exit with status 65280
+2017-12-25 22:08:30 pid:7034 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:30 pid:4828 worker[none:7034] exit with status 65280
+2017-12-25 22:08:30 pid:7041 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:30 pid:4828 worker[none:7041] exit with status 65280
+2017-12-25 22:08:30 pid:7048 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:30 pid:4828 worker[none:7048] exit with status 65280
+2017-12-25 22:08:30 pid:7055 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:30 pid:4828 worker[none:7055] exit with status 65280
+2017-12-25 22:08:30 pid:7062 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:30 pid:4828 worker[none:7062] exit with status 65280
+2017-12-25 22:08:30 pid:7069 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:30 pid:4828 worker[none:7069] exit with status 65280
+2017-12-25 22:08:30 pid:7076 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:30 pid:4828 worker[none:7076] exit with status 65280
+2017-12-25 22:08:30 pid:7083 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:30 pid:4828 worker[none:7083] exit with status 65280
+2017-12-25 22:08:31 pid:7090 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:31 pid:4828 worker[none:7090] exit with status 65280
+2017-12-25 22:08:31 pid:7097 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:31 pid:4828 worker[none:7097] exit with status 65280
+2017-12-25 22:08:31 pid:7104 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:31 pid:4828 worker[none:7104] exit with status 65280
+2017-12-25 22:08:31 pid:7111 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:31 pid:4828 worker[none:7111] exit with status 65280
+2017-12-25 22:08:31 pid:7118 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:31 pid:4828 worker[none:7118] exit with status 65280
+2017-12-25 22:08:31 pid:7125 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:31 pid:4828 worker[none:7125] exit with status 65280
+2017-12-25 22:08:31 pid:7132 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:31 pid:4828 worker[none:7132] exit with status 65280
+2017-12-25 22:08:31 pid:7139 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:31 pid:4828 worker[none:7139] exit with status 65280
+2017-12-25 22:08:31 pid:7146 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:31 pid:4828 worker[none:7146] exit with status 65280
+2017-12-25 22:08:32 pid:7153 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:32 pid:4828 worker[none:7153] exit with status 65280
+2017-12-25 22:08:32 pid:7160 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:32 pid:4828 worker[none:7160] exit with status 65280
+2017-12-25 22:08:32 pid:7167 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:32 pid:4828 worker[none:7167] exit with status 65280
+2017-12-25 22:08:32 pid:7174 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:32 pid:4828 worker[none:7174] exit with status 65280
+2017-12-25 22:08:32 pid:7181 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:32 pid:4828 worker[none:7181] exit with status 65280
+2017-12-25 22:08:32 pid:7188 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:32 pid:4828 worker[none:7188] exit with status 65280
+2017-12-25 22:08:32 pid:7195 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:32 pid:4828 worker[none:7195] exit with status 65280
+2017-12-25 22:08:32 pid:7202 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:32 pid:4828 worker[none:7202] exit with status 65280
+2017-12-25 22:08:32 pid:7209 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:32 pid:4828 worker[none:7209] exit with status 65280
+2017-12-25 22:08:32 pid:7216 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:32 pid:4828 worker[none:7216] exit with status 65280
+2017-12-25 22:08:33 pid:7223 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:33 pid:4828 worker[none:7223] exit with status 65280
+2017-12-25 22:08:33 pid:7230 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:33 pid:4828 worker[none:7230] exit with status 65280
+2017-12-25 22:08:33 pid:7237 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:33 pid:4828 worker[none:7237] exit with status 65280
+2017-12-25 22:08:33 pid:7244 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:33 pid:4828 worker[none:7244] exit with status 65280
+2017-12-25 22:08:33 pid:7251 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:33 pid:4828 worker[none:7251] exit with status 65280
+2017-12-25 22:08:33 pid:7258 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:33 pid:4828 worker[none:7258] exit with status 65280
+2017-12-25 22:08:33 pid:7265 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:33 pid:4828 worker[none:7265] exit with status 65280
+2017-12-25 22:08:33 pid:7272 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:33 pid:4828 worker[none:7272] exit with status 65280
+2017-12-25 22:08:33 pid:7279 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:33 pid:4828 worker[none:7279] exit with status 65280
+2017-12-25 22:08:33 pid:7286 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:33 pid:4828 worker[none:7286] exit with status 65280
+2017-12-25 22:08:33 pid:7293 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:34 pid:4828 worker[none:7293] exit with status 65280
+2017-12-25 22:08:34 pid:7300 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:34 pid:4828 worker[none:7300] exit with status 65280
+2017-12-25 22:08:34 pid:7307 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:34 pid:4828 worker[none:7307] exit with status 65280
+2017-12-25 22:08:34 pid:7314 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:34 pid:4828 worker[none:7314] exit with status 65280
+2017-12-25 22:08:34 pid:7321 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:34 pid:4828 worker[none:7321] exit with status 65280
+2017-12-25 22:08:34 pid:7328 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:34 pid:4828 worker[none:7328] exit with status 65280
+2017-12-25 22:08:34 pid:7335 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:34 pid:4828 worker[none:7335] exit with status 65280
+2017-12-25 22:08:34 pid:7342 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:34 pid:4828 worker[none:7342] exit with status 65280
+2017-12-25 22:08:34 pid:7349 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:34 pid:4828 worker[none:7349] exit with status 65280
+2017-12-25 22:08:34 pid:7356 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:35 pid:4828 worker[none:7356] exit with status 65280
+2017-12-25 22:08:35 pid:7363 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:35 pid:4828 worker[none:7363] exit with status 65280
+2017-12-25 22:08:35 pid:7370 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:35 pid:4828 worker[none:7370] exit with status 65280
+2017-12-25 22:08:35 pid:7377 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:35 pid:4828 worker[none:7377] exit with status 65280
+2017-12-25 22:08:35 pid:7384 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:35 pid:4828 worker[none:7384] exit with status 65280
+2017-12-25 22:08:35 pid:7391 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:35 pid:4828 worker[none:7391] exit with status 65280
+2017-12-25 22:08:35 pid:7398 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:35 pid:4828 worker[none:7398] exit with status 65280
+2017-12-25 22:08:35 pid:7405 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:35 pid:4828 worker[none:7405] exit with status 65280
+2017-12-25 22:08:35 pid:7412 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:35 pid:4828 worker[none:7412] exit with status 65280
+2017-12-25 22:08:35 pid:7419 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:35 pid:4828 worker[none:7419] exit with status 65280
+2017-12-25 22:08:36 pid:7426 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:36 pid:4828 worker[none:7426] exit with status 65280
+2017-12-25 22:08:36 pid:7433 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:36 pid:4828 worker[none:7433] exit with status 65280
+2017-12-25 22:08:36 pid:7440 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:36 pid:4828 worker[none:7440] exit with status 65280
+2017-12-25 22:08:36 pid:7447 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:36 pid:4828 worker[none:7447] exit with status 65280
+2017-12-25 22:08:36 pid:7454 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:36 pid:4828 worker[none:7454] exit with status 65280
+2017-12-25 22:08:36 pid:7461 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:36 pid:4828 worker[none:7461] exit with status 65280
+2017-12-25 22:08:36 pid:7468 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:36 pid:4828 worker[none:7468] exit with status 65280
+2017-12-25 22:08:36 pid:7475 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:36 pid:4828 worker[none:7475] exit with status 65280
+2017-12-25 22:08:36 pid:7482 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:36 pid:4828 worker[none:7482] exit with status 65280
+2017-12-25 22:08:36 pid:7489 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:36 pid:4828 worker[none:7489] exit with status 65280
+2017-12-25 22:08:36 pid:7496 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:36 pid:4828 worker[none:7496] exit with status 65280
+2017-12-25 22:08:37 pid:7503 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:37 pid:4828 worker[none:7503] exit with status 65280
+2017-12-25 22:08:37 pid:7510 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:37 pid:4828 worker[none:7510] exit with status 65280
+2017-12-25 22:08:37 pid:7517 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:37 pid:4828 worker[none:7517] exit with status 65280
+2017-12-25 22:08:37 pid:7524 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:37 pid:4828 worker[none:7524] exit with status 65280
+2017-12-25 22:08:37 pid:7531 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:37 pid:4828 worker[none:7531] exit with status 65280
+2017-12-25 22:08:37 pid:7538 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:37 pid:4828 worker[none:7538] exit with status 65280
+2017-12-25 22:08:37 pid:7545 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:37 pid:4828 worker[none:7545] exit with status 65280
+2017-12-25 22:08:37 pid:7552 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:37 pid:4828 worker[none:7552] exit with status 65280
+2017-12-25 22:08:37 pid:7559 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:37 pid:4828 worker[none:7559] exit with status 65280
+2017-12-25 22:08:38 pid:7566 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:38 pid:4828 worker[none:7566] exit with status 65280
+2017-12-25 22:08:38 pid:7573 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:38 pid:4828 worker[none:7573] exit with status 65280
+2017-12-25 22:08:38 pid:7580 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:38 pid:4828 worker[none:7580] exit with status 65280
+2017-12-25 22:08:38 pid:7587 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:38 pid:4828 worker[none:7587] exit with status 65280
+2017-12-25 22:08:38 pid:7594 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:38 pid:4828 worker[none:7594] exit with status 65280
+2017-12-25 22:08:38 pid:7601 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:38 pid:4828 worker[none:7601] exit with status 65280
+2017-12-25 22:08:38 pid:7608 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:38 pid:4828 worker[none:7608] exit with status 65280
+2017-12-25 22:08:38 pid:7615 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:38 pid:4828 worker[none:7615] exit with status 65280
+2017-12-25 22:08:38 pid:7622 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:38 pid:4828 worker[none:7622] exit with status 65280
+2017-12-25 22:08:38 pid:7629 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:39 pid:4828 worker[none:7629] exit with status 65280
+2017-12-25 22:08:39 pid:7636 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:39 pid:4828 worker[none:7636] exit with status 65280
+2017-12-25 22:08:39 pid:7643 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:39 pid:4828 worker[none:7643] exit with status 65280
+2017-12-25 22:08:39 pid:7650 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:39 pid:4828 worker[none:7650] exit with status 65280
+2017-12-25 22:08:39 pid:7657 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:39 pid:4828 worker[none:7657] exit with status 65280
+2017-12-25 22:08:39 pid:7664 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:39 pid:4828 worker[none:7664] exit with status 65280
+2017-12-25 22:08:39 pid:7671 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:39 pid:4828 worker[none:7671] exit with status 65280
+2017-12-25 22:08:39 pid:7678 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:39 pid:4828 worker[none:7678] exit with status 65280
+2017-12-25 22:08:39 pid:7685 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:39 pid:4828 worker[none:7685] exit with status 65280
+2017-12-25 22:08:39 pid:7692 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:39 pid:4828 worker[none:7692] exit with status 65280
+2017-12-25 22:08:39 pid:7699 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:39 pid:4828 worker[none:7699] exit with status 65280
+2017-12-25 22:08:40 pid:7706 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:40 pid:4828 worker[none:7706] exit with status 65280
+2017-12-25 22:08:40 pid:7713 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:40 pid:4828 worker[none:7713] exit with status 65280
+2017-12-25 22:08:40 pid:7720 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:40 pid:4828 worker[none:7720] exit with status 65280
+2017-12-25 22:08:40 pid:7727 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:40 pid:4828 worker[none:7727] exit with status 65280
+2017-12-25 22:08:40 pid:7734 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:40 pid:4828 worker[none:7734] exit with status 65280
+2017-12-25 22:08:40 pid:7741 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:40 pid:4828 worker[none:7741] exit with status 65280
+2017-12-25 22:08:40 pid:7748 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:40 pid:4828 worker[none:7748] exit with status 65280
+2017-12-25 22:08:40 pid:7755 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:40 pid:4828 worker[none:7755] exit with status 65280
+2017-12-25 22:08:41 pid:7762 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:41 pid:4828 worker[none:7762] exit with status 65280
+2017-12-25 22:08:41 pid:7769 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:41 pid:4828 worker[none:7769] exit with status 65280
+2017-12-25 22:08:41 pid:7776 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:41 pid:4828 worker[none:7776] exit with status 65280
+2017-12-25 22:08:41 pid:7783 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:41 pid:4828 worker[none:7783] exit with status 65280
+2017-12-25 22:08:41 pid:7790 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:41 pid:4828 worker[none:7790] exit with status 65280
+2017-12-25 22:08:41 pid:7797 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:41 pid:4828 worker[none:7797] exit with status 65280
+2017-12-25 22:08:41 pid:7804 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:41 pid:4828 worker[none:7804] exit with status 65280
+2017-12-25 22:08:41 pid:7811 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:41 pid:4828 worker[none:7811] exit with status 65280
+2017-12-25 22:08:41 pid:7818 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:41 pid:4828 worker[none:7818] exit with status 65280
+2017-12-25 22:08:41 pid:7825 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:42 pid:4828 worker[none:7825] exit with status 65280
+2017-12-25 22:08:42 pid:7832 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:42 pid:4828 worker[none:7832] exit with status 65280
+2017-12-25 22:08:42 pid:7839 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:42 pid:4828 worker[none:7839] exit with status 65280
+2017-12-25 22:08:42 pid:7846 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:42 pid:4828 worker[none:7846] exit with status 65280
+2017-12-25 22:08:42 pid:7853 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:42 pid:4828 worker[none:7853] exit with status 65280
+2017-12-25 22:08:42 pid:7860 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:42 pid:4828 worker[none:7860] exit with status 65280
+2017-12-25 22:08:42 pid:7867 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:42 pid:4828 worker[none:7867] exit with status 65280
+2017-12-25 22:08:42 pid:7874 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:42 pid:4828 worker[none:7874] exit with status 65280
+2017-12-25 22:08:42 pid:7881 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:42 pid:4828 worker[none:7881] exit with status 65280
+2017-12-25 22:08:42 pid:7888 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:42 pid:4828 worker[none:7888] exit with status 65280
+2017-12-25 22:08:42 pid:7895 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:43 pid:4828 worker[none:7895] exit with status 65280
+2017-12-25 22:08:43 pid:7902 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:43 pid:4828 worker[none:7902] exit with status 65280
+2017-12-25 22:08:43 pid:7909 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:43 pid:4828 worker[none:7909] exit with status 65280
+2017-12-25 22:08:43 pid:7916 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:43 pid:4828 worker[none:7916] exit with status 65280
+2017-12-25 22:08:43 pid:7923 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:43 pid:4828 worker[none:7923] exit with status 65280
+2017-12-25 22:08:43 pid:7930 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:43 pid:4828 worker[none:7930] exit with status 65280
+2017-12-25 22:08:43 pid:7937 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:43 pid:4828 worker[none:7937] exit with status 65280
+2017-12-25 22:08:43 pid:7944 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:43 pid:4828 worker[none:7944] exit with status 65280
+2017-12-25 22:08:43 pid:7951 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:43 pid:4828 worker[none:7951] exit with status 65280
+2017-12-25 22:08:44 pid:7958 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:44 pid:4828 worker[none:7958] exit with status 65280
+2017-12-25 22:08:44 pid:7965 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:44 pid:4828 worker[none:7965] exit with status 65280
+2017-12-25 22:08:44 pid:7972 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:44 pid:4828 worker[none:7972] exit with status 65280
+2017-12-25 22:08:44 pid:7979 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:44 pid:4828 worker[none:7979] exit with status 65280
+2017-12-25 22:08:44 pid:7986 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:44 pid:4828 worker[none:7986] exit with status 65280
+2017-12-25 22:08:44 pid:7993 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:44 pid:4828 worker[none:7993] exit with status 65280
+2017-12-25 22:08:44 pid:8000 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:44 pid:4828 worker[none:8000] exit with status 65280
+2017-12-25 22:08:44 pid:8007 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:44 pid:4828 worker[none:8007] exit with status 65280
+2017-12-25 22:08:44 pid:8014 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:44 pid:4828 worker[none:8014] exit with status 65280
+2017-12-25 22:08:44 pid:8021 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:44 pid:4828 worker[none:8021] exit with status 65280
+2017-12-25 22:08:45 pid:8028 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:45 pid:4828 worker[none:8028] exit with status 65280
+2017-12-25 22:08:45 pid:8035 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:45 pid:4828 worker[none:8035] exit with status 65280
+2017-12-25 22:08:45 pid:8042 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:45 pid:4828 worker[none:8042] exit with status 65280
+2017-12-25 22:08:45 pid:8049 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:45 pid:4828 worker[none:8049] exit with status 65280
+2017-12-25 22:08:45 pid:8056 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:45 pid:4828 worker[none:8056] exit with status 65280
+2017-12-25 22:08:45 pid:8063 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:45 pid:4828 worker[none:8063] exit with status 65280
+2017-12-25 22:08:45 pid:8070 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:45 pid:4828 worker[none:8070] exit with status 65280
+2017-12-25 22:08:45 pid:8077 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:45 pid:4828 worker[none:8077] exit with status 65280
+2017-12-25 22:08:45 pid:8084 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:45 pid:4828 worker[none:8084] exit with status 65280
+2017-12-25 22:08:45 pid:8091 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:45 pid:4828 worker[none:8091] exit with status 65280
+2017-12-25 22:08:46 pid:8098 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:46 pid:4828 worker[none:8098] exit with status 65280
+2017-12-25 22:08:46 pid:8105 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:46 pid:4828 worker[none:8105] exit with status 65280
+2017-12-25 22:08:46 pid:8112 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:46 pid:4828 worker[none:8112] exit with status 65280
+2017-12-25 22:08:46 pid:8119 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:46 pid:4828 worker[none:8119] exit with status 65280
+2017-12-25 22:08:46 pid:8126 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:46 pid:4828 worker[none:8126] exit with status 65280
+2017-12-25 22:08:46 pid:8133 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:46 pid:4828 worker[none:8133] exit with status 65280
+2017-12-25 22:08:46 pid:8140 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:46 pid:4828 worker[none:8140] exit with status 65280
+2017-12-25 22:08:46 pid:8147 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:46 pid:4828 worker[none:8147] exit with status 65280
+2017-12-25 22:08:46 pid:4828 Workerman[server.php] stopping ...
+2017-12-25 22:08:47 pid:8154 Worker process terminated with ERROR: E_ERROR "Class 'app\push\controller\Worker' not found in /home/wwwroot/default/app/push/controller/WorkerController.php on line 67"
+2017-12-25 22:08:47 pid:4828 worker[none:8154] exit with status 65280
+2017-12-25 22:08:47 pid:4828 Workerman[server.php] has been stopped
+2017-12-25 22:09:04 pid:8161 Workerman[server.php] start in DEBUG mode
+2017-12-25 22:24:33 pid:8161 Workerman[server.php] stopping ...
+2017-12-25 22:24:34 pid:8161 Workerman[server.php] has been stopped
+2017-12-25 22:32:49 pid:8200 Workerman[server.php] start in DEBUG mode
+2017-12-25 22:37:22 pid:8200 Workerman[server.php] stopping ...
+2017-12-25 22:37:22 pid:8200 Workerman[server.php] has been stopped
+2017-12-25 22:48:20 pid:8241 Workerman[push.php] start in DAEMON mode
+2017-12-26 00:37:10 pid:8279 Workerman[push.php] start in DAEMON mode
+2017-12-26 00:37:10 pid:8279 Workerman[push.php] already running
+2017-12-26 00:37:22 pid:8280 Workerman[push.php] restart 
+2017-12-26 00:37:22 pid:8280 Workerman[push.php] is stoping ...
+2017-12-26 00:37:22 pid:8243 Workerman[push.php] stopping ...
+2017-12-26 00:37:22 pid:8243 Workerman[push.php] has been stopped
+2017-12-26 00:37:22 pid:8280 Workerman[push.php] stop success
+2017-12-26 00:40:26 pid:8285 Workerman[push.php] status 
+2017-12-26 00:40:48 pid:8286 Workerman[push.php] status 
+2017-12-26 00:46:38 pid:8288 Workerman[push.php] stop 
+2017-12-26 00:46:38 pid:8288 Workerman[push.php] is stoping ...
+2017-12-26 00:46:38 pid:8282 Workerman[push.php] stopping ...
+2017-12-26 00:46:38 pid:8282 Workerman[push.php] has been stopped
+2017-12-26 00:46:38 pid:8288 Workerman[push.php] stop success
+2017-12-26 00:46:41 pid:8289 Workerman[push.php] start in DEBUG mode
+2017-12-26 01:06:13 pid:8289 Workerman[push.php] stopping ...
+2017-12-26 01:06:13 pid:8289 Workerman[push.php] has been stopped
+2017-12-26 01:06:16 pid:8307 Workerman[push.php] start in DEBUG mode
+2017-12-26 01:06:47 pid:8307 Workerman[push.php] stopping ...
+2017-12-26 01:06:47 pid:8307 Workerman[push.php] has been stopped
+2017-12-26 01:06:51 pid:8309 Workerman[push.php] status 
+2017-12-26 01:06:51 pid:8309 Workerman[push.php] not run
+2017-12-26 01:06:57 pid:8310 Workerman[push.php] start in DEBUG mode
+2017-12-26 01:07:15 pid:8310 Workerman[push.php] stopping ...
+2017-12-26 01:07:15 pid:8310 Workerman[push.php] has been stopped
+2017-12-26 01:07:17 pid:8312 Workerman[push.php] start in DEBUG mode
+2017-12-26 01:32:44 pid:8312 Workerman[push.php] stopping ...
+2017-12-26 01:32:44 pid:8312 Workerman[push.php] has been stopped

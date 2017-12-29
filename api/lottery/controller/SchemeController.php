@@ -13,6 +13,7 @@ use cmf\controller\RestBaseController;
 use think\Request;
 use think\Response;
 use think\Db;
+use think\Validate;
 
 class SchemeController extends BaseController
 {
@@ -84,7 +85,36 @@ class SchemeController extends BaseController
 	protected function addScheme($post_scheme){
 		// $res = json_decode ( $post_scheme, true);//对POST信息解码
 		$res = $post_scheme;
-		//对信息进行校验，暂时没写
+		//对信息进行校验
+		$validate = new Validate([
+            'lotterytype'	=> 'require',
+            'shopid'        => 'require',
+            'schemeid'		=> 'require',
+            'endtime'		=> 'require',
+            'tickets'		=> 'require',
+            'totalamount'	=> 'require'
+        ]);
+
+        $validate->message([
+			'lotterytype.require'	=> '缺少彩票类型',
+            'shopid.require'		=> '缺少彩店ID',
+            'schemeid.require'		=> '缺少方案编号',
+            'endtime.require'		=> '缺少方案截止时间',
+            'tickets.require'		=> '缺少总票数',
+            'totalamount.require'	=> '缺少总金额'
+        ]);
+		$rule = [
+					['multiples','require|number|between:1,99','缺少倍数|倍数必须是数字|倍数必须在1~99之间'],
+					['amount','require|number|>:0','缺少单票金额|单票金额必须是数字|单票金额必须大于0'],
+					['type','require','缺少彩票玩法'],
+					['ticketno','require','缺少彩票序号'],
+					['lotteryNumber','require','缺少彩票号码']
+				];
+		$validate_sd = new Validate($rule);
+		if (!$validate->check($res)) {
+            $this->error($validate->getError());
+        }
+
 		$new_scheme['lotterytype'] = $res['lotterytype'];
 		$new_scheme['shopid'] = $res['shopid'];
 		$new_scheme['mobile'] = $res['mobile'];
@@ -98,7 +128,10 @@ class SchemeController extends BaseController
 		// dump($new_scheme);
 		
 		$scheme_detail = array();
-		foreach($res['schemedetail'] as $key=>$value){  
+		foreach($res['schemedetail'] as $key=>$value){ 
+			if (!$validate_sd->check($value)){
+				$this->error($validate_sd->getError());
+			}
 			// $value["lotteryNumber"]= addslashes(json_encode($value["lotteryNumber"]));
 			$value["lotteryNumber"]= json_encode($value["lotteryNumber"]);
 			$value["sid"] = $res['schemeid'];
@@ -131,9 +164,15 @@ class SchemeController extends BaseController
 	protected function updateScheme($patch_scheme){
 		$res = $patch_scheme;
 		// dump($res);
-		//对信息进行校验，暂时没写
-		if ( !in_array((int)$res['tstatus'],array(2,3,4,6),TRUE) ){
-			$this->error('tstatus提交错误');
+		//对信息进行校验
+		$rule = [
+					['shopid','require|number|>:0','缺少店铺id|店铺id必须是数字|店铺id必须大于0'],
+					['schemeid','require','缺少方案编号'],
+					['tstatus','require|number|in:2,3,4,6','缺少方案状态|方案状态必须是数字|提交的方案状态只能是2,3,4,6']
+				];
+		$validate = new Validate($rule);
+		if ( !$validate->check($res) ){
+			$this->error($validate->getError());
 		}
 		$map['schemeid'] = $res['schemeid'];
 		if ($res['tstatus'] == 6){
