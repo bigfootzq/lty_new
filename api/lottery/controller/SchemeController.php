@@ -216,7 +216,7 @@ class SchemeController extends BaseController
 			if($res['tstatus'] == 3 || $res['tstatus'] == 4){
 				$list = Db::name('lottery_scheme')->where('schemeid', $res["schemeid"])->setField('tstatus',$res['tstatus']);//更新数据库，注意这里要锁表,暂时没写。
 				
-				$this->success('状态变更已经提交');
+				$this->success('状态变更已经提交,请刷新！');
 			}
 			if($res['tstatus'] == 2){
 				
