@@ -180,6 +180,7 @@ class SchemeController extends BaseController
 			$map2['sid'] = $res['schemeid'];
 			$detail = Db::name('lottery_scheme_detail')->where($map2)->select();
 			foreach ($detail as $k2 =>$v2){
+					$de[$k2 ]['multiples'] = $v2['multiples'];
 					$de[$k2 ]['amount'] = $v2['amount'];
 					$de[$k2 ]['append'] = $v2['append'];
 					$de[$k2 ]['type'] = $v2['type'];
@@ -197,8 +198,19 @@ class SchemeController extends BaseController
 			if ($list == false){//返回失败报文,
 				$this->error('变更失败');
 			}else{
+				$de = array();
+				$map2['sid'] = $res['schemeid'];
+				$detail = Db::name('lottery_scheme_detail')->where($map2)->select();
+				foreach ($detail as $k2 =>$v2){
+						$de[$k2 ]['multiples'] = $v2['multiples'];
+						$de[$k2 ]['amount'] = $v2['amount'];
+						$de[$k2 ]['append'] = $v2['append'];
+						$de[$k2 ]['type'] = $v2['type'];
+						$de[$k2 ]['ticketno'] = $v2['ticketno'];
+						$de[$k2 ]['lotteryNumber'] = (array)json_decode($v2['lotteryNumber']);
+					}
 				//返回成功报文
-				$this->success('状态变更已经提交');
+				$this->success('状态变更为出票中',['schemedetail'=>$de]);
 			}
 		}else if($tstatus == 2){
 			if($res['tstatus'] == 3 || $res['tstatus'] == 4){

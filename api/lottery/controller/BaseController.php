@@ -113,7 +113,7 @@ class BaseController
 
         $this->token      = $token;
         // $this->deviceType = $deviceType;
-
+        // dump($token);
         $user = Db::name('user_token')
             ->alias('a')
             ->field('b.*')
@@ -126,7 +126,8 @@ class BaseController
             $this->userId   = $user['id'];
             $this->userType = $user['user_type'];
         }
-
+		// dump($token);
+		// dump($user);
     }
 
     /**
