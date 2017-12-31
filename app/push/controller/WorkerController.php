@@ -14,8 +14,8 @@ use Workerman\Worker;
 class WorkerController extends Server
 {
     protected $socket = 'tcp://0.0.0.0:1234';
+	protected $db = NULL;
 	
-
     /**
      * 收到信息
      * @Author: 296720094@qq.com chenning
@@ -28,20 +28,23 @@ class WorkerController extends Server
         // 判断当前客户端是否已经验证,既是否设置了uid
 		if(!isset($connection->uid))
 		{
-		   // 没验证的话把第一个包当做uid（这里为了方便演示，没做真正的验证）
+		   // 读取上传的data，验证token
 			$res =  json_decode($data,true);
 			$token = $res['token'];
-			$user_id = Db::name('user_token')
-            ->where(['token' => $token])
-			->value('user_id');
-			if ($user_id == (int)$res['shopid']){
-				$shopid = $res['shopid'];
-				$connection->uid = $shopid;
+			if ($token){
+				$user_id = Db::name('user_token')
+				->where(['token' => $token])
+				->value('user_id');
 			}else{
 				$connection->send(json_encode(array('code'=>0,'msg'=>'Authentication failure')));
 			}
 			
-			$connection->send(json_encode(array('code'=>1,'msg'=>'Authentication ok')));
+			if (!empty($user_id) && ($user_id == (int)$res['shopid'])){
+				$connection->uid = (int)$res['shopid'];
+				$connection->send(json_encode(array('code'=>1,'msg'=>'Authentication ok')));
+			}else{
+				$connection->send(json_encode(array('code'=>0,'msg'=>'Authentication failure')));
+			}
 
 		   /* 保存uid到connection的映射，这样可以方便的通过uid查找connection，
 			* 实现针对特定uid推送数据

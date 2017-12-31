@@ -5,6 +5,7 @@
 .idea
 composer.lock
 /simplewind
+/simplewind/vendor/workerman/workerman.log
 /data
 /public/plugins/
 /public/static/
@@ -16,3 +17,4 @@ composer.lock
 /public/router.php
 /public/pma
 /think
+
