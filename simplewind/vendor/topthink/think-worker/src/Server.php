@@ -20,9 +20,9 @@ abstract class Server
 {
     protected $worker;
     protected $socket    = '';
-    protected $protocol  = 'http';
+    protected $protocol  = 'tcp';
     protected $host      = '0.0.0.0';
-    protected $port      = '2346';
+    protected $port      = '1234';
     protected $processes = 1;
 
     /**
@@ -35,6 +35,8 @@ abstract class Server
         $this->worker = new Worker($this->socket ?: $this->protocol . '://' . $this->host . ':' . $this->port);
         // 设置进程数
         $this->worker->count = $this->processes;
+		// 新增加一个属性，用来保存uid到connection的映射
+		$this->worker->uidConnections = array();
         // 初始化
         $this->init();
 
@@ -45,7 +47,7 @@ abstract class Server
             }
         }
         // Run worker
-        // Worker::runAll();
+        Worker::runAll();
     }
 
     protected function init()

@@ -3,7 +3,7 @@
 use Workerman\Worker;
 require_once './workerman/Autoloader.php';
 	// 初始化一个worker容器，监听1234端口
-	$worker = new Worker('websocket://0.0.0.0:1234');
+	$worker = new Worker('tcp://0.0.0.0:1234');
 	// 这里进程数必须设置为1
 	$worker->count = 1;
 	// worker进程启动后建立一个内部通讯端口
@@ -19,6 +19,7 @@ require_once './workerman/Autoloader.php';
 			$shopid = $data['shopid'];
 			// 通过workerman，向uid的页面推送数据
 			$ret = sendMessageByUid($shopid, $buffer);
+			// $ret = broadcast($buffer);
 			// 返回推送结果
 			$connection->send($ret ? 'ok' : 'fail');
 		};
@@ -33,7 +34,9 @@ require_once './workerman/Autoloader.php';
 		if(!isset($connection->uid))
 		{
 		   // 没验证的话把第一个包当做uid（这里为了方便演示，没做真正的验证）
-		   $connection->uid = $data;
+			$connection->uid = $data;
+			$connection->send("hello".$connection->uid);
+
 		   /* 保存uid到connection的映射，这样可以方便的通过uid查找connection，
 			* 实现针对特定uid推送数据
 			*/

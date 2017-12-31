@@ -156,7 +156,7 @@ class SchemeController extends BaseController
 		
 		if ($result1 && $result2){
 			$this->pushSchemeNum($new_scheme['shopid']);
-			$this->success('方案已经上传');
+			$this->success('方案上传成功');
 		}else{
 			$this->error('方案上传失败');
 		}
@@ -251,6 +251,8 @@ class SchemeController extends BaseController
 		
 		
 	}
+	
+	
 	 
 
 }
