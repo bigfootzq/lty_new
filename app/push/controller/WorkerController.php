@@ -1,9 +1,9 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: ning
- * Date: 2017/8/25
- * Time: 13:50
+ * Created by notepad++.
+ * User: bigfoot
+ * Date: 2017/12/31
+ * Time: 23:50
  */
 namespace app\push\controller;
 
@@ -19,6 +19,7 @@ class WorkerController extends Server
     /**
      * 收到信息
      * @Author: 296720094@qq.com chenning
+	 * @Editor: bigfootzq
      * @param $connection
      * @param $data
      */

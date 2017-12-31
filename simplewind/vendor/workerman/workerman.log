@@ -584,3 +584,6 @@ Stack trace:
 2017-12-31 23:47:55 pid:24507 Workerman[server.php] start in DEBUG mode
 2017-12-31 23:48:33 pid:24507 Workerman[server.php] stopping ...
 2017-12-31 23:48:33 pid:24507 Workerman[server.php] has been stopped
+2017-12-31 23:59:01 pid:24524 Workerman[server.php] start in DEBUG mode
+2017-12-31 23:59:05 pid:24524 Workerman[server.php] stopping ...
+2017-12-31 23:59:05 pid:24524 Workerman[server.php] has been stopped
