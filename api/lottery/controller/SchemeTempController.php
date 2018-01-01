@@ -151,7 +151,8 @@ class SchemeTempController extends BaseTempController
 		}
 		
 		if ($result1 && $result2){
-			$this->pushSchemeNum($new_scheme['shopid']);
+			//测试上传部分暂时不推送消息。
+			//$this->pushSchemeNum($new_scheme['shopid']);
 			$this->success('方案已经上传');
 		}else{
 			$this->error('方案上传失败');
