@@ -37,5 +37,17 @@ define('RUNTIME_PATH',__DIR__.'/../../data/runtime/api/');
 // 加载框架基础文件
 require __DIR__ . '/../../simplewind/thinkphp/base.php';
 
+// 准许跨域请求。
+header("Access-Control-Allow-Origin: * ");
+header("Access-Control-Allow-Methods: POST, GET, OPTIONS, PUT, DELETE");
+header('Access-Control-Allow-Headers:*');  
+/**
+ * 浏览器第一次在处理复杂请求的时候会先发起OPTIONS请求。路由在处理请求的时候会导致PUT请求失败。
+ * 在检测到option请求的时候就停止继续执行
+ */
+if($_SERVER['REQUEST_METHOD'] == 'OPTIONS'){
+    exit;
+}
+
 // 执行应用
 \think\App::run()->send();
