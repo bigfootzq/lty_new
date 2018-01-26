@@ -327,6 +327,16 @@ class DealController extends BaseController
 		$endtime = $starttime + $no*60*10;//每期间隔10分钟
 		return date('Y-m-d H:i:s',$endtime) ;
 	}
-
+	
+	/**
+	 * 生成订单号
+	 * 可根据自身的业务需求更改
+	 */
+	private function create_out_trade_no() {
+		$year_code = array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J');
+		return 'CT'.$year_code[intval(date('Y')) - 2010] .strtoupper(dechex(date('m'))) .
+			date('d') .substr(time(), -5) . substr(microtime(), 2, 5) . sprintf('d', rand(0, 99));
+	}
+	
 
 }
