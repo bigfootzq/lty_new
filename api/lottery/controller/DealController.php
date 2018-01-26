@@ -278,7 +278,7 @@ class DealController extends BaseController
 						->field('shopid,user_login,mobile')
 						->where($user)
 						->find();
-			$data['schemeid'] = create_out_trade_no();//生成订单号
+			$data['schemeid'] = $this->create_out_trade_no();//生成订单号
 			$data['shopid'] = $userinfo['shopid'];
 			$data['username'] = $userinfo['user_login'];
 			$data['mobile'] = $userinfo['mobile'];
