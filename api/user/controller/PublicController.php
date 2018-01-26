@@ -19,14 +19,14 @@ class PublicController extends RestBaseController
     {
         $validate = new Validate([
             'username'          => 'require',
-            'password'          => 'require',
-            'verification_code' => 'require'
+            'password'          => 'require'
+            // 'verification_code' => 'require'
         ]);
 
         $validate->message([
             'username.require'          => '请输入手机号,邮箱!',
-            'password.require'          => '请输入您的密码!',
-            'verification_code.require' => '请输入数字验证码!'
+            'password.require'          => '请输入您的密码!'
+            // 'verification_code.require' => '请输入数字验证码!'
         ]);
 
         $data = $this->request->param();
@@ -48,10 +48,10 @@ class PublicController extends RestBaseController
             $this->error("请输入正确的手机或者邮箱格式!");
         }
 
-        $errMsg = cmf_check_verification_code($data['username'], $data['verification_code']);
-        if (!empty($errMsg)) {
-            $this->error($errMsg);
-        }
+        // $errMsg = cmf_check_verification_code($data['username'], $data['verification_code']);
+        // if (!empty($errMsg)) {
+            // $this->error($errMsg);
+        // }
 
         $findUserCount = $userQuery->count();
 

@@ -22,6 +22,8 @@ Route::post([
     'user/articles/deletes' => 'user/Articles/deletes',
     'user/favorites'        => 'user/favorites/setFavorites', //添加收藏
     'user/comments'         => 'user/comments/setComments', //添加评论
+	'user/reg'				=> 'user/public/register',//注册
+	'user/login'			=> 'user/public/login',//登录
 ]);
 
 Route::delete([
