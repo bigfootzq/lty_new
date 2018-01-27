@@ -186,6 +186,7 @@ class SchemeController extends BaseController
 					$de[$k2 ]['type'] = $v2['type'];
 					$de[$k2 ]['ticketno'] = $v2['ticketno'];
 					$de[$k2 ]['lotteryNumber'] = (array)json_decode($v2['lotteryNumber']);
+					
 				}
 			$this->success('请求成功',['schemedetail'=>$de]);
 		}

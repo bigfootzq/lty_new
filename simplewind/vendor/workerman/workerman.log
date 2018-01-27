@@ -587,3 +587,565 @@ Stack trace:
 2017-12-31 23:59:01 pid:24524 Workerman[server.php] start in DEBUG mode
 2017-12-31 23:59:05 pid:24524 Workerman[server.php] stopping ...
 2017-12-31 23:59:05 pid:24524 Workerman[server.php] has been stopped
+2018-01-28 00:56:49 pid:3601 Workerman[server.php] start in DAEMON mode
+2018-01-28 00:56:49 pid:3601 Workerman[server.php] already running
+2018-01-28 00:57:00 pid:3603 Workerman[server.php] status 
+2018-01-28 00:57:12 pid:3605 Workerman[server.php] stop 
+2018-01-28 00:57:12 pid:3605 Workerman[server.php] not run
+2018-01-28 00:57:17 pid:3607 Workerman[server.php] start in DAEMON mode
+2018-01-28 00:58:28 pid:3611 Workerman[server.php] status 
+2018-01-28 00:58:28 pid:3611 Workerman[server.php] not run
+2018-01-28 00:59:01 pid:3615 Workerman[server.php] status 
+2018-01-28 01:00:33 pid:3610 exception 'think\exception\ErrorException' with message 'Undefined property: Workerman\Connection\TcpConnection::$uid' in /home/wwwroot/default/app/push/controller/WorkerController.php:53
+Stack trace:
+#0 /home/wwwroot/default/app/push/controller/WorkerController.php(53): think\Error::appError(8, 'Undefined prope...', '/home/wwwroot/d...', 53, Array)
+#1 [internal function]: app\push\controller\WorkerController->onMessage(Object(Workerman\Connection\TcpConnection), '2')
+#2 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Connection/TcpConnection.php(680): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '2')
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #271)
+#4 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#5 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#6 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#7 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#8 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#9 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(459): Workerman\Worker::forkWorkers()
+#10 /home/wwwroot/default/simplewind/vendor/topthink/think-worker/src/Server.php(50): Workerman\Worker::runAll()
+#11 [internal function]: think\worker\Server->__construct()
+#12 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#13 /home/wwwroot/default/simplewind/thinkphp/library/think/Loader.php(420): think\App::invokeClass('app\\push\\contro...')
+#14 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(388): think\Loader::controller('worker', 'controller', true, 'Error')
+#15 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(296): think\App::module(Array, Array, NULL)
+#16 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#17 /home/wwwroot/default/simplewind/thinkphp/start.php(18): think\App::run()
+#18 /home/wwwroot/default/server.php(33): require('/home/wwwroot/d...')
+#19 {main}
+2018-01-28 01:00:33 pid:3610 Worker process terminated
+2018-01-28 01:00:33 pid:3609 worker[none:3610] exit with status 64000
+2018-01-28 01:04:19 pid:3616 exception 'think\exception\ErrorException' with message 'Error while sending STMT_CLOSE packet. PID=3616' in /home/wwwroot/default/simplewind/thinkphp/library/think/db/Connection.php:316
+Stack trace:
+#0 /home/wwwroot/default/simplewind/thinkphp/library/think/db/Connection.php(316): think\Error::appError(2, 'Error while sen...', '/home/wwwroot/d...', 316, Array)
+#1 /home/wwwroot/default/simplewind/thinkphp/library/think/db/Connection.php(359): think\db\Connection->free()
+#2 /home/wwwroot/default/simplewind/thinkphp/library/think/db/connector/Mysql.php(62): think\db\Connection->query('SHOW COLUMNS FR...', Array, false, true)
+#3 /home/wwwroot/default/simplewind/thinkphp/library/think/db/Query.php(1741): think\db\connector\Mysql->getFields('lty_user_token')
+#4 /home/wwwroot/default/simplewind/thinkphp/library/think/db/Query.php(1789): think\db\Query->getTableInfo('lty_user_token', 'type')
+#5 /home/wwwroot/default/simplewind/thinkphp/library/think/db/Query.php(1795): think\db\Query->getFieldsType('lty_user_token')
+#6 /home/wwwroot/default/simplewind/thinkphp/library/think/db/Builder.php(256): think\db\Query->getFieldsBind('lty_user_token')
+#7 /home/wwwroot/default/simplewind/thinkphp/library/think/db/Builder.php(226): think\db\Builder->buildWhere(Array, Array)
+#8 /home/wwwroot/default/simplewind/thinkphp/library/think/db/Builder.php(690): think\db\Builder->parseWhere(Array, Array)
+#9 /home/wwwroot/default/simplewind/thinkphp/library/think/db/Query.php(2259): think\db\Builder->select(Array)
+#10 /home/wwwroot/default/simplewind/thinkphp/library/think/db/Query.php(413): think\db\Query->getPdo()
+#11 /home/wwwroot/default/app/push/controller/WorkerController.php(38): think\db\Query->value('user_id')
+#12 [internal function]: app\push\controller\WorkerController->onMessage(Object(Workerman\Connection\TcpConnection), '{"token":"eyJ0e...')
+#13 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Connection/TcpConnection.php(680): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"token":"eyJ0e...')
+#14 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #1038)
+#15 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#16 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#17 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#18 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#19 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#20 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1426): Workerman\Worker::forkWorkers()
+#21 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1375): Workerman\Worker::monitorWorkersForLinux()
+#22 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(461): Workerman\Worker::monitorWorkers()
+#23 /home/wwwroot/default/simplewind/vendor/topthink/think-worker/src/Server.php(50): Workerman\Worker::runAll()
+#24 [internal function]: think\worker\Server->__construct()
+#25 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#26 /home/wwwroot/default/simplewind/thinkphp/library/think/Loader.php(420): think\App::invokeClass('app\\push\\contro...')
+#27 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(388): think\Loader::controller('worker', 'controller', true, 'Error')
+#28 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(296): think\App::module(Array, Array, NULL)
+#29 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#30 /home/wwwroot/default/simplewind/thinkphp/start.php(18): think\App::run()
+#31 /home/wwwroot/default/server.php(33): require('/home/wwwroot/d...')
+#32 {main}
+2018-01-28 01:04:19 pid:3616 Worker process terminated
+2018-01-28 01:04:19 pid:3609 worker[none:3616] exit with status 64000
+2018-01-28 01:04:35 pid:3633 exception 'think\exception\ErrorException' with message 'Error while sending STMT_CLOSE packet. PID=3633' in /home/wwwroot/default/simplewind/thinkphp/library/think/db/Connection.php:316
+Stack trace:
+#0 /home/wwwroot/default/simplewind/thinkphp/library/think/db/Connection.php(316): think\Error::appError(2, 'Error while sen...', '/home/wwwroot/d...', 316, Array)
+#1 /home/wwwroot/default/simplewind/thinkphp/library/think/db/Connection.php(359): think\db\Connection->free()
+#2 /home/wwwroot/default/simplewind/thinkphp/library/think/db/connector/Mysql.php(62): think\db\Connection->query('SHOW COLUMNS FR...', Array, false, true)
+#3 /home/wwwroot/default/simplewind/thinkphp/library/think/db/Query.php(1741): think\db\connector\Mysql->getFields('lty_user_token')
+#4 /home/wwwroot/default/simplewind/thinkphp/library/think/db/Query.php(1789): think\db\Query->getTableInfo('lty_user_token', 'type')
+#5 /home/wwwroot/default/simplewind/thinkphp/library/think/db/Query.php(1795): think\db\Query->getFieldsType('lty_user_token')
+#6 /home/wwwroot/default/simplewind/thinkphp/library/think/db/Builder.php(256): think\db\Query->getFieldsBind('lty_user_token')
+#7 /home/wwwroot/default/simplewind/thinkphp/library/think/db/Builder.php(226): think\db\Builder->buildWhere(Array, Array)
+#8 /home/wwwroot/default/simplewind/thinkphp/library/think/db/Builder.php(690): think\db\Builder->parseWhere(Array, Array)
+#9 /home/wwwroot/default/simplewind/thinkphp/library/think/db/Query.php(2259): think\db\Builder->select(Array)
+#10 /home/wwwroot/default/simplewind/thinkphp/library/think/db/Query.php(413): think\db\Query->getPdo()
+#11 /home/wwwroot/default/app/push/controller/WorkerController.php(38): think\db\Query->value('user_id')
+#12 [internal function]: app\push\controller\WorkerController->onMessage(Object(Workerman\Connection\TcpConnection), '{"token":"eyJ0e...')
+#13 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Connection/TcpConnection.php(680): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"token":"eyJ0e...')
+#14 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #3297)
+#15 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#16 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#17 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#18 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#19 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#20 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1426): Workerman\Worker::forkWorkers()
+#21 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1375): Workerman\Worker::monitorWorkersForLinux()
+#22 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(461): Workerman\Worker::monitorWorkers()
+#23 /home/wwwroot/default/simplewind/vendor/topthink/think-worker/src/Server.php(50): Workerman\Worker::runAll()
+#24 [internal function]: think\worker\Server->__construct()
+#25 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#26 /home/wwwroot/default/simplewind/thinkphp/library/think/Loader.php(420): think\App::invokeClass('app\\push\\contro...')
+#27 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(388): think\Loader::controller('worker', 'controller', true, 'Error')
+#28 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(296): think\App::module(Array, Array, NULL)
+#29 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#30 /home/wwwroot/default/simplewind/thinkphp/start.php(18): think\App::run()
+#31 /home/wwwroot/default/server.php(33): require('/home/wwwroot/d...')
+#32 {main}
+2018-01-28 01:04:35 pid:3633 Worker process terminated
+2018-01-28 01:04:35 pid:3609 worker[none:3633] exit with status 64000
+2018-01-28 01:05:14 pid:3634 exception 'think\exception\ErrorException' with message 'Undefined property: Workerman\Connection\TcpConnection::$uid' in /home/wwwroot/default/app/push/controller/WorkerController.php:53
+Stack trace:
+#0 /home/wwwroot/default/app/push/controller/WorkerController.php(53): think\Error::appError(8, 'Undefined prope...', '/home/wwwroot/d...', 53, Array)
+#1 [internal function]: app\push\controller\WorkerController->onMessage(Object(Workerman\Connection\TcpConnection), '"data": {\n     ...')
+#2 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Connection/TcpConnection.php(680): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '"data": {\n     ...')
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #3444)
+#4 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#5 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#6 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#7 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#8 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#9 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1426): Workerman\Worker::forkWorkers()
+#10 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1375): Workerman\Worker::monitorWorkersForLinux()
+#11 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(461): Workerman\Worker::monitorWorkers()
+#12 /home/wwwroot/default/simplewind/vendor/topthink/think-worker/src/Server.php(50): Workerman\Worker::runAll()
+#13 [internal function]: think\worker\Server->__construct()
+#14 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#15 /home/wwwroot/default/simplewind/thinkphp/library/think/Loader.php(420): think\App::invokeClass('app\\push\\contro...')
+#16 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(388): think\Loader::controller('worker', 'controller', true, 'Error')
+#17 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(296): think\App::module(Array, Array, NULL)
+#18 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#19 /home/wwwroot/default/simplewind/thinkphp/start.php(18): think\App::run()
+#20 /home/wwwroot/default/server.php(33): require('/home/wwwroot/d...')
+#21 {main}
+2018-01-28 01:05:14 pid:3634 Worker process terminated
+2018-01-28 01:05:14 pid:3609 worker[none:3634] exit with status 64000
+2018-01-28 01:06:17 pid:3635 exception 'think\exception\ErrorException' with message 'Undefined property: Workerman\Connection\TcpConnection::$uid' in /home/wwwroot/default/app/push/controller/WorkerController.php:53
+Stack trace:
+#0 /home/wwwroot/default/app/push/controller/WorkerController.php(53): think\Error::appError(8, 'Undefined prope...', '/home/wwwroot/d...', 53, Array)
+#1 [internal function]: app\push\controller\WorkerController->onMessage(Object(Workerman\Connection\TcpConnection), '"data": { "toke...')
+#2 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Connection/TcpConnection.php(680): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '"data": { "toke...')
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #3951)
+#4 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#5 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#6 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#7 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#8 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#9 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1426): Workerman\Worker::forkWorkers()
+#10 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1375): Workerman\Worker::monitorWorkersForLinux()
+#11 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(461): Workerman\Worker::monitorWorkers()
+#12 /home/wwwroot/default/simplewind/vendor/topthink/think-worker/src/Server.php(50): Workerman\Worker::runAll()
+#13 [internal function]: think\worker\Server->__construct()
+#14 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#15 /home/wwwroot/default/simplewind/thinkphp/library/think/Loader.php(420): think\App::invokeClass('app\\push\\contro...')
+#16 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(388): think\Loader::controller('worker', 'controller', true, 'Error')
+#17 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(296): think\App::module(Array, Array, NULL)
+#18 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#19 /home/wwwroot/default/simplewind/thinkphp/start.php(18): think\App::run()
+#20 /home/wwwroot/default/server.php(33): require('/home/wwwroot/d...')
+#21 {main}
+2018-01-28 01:06:17 pid:3635 Worker process terminated
+2018-01-28 01:06:17 pid:3609 worker[none:3635] exit with status 64000
+2018-01-28 01:07:48 pid:3637 exception 'think\exception\ErrorException' with message 'Undefined property: Workerman\Connection\TcpConnection::$uid' in /home/wwwroot/default/app/push/controller/WorkerController.php:53
+Stack trace:
+#0 /home/wwwroot/default/app/push/controller/WorkerController.php(53): think\Error::appError(8, 'Undefined prope...', '/home/wwwroot/d...', 53, Array)
+#1 [internal function]: app\push\controller\WorkerController->onMessage(Object(Workerman\Connection\TcpConnection), '"data": { "toke...')
+#2 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Connection/TcpConnection.php(680): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '"data": { "toke...')
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #4470)
+#4 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#5 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#6 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#7 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#8 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#9 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1426): Workerman\Worker::forkWorkers()
+#10 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1375): Workerman\Worker::monitorWorkersForLinux()
+#11 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(461): Workerman\Worker::monitorWorkers()
+#12 /home/wwwroot/default/simplewind/vendor/topthink/think-worker/src/Server.php(50): Workerman\Worker::runAll()
+#13 [internal function]: think\worker\Server->__construct()
+#14 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#15 /home/wwwroot/default/simplewind/thinkphp/library/think/Loader.php(420): think\App::invokeClass('app\\push\\contro...')
+#16 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(388): think\Loader::controller('worker', 'controller', true, 'Error')
+#17 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(296): think\App::module(Array, Array, NULL)
+#18 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#19 /home/wwwroot/default/simplewind/thinkphp/start.php(18): think\App::run()
+#20 /home/wwwroot/default/server.php(33): require('/home/wwwroot/d...')
+#21 {main}
+2018-01-28 01:07:48 pid:3637 Worker process terminated
+2018-01-28 01:07:48 pid:3609 worker[none:3637] exit with status 64000
+2018-01-28 01:07:57 pid:3638 exception 'think\exception\ErrorException' with message 'Undefined property: Workerman\Connection\TcpConnection::$uid' in /home/wwwroot/default/app/push/controller/WorkerController.php:53
+Stack trace:
+#0 /home/wwwroot/default/app/push/controller/WorkerController.php(53): think\Error::appError(8, 'Undefined prope...', '/home/wwwroot/d...', 53, Array)
+#1 [internal function]: app\push\controller\WorkerController->onMessage(Object(Workerman\Connection\TcpConnection), '"data": { "toke...')
+#2 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Connection/TcpConnection.php(680): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '"data": { "toke...')
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #5387)
+#4 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#5 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#6 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#7 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#8 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#9 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1426): Workerman\Worker::forkWorkers()
+#10 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1375): Workerman\Worker::monitorWorkersForLinux()
+#11 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(461): Workerman\Worker::monitorWorkers()
+#12 /home/wwwroot/default/simplewind/vendor/topthink/think-worker/src/Server.php(50): Workerman\Worker::runAll()
+#13 [internal function]: think\worker\Server->__construct()
+#14 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#15 /home/wwwroot/default/simplewind/thinkphp/library/think/Loader.php(420): think\App::invokeClass('app\\push\\contro...')
+#16 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(388): think\Loader::controller('worker', 'controller', true, 'Error')
+#17 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(296): think\App::module(Array, Array, NULL)
+#18 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#19 /home/wwwroot/default/simplewind/thinkphp/start.php(18): think\App::run()
+#20 /home/wwwroot/default/server.php(33): require('/home/wwwroot/d...')
+#21 {main}
+2018-01-28 01:07:57 pid:3638 Worker process terminated
+2018-01-28 01:07:57 pid:3609 worker[none:3638] exit with status 64000
+2018-01-28 01:08:43 pid:3641 Workerman[server.php] stop 
+2018-01-28 01:08:43 pid:3641 Workerman[server.php] is stoping ...
+2018-01-28 01:08:43 pid:3609 Workerman[server.php] stopping ...
+2018-01-28 01:08:43 pid:3609 worker[none:3639] exit with status 65280
+2018-01-28 01:08:43 pid:3609 Workerman[server.php] has been stopped
+2018-01-28 01:08:44 pid:3641 Workerman[server.php] stop success
+2018-01-28 01:08:49 pid:3643 Workerman[server.php] start in DAEMON mode
+2018-01-28 01:09:04 pid:3647 Workerman[server.php] start in DEBUG mode
+2018-01-28 01:09:16 pid:3654 Workerman[server.php] stop 
+2018-01-28 01:09:16 pid:3654 Workerman[server.php] not run
+2018-01-28 01:09:23 pid:3655 Workerman[server.php] start in DEBUG mode
+2018-01-28 01:09:32 pid:3662 Workerman[server.php] stop 
+2018-01-28 01:09:32 pid:3662 Workerman[server.php] not run
+2018-01-28 01:09:35 pid:3663 Workerman[server.php] start in DAEMON mode
+2018-01-28 01:09:52 pid:3673 Workerman[server.php] start in DAEMON mode
+2018-01-28 01:09:52 pid:3673 Workerman[server.php] already running
+2018-01-28 01:09:57 pid:3675 Workerman[server.php] stop 
+2018-01-28 01:09:57 pid:3675 Workerman[server.php] is stoping ...
+2018-01-28 01:09:57 pid:3645 Workerman[server.php] stopping ...
+2018-01-28 01:09:57 pid:3645 worker[none:3646] exit with status 65280
+2018-01-28 01:09:57 pid:3645 Workerman[server.php] has been stopped
+2018-01-28 01:09:57 pid:3675 Workerman[server.php] stop success
+2018-01-28 01:09:59 pid:3677 Workerman[server.php] start in DAEMON mode
+2018-01-28 01:10:08 pid:3681 Workerman[server.php] status 
+2018-01-28 01:10:08 pid:3681 Workerman[server.php] not run
+2018-01-28 01:10:21 pid:3683 Workerman[server.php] status 
+2018-01-28 01:10:36 pid:3680 exception 'think\exception\ErrorException' with message 'Undefined property: Workerman\Connection\TcpConnection::$uid' in /home/wwwroot/default/app/push/controller/WorkerController.php:53
+Stack trace:
+#0 /home/wwwroot/default/app/push/controller/WorkerController.php(53): think\Error::appError(8, 'Undefined prope...', '/home/wwwroot/d...', 53, Array)
+#1 [internal function]: app\push\controller\WorkerController->onMessage(Object(Workerman\Connection\TcpConnection), '"data": { "toke...')
+#2 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Connection/TcpConnection.php(680): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '"data": { "toke...')
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #122)
+#4 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#5 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#6 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#7 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#8 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#9 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(459): Workerman\Worker::forkWorkers()
+#10 /home/wwwroot/default/simplewind/vendor/topthink/think-worker/src/Server.php(50): Workerman\Worker::runAll()
+#11 [internal function]: think\worker\Server->__construct()
+#12 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#13 /home/wwwroot/default/simplewind/thinkphp/library/think/Loader.php(420): think\App::invokeClass('app\\push\\contro...')
+#14 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(388): think\Loader::controller('worker', 'controller', true, 'Error')
+#15 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(296): think\App::module(Array, Array, NULL)
+#16 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#17 /home/wwwroot/default/simplewind/thinkphp/start.php(18): think\App::run()
+#18 /home/wwwroot/default/server.php(33): require('/home/wwwroot/d...')
+#19 {main}
+2018-01-28 01:10:36 pid:3680 Worker process terminated
+2018-01-28 01:10:36 pid:3679 worker[none:3680] exit with status 64000
+2018-01-28 01:12:04 pid:3684 exception 'think\exception\ErrorException' with message 'Undefined property: Workerman\Connection\TcpConnection::$uid' in /home/wwwroot/default/app/push/controller/WorkerController.php:53
+Stack trace:
+#0 /home/wwwroot/default/app/push/controller/WorkerController.php(53): think\Error::appError(8, 'Undefined prope...', '/home/wwwroot/d...', 53, Array)
+#1 [internal function]: app\push\controller\WorkerController->onMessage(Object(Workerman\Connection\TcpConnection), '"data":{"token"...')
+#2 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Connection/TcpConnection.php(680): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '"data":{"token"...')
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #427)
+#4 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#5 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#6 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#7 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#8 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#9 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1426): Workerman\Worker::forkWorkers()
+#10 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1375): Workerman\Worker::monitorWorkersForLinux()
+#11 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(461): Workerman\Worker::monitorWorkers()
+#12 /home/wwwroot/default/simplewind/vendor/topthink/think-worker/src/Server.php(50): Workerman\Worker::runAll()
+#13 [internal function]: think\worker\Server->__construct()
+#14 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#15 /home/wwwroot/default/simplewind/thinkphp/library/think/Loader.php(420): think\App::invokeClass('app\\push\\contro...')
+#16 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(388): think\Loader::controller('worker', 'controller', true, 'Error')
+#17 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(296): think\App::module(Array, Array, NULL)
+#18 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#19 /home/wwwroot/default/simplewind/thinkphp/start.php(18): think\App::run()
+#20 /home/wwwroot/default/server.php(33): require('/home/wwwroot/d...')
+#21 {main}
+2018-01-28 01:12:04 pid:3684 Worker process terminated
+2018-01-28 01:12:04 pid:3679 worker[none:3684] exit with status 64000
+2018-01-28 01:13:30 pid:3686 exception 'think\exception\ErrorException' with message 'Undefined property: Workerman\Connection\TcpConnection::$uid' in /home/wwwroot/default/app/push/controller/WorkerController.php:53
+Stack trace:
+#0 /home/wwwroot/default/app/push/controller/WorkerController.php(53): think\Error::appError(8, 'Undefined prope...', '/home/wwwroot/d...', 53, Array)
+#1 [internal function]: app\push\controller\WorkerController->onMessage(Object(Workerman\Connection\TcpConnection), '"data":{"token"...')
+#2 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Connection/TcpConnection.php(680): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '"data":{"token"...')
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #1304)
+#4 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#5 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#6 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#7 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#8 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#9 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1426): Workerman\Worker::forkWorkers()
+#10 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1375): Workerman\Worker::monitorWorkersForLinux()
+#11 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(461): Workerman\Worker::monitorWorkers()
+#12 /home/wwwroot/default/simplewind/vendor/topthink/think-worker/src/Server.php(50): Workerman\Worker::runAll()
+#13 [internal function]: think\worker\Server->__construct()
+#14 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#15 /home/wwwroot/default/simplewind/thinkphp/library/think/Loader.php(420): think\App::invokeClass('app\\push\\contro...')
+#16 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(388): think\Loader::controller('worker', 'controller', true, 'Error')
+#17 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(296): think\App::module(Array, Array, NULL)
+#18 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#19 /home/wwwroot/default/simplewind/thinkphp/start.php(18): think\App::run()
+#20 /home/wwwroot/default/server.php(33): require('/home/wwwroot/d...')
+#21 {main}
+2018-01-28 01:13:30 pid:3686 Worker process terminated
+2018-01-28 01:13:30 pid:3679 worker[none:3686] exit with status 64000
+2018-01-28 01:14:52 pid:3687 exception 'think\exception\ErrorException' with message 'Undefined property: Workerman\Connection\TcpConnection::$uid' in /home/wwwroot/default/app/push/controller/WorkerController.php:53
+Stack trace:
+#0 /home/wwwroot/default/app/push/controller/WorkerController.php(53): think\Error::appError(8, 'Undefined prope...', '/home/wwwroot/d...', 53, Array)
+#1 [internal function]: app\push\controller\WorkerController->onMessage(Object(Workerman\Connection\TcpConnection), '"data":{"token"...')
+#2 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Connection/TcpConnection.php(680): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '"data":{"token"...')
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #1993)
+#4 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#5 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#6 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#7 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#8 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#9 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1426): Workerman\Worker::forkWorkers()
+#10 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1375): Workerman\Worker::monitorWorkersForLinux()
+#11 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(461): Workerman\Worker::monitorWorkers()
+#12 /home/wwwroot/default/simplewind/vendor/topthink/think-worker/src/Server.php(50): Workerman\Worker::runAll()
+#13 [internal function]: think\worker\Server->__construct()
+#14 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#15 /home/wwwroot/default/simplewind/thinkphp/library/think/Loader.php(420): think\App::invokeClass('app\\push\\contro...')
+#16 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(388): think\Loader::controller('worker', 'controller', true, 'Error')
+#17 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(296): think\App::module(Array, Array, NULL)
+#18 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#19 /home/wwwroot/default/simplewind/thinkphp/start.php(18): think\App::run()
+#20 /home/wwwroot/default/server.php(33): require('/home/wwwroot/d...')
+#21 {main}
+2018-01-28 01:14:52 pid:3687 Worker process terminated
+2018-01-28 01:14:52 pid:3679 worker[none:3687] exit with status 64000
+2018-01-28 01:15:13 pid:3690 Workerman[server.php] reload 
+2018-01-28 01:15:13 pid:3679 Workerman[server.php] reloading
+2018-01-28 01:15:13 pid:3679 worker[none:3688] exit with status 65280
+2018-01-28 01:15:19 pid:3693 Workerman[server.php] status 
+2018-01-28 01:15:29 pid:3691 exception 'think\exception\ErrorException' with message 'Undefined property: Workerman\Connection\TcpConnection::$uid' in /home/wwwroot/default/app/push/controller/WorkerController.php:53
+Stack trace:
+#0 /home/wwwroot/default/app/push/controller/WorkerController.php(53): think\Error::appError(8, 'Undefined prope...', '/home/wwwroot/d...', 53, Array)
+#1 [internal function]: app\push\controller\WorkerController->onMessage(Object(Workerman\Connection\TcpConnection), '"data":{"token"...')
+#2 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Connection/TcpConnection.php(680): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '"data":{"token"...')
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #2960)
+#4 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#5 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#6 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#7 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#8 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#9 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1426): Workerman\Worker::forkWorkers()
+#10 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1375): Workerman\Worker::monitorWorkersForLinux()
+#11 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(461): Workerman\Worker::monitorWorkers()
+#12 /home/wwwroot/default/simplewind/vendor/topthink/think-worker/src/Server.php(50): Workerman\Worker::runAll()
+#13 [internal function]: think\worker\Server->__construct()
+#14 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#15 /home/wwwroot/default/simplewind/thinkphp/library/think/Loader.php(420): think\App::invokeClass('app\\push\\contro...')
+#16 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(388): think\Loader::controller('worker', 'controller', true, 'Error')
+#17 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(296): think\App::module(Array, Array, NULL)
+#18 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#19 /home/wwwroot/default/simplewind/thinkphp/start.php(18): think\App::run()
+#20 /home/wwwroot/default/server.php(33): require('/home/wwwroot/d...')
+#21 {main}
+2018-01-28 01:15:29 pid:3691 Worker process terminated
+2018-01-28 01:15:29 pid:3679 worker[none:3691] exit with status 64000
+2018-01-28 01:16:02 pid:3696 Workerman[server.php] stop 
+2018-01-28 01:16:02 pid:3696 Workerman[server.php] is stoping ...
+2018-01-28 01:16:03 pid:3679 Workerman[server.php] stopping ...
+2018-01-28 01:16:03 pid:3679 worker[none:3694] exit with status 65280
+2018-01-28 01:16:03 pid:3679 Workerman[server.php] has been stopped
+2018-01-28 01:16:03 pid:3696 Workerman[server.php] stop success
+2018-01-28 01:16:09 pid:3698 Workerman[server.php] start in DAEMON mode
+2018-01-28 01:16:21 pid:3703 Workerman[server.php] status 
+2018-01-28 01:16:30 pid:3701 exception 'think\exception\ErrorException' with message 'Undefined variable: user_id' in /home/wwwroot/default/app/push/controller/WorkerController.php:47
+Stack trace:
+#0 /home/wwwroot/default/app/push/controller/WorkerController.php(47): think\Error::appError(8, 'Undefined varia...', '/home/wwwroot/d...', 47, Array)
+#1 [internal function]: app\push\controller\WorkerController->onMessage(Object(Workerman\Connection\TcpConnection), '"data":{"token"...')
+#2 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Connection/TcpConnection.php(680): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '"data":{"token"...')
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #110)
+#4 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#5 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#6 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#7 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#8 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#9 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(459): Workerman\Worker::forkWorkers()
+#10 /home/wwwroot/default/simplewind/vendor/topthink/think-worker/src/Server.php(50): Workerman\Worker::runAll()
+#11 [internal function]: think\worker\Server->__construct()
+#12 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#13 /home/wwwroot/default/simplewind/thinkphp/library/think/Loader.php(420): think\App::invokeClass('app\\push\\contro...')
+#14 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(388): think\Loader::controller('worker', 'controller', true, 'Error')
+#15 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(296): think\App::module(Array, Array, NULL)
+#16 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#17 /home/wwwroot/default/simplewind/thinkphp/start.php(18): think\App::run()
+#18 /home/wwwroot/default/server.php(33): require('/home/wwwroot/d...')
+#19 {main}
+2018-01-28 01:16:30 pid:3701 Worker process terminated
+2018-01-28 01:16:30 pid:3700 worker[none:3701] exit with status 64000
+2018-01-28 01:16:34 pid:3704 exception 'think\exception\ErrorException' with message 'Undefined variable: user_id' in /home/wwwroot/default/app/push/controller/WorkerController.php:47
+Stack trace:
+#0 /home/wwwroot/default/app/push/controller/WorkerController.php(47): think\Error::appError(8, 'Undefined varia...', '/home/wwwroot/d...', 47, Array)
+#1 [internal function]: app\push\controller\WorkerController->onMessage(Object(Workerman\Connection\TcpConnection), '"data":{"token"...')
+#2 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Connection/TcpConnection.php(680): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '"data":{"token"...')
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #195)
+#4 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#5 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#6 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#7 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#8 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#9 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1426): Workerman\Worker::forkWorkers()
+#10 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1375): Workerman\Worker::monitorWorkersForLinux()
+#11 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(461): Workerman\Worker::monitorWorkers()
+#12 /home/wwwroot/default/simplewind/vendor/topthink/think-worker/src/Server.php(50): Workerman\Worker::runAll()
+#13 [internal function]: think\worker\Server->__construct()
+#14 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#15 /home/wwwroot/default/simplewind/thinkphp/library/think/Loader.php(420): think\App::invokeClass('app\\push\\contro...')
+#16 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(388): think\Loader::controller('worker', 'controller', true, 'Error')
+#17 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(296): think\App::module(Array, Array, NULL)
+#18 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#19 /home/wwwroot/default/simplewind/thinkphp/start.php(18): think\App::run()
+#20 /home/wwwroot/default/server.php(33): require('/home/wwwroot/d...')
+#21 {main}
+2018-01-28 01:16:34 pid:3704 Worker process terminated
+2018-01-28 01:16:34 pid:3700 worker[none:3704] exit with status 64000
+2018-01-28 01:16:41 pid:3705 exception 'think\exception\ErrorException' with message 'Undefined variable: user_id' in /home/wwwroot/default/app/push/controller/WorkerController.php:47
+Stack trace:
+#0 /home/wwwroot/default/app/push/controller/WorkerController.php(47): think\Error::appError(8, 'Undefined varia...', '/home/wwwroot/d...', 47, Array)
+#1 [internal function]: app\push\controller\WorkerController->onMessage(Object(Workerman\Connection\TcpConnection), '"data":{"token"...')
+#2 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Connection/TcpConnection.php(680): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '"data":{"token"...')
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #248)
+#4 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#5 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#6 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#7 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#8 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#9 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1426): Workerman\Worker::forkWorkers()
+#10 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1375): Workerman\Worker::monitorWorkersForLinux()
+#11 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(461): Workerman\Worker::monitorWorkers()
+#12 /home/wwwroot/default/simplewind/vendor/topthink/think-worker/src/Server.php(50): Workerman\Worker::runAll()
+#13 [internal function]: think\worker\Server->__construct()
+#14 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#15 /home/wwwroot/default/simplewind/thinkphp/library/think/Loader.php(420): think\App::invokeClass('app\\push\\contro...')
+#16 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(388): think\Loader::controller('worker', 'controller', true, 'Error')
+#17 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(296): think\App::module(Array, Array, NULL)
+#18 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#19 /home/wwwroot/default/simplewind/thinkphp/start.php(18): think\App::run()
+#20 /home/wwwroot/default/server.php(33): require('/home/wwwroot/d...')
+#21 {main}
+2018-01-28 01:16:41 pid:3705 Worker process terminated
+2018-01-28 01:16:41 pid:3700 worker[none:3705] exit with status 64000
+2018-01-28 01:17:19 pid:3706 exception 'think\exception\ErrorException' with message 'Undefined variable: user_id' in /home/wwwroot/default/app/push/controller/WorkerController.php:47
+Stack trace:
+#0 /home/wwwroot/default/app/push/controller/WorkerController.php(47): think\Error::appError(8, 'Undefined varia...', '/home/wwwroot/d...', 47, Array)
+#1 [internal function]: app\push\controller\WorkerController->onMessage(Object(Workerman\Connection\TcpConnection), '"data":{"token"...')
+#2 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Connection/TcpConnection.php(680): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '"data":{"token"...')
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #381)
+#4 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#5 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#6 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#7 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#8 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#9 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1426): Workerman\Worker::forkWorkers()
+#10 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1375): Workerman\Worker::monitorWorkersForLinux()
+#11 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(461): Workerman\Worker::monitorWorkers()
+#12 /home/wwwroot/default/simplewind/vendor/topthink/think-worker/src/Server.php(50): Workerman\Worker::runAll()
+#13 [internal function]: think\worker\Server->__construct()
+#14 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#15 /home/wwwroot/default/simplewind/thinkphp/library/think/Loader.php(420): think\App::invokeClass('app\\push\\contro...')
+#16 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(388): think\Loader::controller('worker', 'controller', true, 'Error')
+#17 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(296): think\App::module(Array, Array, NULL)
+#18 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#19 /home/wwwroot/default/simplewind/thinkphp/start.php(18): think\App::run()
+#20 /home/wwwroot/default/server.php(33): require('/home/wwwroot/d...')
+#21 {main}
+2018-01-28 01:17:19 pid:3706 Worker process terminated
+2018-01-28 01:17:19 pid:3700 worker[none:3706] exit with status 64000
+2018-01-28 01:27:39 pid:3707 exception 'think\exception\ErrorException' with message 'Error while sending STMT_CLOSE packet. PID=3707' in /home/wwwroot/default/simplewind/thinkphp/library/think/db/Connection.php:316
+Stack trace:
+#0 /home/wwwroot/default/simplewind/thinkphp/library/think/db/Connection.php(316): think\Error::appError(2, 'Error while sen...', '/home/wwwroot/d...', 316, Array)
+#1 /home/wwwroot/default/simplewind/thinkphp/library/think/db/Connection.php(359): think\db\Connection->free()
+#2 /home/wwwroot/default/simplewind/thinkphp/library/think/db/connector/Mysql.php(62): think\db\Connection->query('SHOW COLUMNS FR...', Array, false, true)
+#3 /home/wwwroot/default/simplewind/thinkphp/library/think/db/Query.php(1741): think\db\connector\Mysql->getFields('lty_user_token')
+#4 /home/wwwroot/default/simplewind/thinkphp/library/think/db/Query.php(1789): think\db\Query->getTableInfo('lty_user_token', 'type')
+#5 /home/wwwroot/default/simplewind/thinkphp/library/think/db/Query.php(1795): think\db\Query->getFieldsType('lty_user_token')
+#6 /home/wwwroot/default/simplewind/thinkphp/library/think/db/Builder.php(256): think\db\Query->getFieldsBind('lty_user_token')
+#7 /home/wwwroot/default/simplewind/thinkphp/library/think/db/Builder.php(226): think\db\Builder->buildWhere(Array, Array)
+#8 /home/wwwroot/default/simplewind/thinkphp/library/think/db/Builder.php(690): think\db\Builder->parseWhere(Array, Array)
+#9 /home/wwwroot/default/simplewind/thinkphp/library/think/db/Query.php(2259): think\db\Builder->select(Array)
+#10 /home/wwwroot/default/simplewind/thinkphp/library/think/db/Query.php(413): think\db\Query->getPdo()
+#11 /home/wwwroot/default/app/push/controller/WorkerController.php(38): think\db\Query->value('user_id')
+#12 [internal function]: app\push\controller\WorkerController->onMessage(Object(Workerman\Connection\TcpConnection), '{"token":"eyJ0e...')
+#13 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Connection/TcpConnection.php(680): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"token":"eyJ0e...')
+#14 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #1924)
+#15 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#16 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#17 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#18 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#19 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#20 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1426): Workerman\Worker::forkWorkers()
+#21 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1375): Workerman\Worker::monitorWorkersForLinux()
+#22 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(461): Workerman\Worker::monitorWorkers()
+#23 /home/wwwroot/default/simplewind/vendor/topthink/think-worker/src/Server.php(50): Workerman\Worker::runAll()
+#24 [internal function]: think\worker\Server->__construct()
+#25 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#26 /home/wwwroot/default/simplewind/thinkphp/library/think/Loader.php(420): think\App::invokeClass('app\\push\\contro...')
+#27 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(388): think\Loader::controller('worker', 'controller', true, 'Error')
+#28 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(296): think\App::module(Array, Array, NULL)
+#29 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#30 /home/wwwroot/default/simplewind/thinkphp/start.php(18): think\App::run()
+#31 /home/wwwroot/default/server.php(33): require('/home/wwwroot/d...')
+#32 {main}
+2018-01-28 01:27:39 pid:3707 Worker process terminated
+2018-01-28 01:27:39 pid:3700 worker[none:3707] exit with status 64000
+2018-01-28 01:28:30 pid:3710 exception 'think\exception\ErrorException' with message 'Error while sending STMT_CLOSE packet. PID=3710' in /home/wwwroot/default/simplewind/thinkphp/library/think/db/Connection.php:316
+Stack trace:
+#0 /home/wwwroot/default/simplewind/thinkphp/library/think/db/Connection.php(316): think\Error::appError(2, 'Error while sen...', '/home/wwwroot/d...', 316, Array)
+#1 /home/wwwroot/default/simplewind/thinkphp/library/think/db/Connection.php(359): think\db\Connection->free()
+#2 /home/wwwroot/default/simplewind/thinkphp/library/think/db/connector/Mysql.php(62): think\db\Connection->query('SHOW COLUMNS FR...', Array, false, true)
+#3 /home/wwwroot/default/simplewind/thinkphp/library/think/db/Query.php(1741): think\db\connector\Mysql->getFields('lty_user_token')
+#4 /home/wwwroot/default/simplewind/thinkphp/library/think/db/Query.php(1789): think\db\Query->getTableInfo('lty_user_token', 'type')
+#5 /home/wwwroot/default/simplewind/thinkphp/library/think/db/Query.php(1795): think\db\Query->getFieldsType('lty_user_token')
+#6 /home/wwwroot/default/simplewind/thinkphp/library/think/db/Builder.php(256): think\db\Query->getFieldsBind('lty_user_token')
+#7 /home/wwwroot/default/simplewind/thinkphp/library/think/db/Builder.php(226): think\db\Builder->buildWhere(Array, Array)
+#8 /home/wwwroot/default/simplewind/thinkphp/library/think/db/Builder.php(690): think\db\Builder->parseWhere(Array, Array)
+#9 /home/wwwroot/default/simplewind/thinkphp/library/think/db/Query.php(2259): think\db\Builder->select(Array)
+#10 /home/wwwroot/default/simplewind/thinkphp/library/think/db/Query.php(413): think\db\Query->getPdo()
+#11 /home/wwwroot/default/app/push/controller/WorkerController.php(38): think\db\Query->value('user_id')
+#12 [internal function]: app\push\controller\WorkerController->onMessage(Object(Workerman\Connection\TcpConnection), '{"token":"eyJ0e...')
+#13 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Connection/TcpConnection.php(680): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"token":"eyJ0e...')
+#14 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #6953)
+#15 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#16 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#17 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#18 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#19 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#20 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1426): Workerman\Worker::forkWorkers()
+#21 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(1375): Workerman\Worker::monitorWorkersForLinux()
+#22 /home/wwwroot/default/simplewind/vendor/workerman/workerman/Worker.php(461): Workerman\Worker::monitorWorkers()
+#23 /home/wwwroot/default/simplewind/vendor/topthink/think-worker/src/Server.php(50): Workerman\Worker::runAll()
+#24 [internal function]: think\worker\Server->__construct()
+#25 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#26 /home/wwwroot/default/simplewind/thinkphp/library/think/Loader.php(420): think\App::invokeClass('app\\push\\contro...')
+#27 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(388): think\Loader::controller('worker', 'controller', true, 'Error')
+#28 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(296): think\App::module(Array, Array, NULL)
+#29 /home/wwwroot/default/simplewind/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#30 /home/wwwroot/default/simplewind/thinkphp/start.php(18): think\App::run()
+#31 /home/wwwroot/default/server.php(33): require('/home/wwwroot/d...')
+#32 {main}
+2018-01-28 01:28:30 pid:3710 Worker process terminated
+2018-01-28 01:28:30 pid:3700 worker[none:3710] exit with status 64000
+2018-01-28 01:28:44 pid:3713 Workerman[server.php] stop 
+2018-01-28 01:28:44 pid:3713 Workerman[server.php] is stoping ...
+2018-01-28 01:28:44 pid:3700 Workerman[server.php] stopping ...
+2018-01-28 01:28:44 pid:3700 worker[none:3711] exit with status 65280
+2018-01-28 01:28:44 pid:3700 Workerman[server.php] has been stopped
+2018-01-28 01:28:44 pid:3713 Workerman[server.php] stop success
+2018-01-28 01:28:47 pid:3715 Workerman[server.php] start in DEBUG mode
+2018-01-28 02:13:33 pid:3715 Workerman[server.php] stopping ...
+2018-01-28 02:13:33 pid:3715 Workerman[server.php] has been stopped
