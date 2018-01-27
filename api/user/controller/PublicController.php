@@ -254,6 +254,20 @@ class PublicController extends RestBaseController
 
         $this->success("退出成功!");
     }
+    // 获取用户信息
+    public function userinfo()
+    {
+        $userId = $this->getUserId();
+        $userinfo = Db::name('user')->where([
+						'id'     => $userId
+					])->find();
+
+        if($userinfo){
+			$this->success('查询用户信息成功',$userinfo);
+		}else{
+			$this->error('查询用户信息失败');
+		}
+    }
 
     // 用户密码重置
     public function passwordReset()

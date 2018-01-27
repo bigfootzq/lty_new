@@ -11,6 +11,7 @@ Route::get('profile/orderdata','lottery/Deal/order');
 Route::get('profile/chaseorderdata','lottery/Deal/chaseorder');
 Route::get('profile/betorderdata','lottery/Deal/betorder');
 Route::get('user/logout','user/public/logout');
+Route::get('user/userinfo','user/public/userinfo');
 
 Route::post('scheme','lottery/SchemeTemp/scheme');
 Route::post('scheme2','lottery/Scheme/scheme');
