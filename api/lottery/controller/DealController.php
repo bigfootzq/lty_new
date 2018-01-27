@@ -296,14 +296,73 @@ class DealController extends BaseController
 			 $data['endtime'] = $endtime;
 			 // $data[''] = $value[''];
 			 //schemedetail:sid,ticketno,type,multiples,amount,append,lotteryNumber,createtime,status,
-			$data['schemedetail']['sid']  = $data['schemeid'];
-			$data['schemedetail']['ticketno']  = 1;
-			$data['schemedetail']['type']  = 1;
-			$data['schemedetail']['multiples']  = $value['multiple'];
-			$data['schemedetail']['amount'] = $value['totalmoney'];
-			$data['schemedetail']['append'] = 1;
-			$data['schemedetail']['lotteryNumber'] = explode('#',$value['number']);
-			$data['schemedetail']['ischase'] = $value['chaseid']?1:0;
+			// $data['schemedetail']['sid']  = $data['schemeid'];
+			// $data['schemedetail']['ticketno']  = 1;
+			// // $data['schemedetail']['type']  = 1;
+			// $data['schemedetail']['multiples']  = $value['multiple'];
+			// $data['schemedetail']['amount'] = $value['totalmoney'];
+			// $data['schemedetail']['append'] = 1;
+			// // $data['schemedetail']['lotteryNumber'] = explode('#',$value['number']);
+			// $data['schemedetail']['ischase'] = $value['chaseid']?1:0;
+			$lotterynumber = explode('#',$value['number']);
+			foreach($lotterynumber as $index =>$value2){
+				$num = explode('.',$value2);
+				switch($num[0]){
+							case "HZ":
+									$data2['type'] = "和值";
+									$data2['lotteryNumber'] = $num[1];
+								break;
+							case "3THTX":
+									$data2['type'] = "三同号通选";
+									$data2['lotteryNumber'] = $num[1];
+								break;
+							case "3THDX":
+									$data2['type'] = "三同号单选";
+									$data2['lotteryNumber'] = $num[1];
+
+								break;
+							case "3LHTX":
+									$data2['type'] = "三连号通选";
+									$data2['lotteryNumber'] = $num[1];
+
+								break;
+							case "3BTH":
+									$data2['type'] = "三不同号标准";
+									$data2['lotteryNumber'] = $num[1];
+
+								break;
+							case "3BTHDT":
+									$data2['type'] = "三不同号胆拖";
+									$data2['lotteryNumber'] = $num[1];
+								break;
+							case "2THFX":
+									$data2['type'] = "二同号复选";
+									$data2['lotteryNumber'] = $num[1];
+								break;
+							case "2THDX":
+									$data2['type'] = "二同号单选";
+									$data2['lotteryNumber'] = $num[1];
+
+								break;
+							case "2BTH":
+									$data2['type'] = "二不同号标准";
+									$data2['lotteryNumber'] = $num[1];
+
+								break;
+							case "2BTHDT":
+									$data2['type'] = "二不同号胆拖";
+									$data2['lotteryNumber'] = $num[1];
+								break;
+				}
+				$data['schemedetail'][$index]['sid']  = $data['schemeid'];
+				$data['schemedetail'][$index]['ticketno']  = 1;
+				$data['schemedetail'][$index]['multiples']  = $value['multiple'];
+				$data['schemedetail'][$index]['amount'] = $value['totalmoney'];
+				$data['schemedetail'][$index]['append'] = 1;
+				$data['schemedetail'][$index]['ischase'] = $value['chaseid']?1:0;
+				$data['schemedetail'][$index]['type'] = $data2['type'];
+				$data['schemedetail'][$index]['lotteryNumber'] = $data2['lotteryNumber'];
+			}
 			dump($data);
 		}
 	}

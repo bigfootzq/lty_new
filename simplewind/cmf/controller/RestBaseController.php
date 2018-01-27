@@ -35,7 +35,7 @@ class RestBaseController
     //用户类型
     protected $userType;
 
-    protected $allowedDeviceTypes = ['mobile', 'android', 'iphone', 'ipad', 'web', 'pc', 'mac', 'wxapp'];
+    protected $allowedDeviceTypes = ['mobile', 'Android', 'iphone', 'ipad', 'web', 'pc', 'mac', 'wxapp'];
 
     /**
      * @var \think\Request Request实例
@@ -92,10 +92,11 @@ class RestBaseController
     private function _initUser()
     {
     
-		// $data =	explode(" ",$this->request->header('Authorization'));
-		// $token = trim($data[1]); 
+
         $token      = $this->request->header('XX-Token');
         $deviceType = $this->request->header('XX-Device-Type');
+		
+
         if (empty($token)) {
             return;
         }
@@ -110,7 +111,7 @@ class RestBaseController
 
         $this->token      = $token;
         $this->deviceType = $deviceType;
-
+		
         $user = Db::name('user_token')
             ->alias('a')
             ->field('b.*')
@@ -118,6 +119,7 @@ class RestBaseController
             // ->where(['token' => $token])
             ->join('__USER__ b', 'a.user_id = b.id')
             ->find();
+
         if (!empty($user)) {
             $this->user     = $user;
             $this->userId   = $user['id'];
@@ -286,7 +288,8 @@ class RestBaseController
      */
     public function getUserId()
     {
-        if (empty($this->userId)) {
+		
+		if (empty($this->userId)) {
             $this->error(['code' => 10001, 'msg' => '用户未登录']);
         }
         return $this->userId;
