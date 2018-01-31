@@ -140,7 +140,7 @@ class DealController extends BaseController
 					// ->limit($limit_start,10)
 					->order('createtime desc')
 					->select();
-		if($result){
+		if( $result && (count($result) != 0)){
 			$this->success("ok",$result);
 		}else{
             $this->error("请求失败!");
@@ -178,10 +178,12 @@ class DealController extends BaseController
 					// ->limit($limit_start,10)
 					->order('createtime desc')
 					->select();
-		if($result){
+					
+		if( $result && (count($result) != 0)){
 			$this->success("ok",$result);
+			
 		}else{
-            $this->error("请求失败!");
+            $this->error("暂时没有您的投注记录!");
 		}
 	}
 	

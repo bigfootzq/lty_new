@@ -30,9 +30,9 @@ class AwardController extends BaseController
     }
 	public function update(){
 		$get = input('get.');
-		dump($get);
+		// dump($get);
 		$result = Db::name('lottery_app_version')->order('version_id')->find();
-		dump($result);
+		// dump($result);
 		if($result){
 			if($result['version_name'] > $get['version']){
 				$data = array(
@@ -120,7 +120,11 @@ class AwardController extends BaseController
 				$provid = 36;
 				break;
 		}
-		$Curqi = '180111083';
+		$Curqi = '180201001';
+		$endtime = $this->getEndtime('JXKS',$Curqi);
+		$seconds = floor((strtotime($endtime)-time()));
+		// dump($endtime);
+		// dump($second);
 		$map['provid'] = $provid;	
 		$map['issue_number'] = $Curqi -1;	
 		$preIssues	=	Db::name($table)
@@ -146,7 +150,7 @@ class AwardController extends BaseController
 									"bstatus" 		=> 	$preIssues['bstatus']
 									
 									);
-		$data['Seconds'] =  173;
+		$data['Seconds'] =  $seconds;
 		$data['HistoryIssues'] = $HistoryIssues;
 		$this->success("",$data);;
 	
