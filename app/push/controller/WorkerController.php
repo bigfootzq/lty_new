@@ -44,7 +44,7 @@ class WorkerController extends Server
 				$connection->uid = (int)$res['shopid'];
 				$connection->send(json_encode(array('code'=>1,'msg'=>'Authentication ok')));
 			}else{
-				$connection->send(json_encode(array('code'=>0,'msg'=>'shopid error'));
+				$connection->send(json_encode(array('code'=>0,'msg'=>'shopid error')));
 			}
 
 		   /* 保存uid到connection的映射，这样可以方便的通过uid查找connection，

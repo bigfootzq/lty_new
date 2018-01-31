@@ -28,7 +28,27 @@ class AwardController extends BaseController
     public function index(){
 		echo 'test';
     }
-	
+	public function update(){
+		$get = input('get.');
+		dump($get);
+		$result = Db::name('lottery_app_version')->order('version_id')->find();
+		dump($result);
+		if($result){
+			if($result['version_name'] > $get['version']){
+				$data = array(
+								'md5'=>$result['md5'],
+								'note'=>$result['upgrade_point'],
+								'url'=>$result['url']
+								);
+				$this->success('版本更新',$data);
+			}else{
+				$this->error('无需升级');
+			}
+		}else{
+			$this->error('无需升级');
+		}
+		
+	}
 	public function Award(Request	$request){
 		switch ($request->method()){
 			case 'GET': // get请求处理代码
