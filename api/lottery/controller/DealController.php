@@ -218,7 +218,7 @@ class DealController extends BaseController
 			// $ischase = 0;
 			// $data['ischase'] = $ischase;
 			//将投注记录写入投注数据表
-			$result1 = Db::name('lottery_betorder_list')->insert($data);
+			$result = Db::name('lottery_betorder_list')->insertGetId($data);
 		} else{
 			// $ischase = 1;
 			// $data['ischase'] = $ischase;
@@ -251,9 +251,9 @@ class DealController extends BaseController
 		//将订单记录写入订单数据表
 		// $result = Db::name('lottery_order_list')->insert($data);
 		// dump($result);
-		if($result1){
+		if($result){
 			//发送投注记录
-			$this->success('ok',$post);
+			$this->success('ok',$result);
 		}else{
 			$this->error('error');
 		}

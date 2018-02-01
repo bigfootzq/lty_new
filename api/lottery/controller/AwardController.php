@@ -120,7 +120,7 @@ class AwardController extends BaseController
 				$provid = 36;
 				break;
 		}
-		$Curqi = '180201001';
+		$Curqi = '180111083';
 		$endtime = $this->getEndtime('JXKS',$Curqi);
 		$seconds = floor((strtotime($endtime)-time()));
 		// dump($endtime);
@@ -214,13 +214,18 @@ class AwardController extends BaseController
 	}
 	
 	public function getTongjiData(){
+		$maxissue = input('get.maxissue');
+		$provid = input('get.provid');
 		$result = Db::name('lottery_k3_bonus_results')
 					->field('issue_number,bonus_code')
-					->limit(120)
+					->limit(500)
+					->where('issue_number','>',$maxissue)
 					->order('issue_number desc')
 					->select();
 		// dump($result);
-		
+		if(count($result) == 0){
+			$this->error('没有查询到记录');
+		}
 
 		foreach($result as $key => $value){
 			$bonus_code = explode(',',$value['bonus_code']);
