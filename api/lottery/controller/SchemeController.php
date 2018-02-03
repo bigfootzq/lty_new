@@ -42,7 +42,6 @@ class SchemeController extends BaseController
 	public function scheme(Request	$request){
 		switch ($request->method()){
 			case 'GET': // get请求处理代码
-			
 				$get = input('get.');
 				 
 				$this->getScheme($get);
@@ -63,6 +62,7 @@ class SchemeController extends BaseController
 	
 	protected function getScheme($get){
 		// dump($get);
+		
 		if(!empty($get['page'])){
 			$page = $get['page'];
 			$limit_start = ($page -1)*15;	
