@@ -26,7 +26,35 @@ class AwardController extends BaseController
      * 显示资源列表
      */
     public function index(){
-		echo 'test';
+		$str = '{"endtime":"2018-02-03 20:00:00",
+		"lotteytype":"lottery",
+		"mobile":"1451",
+		"schemeid":"956489875257843712",
+		"shopid":"2",
+		"source":"58.com",
+		"tickets":"1",
+		"totalamount":"2",
+		"username":"邢博文"}';
+		// $data = (array)json_decode($str,true);
+		// dump($data);
+		$data = array(
+					 "endtime" => "2018-02-03 20:00:00",
+					  "mobile" =>  "1451",
+					  "schemeid" => 111,
+					  "shopid" =>  "2",
+					  "source" =>  "58.com",
+					  "tickets" =>  "1",
+					  "totalamount" => "2",
+					  "username" =>  "邢博文",
+					  "lotterytype" => "super_lottery"
+					);
+		for($i = 0;$i<1000;$i++){
+			$data['schemeid'] = $i*100+1;
+			// dump($data);
+			Db::name('lottery_scheme')->insert($data);
+			// echo Db::getLastSql();
+		}
+		
     }
 	public function update(){
 		$get = input('get.');

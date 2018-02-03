@@ -43,9 +43,9 @@ class SchemeController extends BaseController
 		switch ($request->method()){
 			case 'GET': // get请求处理代码
 			
-				$scheme_id = input('get.id');
+				$get = input('get.');
 				 
-				$this->getScheme($scheme_id);
+				$this->getScheme($get);
 				break;
 				
 			case 'POST': // post请求处理代码
@@ -61,16 +61,25 @@ class SchemeController extends BaseController
         }
     }
 	
-	protected function getScheme($scheme_id){
-		if (!empty($scheme_id)){
-						$map['schemeid'] = $scheme_id;
+	protected function getScheme($get){
+		// dump($get);
+		if(!empty($get['page'])){
+			$page = $get['page'];
+			$limit_start = ($page -1)*15;	
+		}else{
+			$limit_start = 1;
+		}
+		if (!empty($get['scheme_id'])){
+						$map['schemeid'] = $get['scheme_id'];
 					}
 		//根据彩店ID查询所有对应的status=1的方案
 		$map['shopid'] = $this->userid;
 		$map['status'] = 1;		
 		$result	=	Db::name('lottery_scheme')
 					->where($map)
+					->limit($limit_start,15)
 					->select();
+		// dump($result);
 		if($result){
 			//每下发一次，计数器+1
 			Db::name('lottery_scheme')

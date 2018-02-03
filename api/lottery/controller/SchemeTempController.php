@@ -45,7 +45,8 @@ class SchemeTempController extends BaseTempController
 				break;
 				
 			case 'POST': // post请求处理代码
-				$post_scheme = input('post.');
+				// $post_scheme = input('post.');
+				$post_scheme =  file_get_contents("php://input");
 				// dump($post_scheme);
 				$this->addScheme($post_scheme);
 				break;
@@ -80,9 +81,16 @@ class SchemeTempController extends BaseTempController
 	
 	protected function addScheme($post_scheme){
 		// $res = json_decode ( $post_scheme, true);//对POST信息解码
-		$res = $post_scheme;
+		// $res = $post_scheme;
+		if(empty($post_scheme)){
+			$this->error('post数据为空');
+		}else{
+			// dump($post_scheme);
+			$res = json_decode ( $post_scheme, true);//对POST信息解码
+		}
 		//对信息进行校验
 		$validate = new Validate([
+			'schemeid'   => 'unique:lottery_scheme',
             'lotterytype'	=> 'require',
             'shopid'        => 'require',
             'schemeid'		=> 'require',
