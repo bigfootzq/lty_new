@@ -10,9 +10,13 @@ Route::get('getTongjiData','lottery/Award/getTongjiData');
 Route::get('profile/orderdata','lottery/Deal/order');
 Route::get('profile/chaseorderdata','lottery/Deal/chaseorder');
 Route::get('profile/betorderdata','lottery/Deal/betorder');
+Route::get('profile/coinrecord','lottery/Deal/coinrecord');
 Route::get('user/logout','user/public/logout');
 Route::get('user/userinfo','user/public/userinfo');
 Route::get('update','lottery/Award/update');
+Route::get('match/finishcount','lottery/Match/finishcount');
+Route::get('match/leaguequerylist','lottery/Match/leaguequerylist');
+Route::get('match/selectlist','lottery/Match/selectlist');
 
 Route::post('scheme','lottery/SchemeTemp/scheme');
 Route::post('scheme2','lottery/Scheme/scheme');

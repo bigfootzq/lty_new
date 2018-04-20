@@ -83,6 +83,12 @@ class AwardController extends BaseController
 				$game = input('get.game');
 				$page = input('get.page');
 				$this->getAward($game,$page);
+				break;			
+			case 'POST': // post请求处理代码
+				// $postAward  = input('post.');
+				$postAward =  file_get_contents("php://input");
+				// dump($postAward);
+				$this->addAward($postAward);
 				break;
         }
     }
@@ -141,6 +147,60 @@ class AwardController extends BaseController
 		}
 	}
 	
+	protected function addAward($postAward){
+		if(empty($postAward)){
+			$this->error('post数据为空');
+		}else{
+			// dump($postAward);
+			// $res = json_decode( $postAward, true);//对POST信息解码
+			$res = explode('#',$postAward);
+			// dump($res);
+		}
+		//对信息进行校验
+		$validate = new Validate([
+            'issue_number'	=> 'require',
+            'bonus_code'        => 'require',
+            'provid'		=> 'require',
+            'create_time'		=> 'require'
+        ]);
+
+        $validate->message([
+			'lotterytype.require'	=> '缺少期号',
+            'shopid.require'		=> '缺少开奖结果',
+            'schemeid.require'		=> '缺少开奖省份',
+            'endtime.require'		=> '缺少生成时间'
+        ]);
+		// $rule = [
+					// ['multiples','require|number|between:1,99','缺少倍数|倍数必须是数字|倍数必须在1~99之间'],
+					// ['amount','require|number|>:0','缺少单票金额|单票金额必须是数字|单票金额必须大于0'],
+					// ['type','require','缺少彩票玩法'],
+					// ['ticketno','require','缺少彩票序号'],
+					// ['lotteryNumber','require','缺少彩票号码']
+				// ];
+		// $validate_sd = new Validate($rule);
+		// if (!$validate->check($res)) {
+            // $this->error($validate->getError());
+        // }
+
+		// $newAward['issue_number'] = $res['issue_number'];
+		// $newAward['bonus_code'] = $res['bonus_code'];
+		// $newAward['provid'] = $res['provid'];
+		// $newAward['create_time'] = $res['create_time'];
+		// $newAward['status'] = 1;
+		$newAward['issue_number'] = $res[0];
+		$newAward['bonus_code'] = $res[1];
+		$newAward['provid'] = $res[2];
+		$newAward['create_time'] = $res[3];
+		$newAward['status'] = 1;
+		// dump($newAward);
+		$result = Db::name('lottery_k3_bonus_results')->insert($newAward);//scheme写入数据库
+		if($result){
+			$this->success('本次开奖结果已经上传');
+		}else{
+			$this->error('本次开奖结果上传失败');
+		}
+	}
+
 	protected function getPeriod($gameid){
 		switch($gameid){
 			case '111':

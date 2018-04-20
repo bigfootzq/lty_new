@@ -84,6 +84,23 @@ class DealController extends BaseController
 		
     }
 	/*
+		消费记录
+	*/
+	public function coinrecord(Request	$request){
+		switch ($request->method()){
+			case 'GET': // get请求处理代码
+				$get = input('get.');
+				$this->getCoinRecord($get);
+				break;
+			case 'POST': // POST请求处理代码
+				$post = input('post.');
+				$this->addCoinRecord($post);
+				break;
+        }
+		
+		
+    }
+	/*
 	*请求订单记录
 	*    orderstatus 
         "-1": "已撤销",
@@ -127,9 +144,11 @@ class DealController extends BaseController
 	private function getbetOrderData($get){
 		$orderstatus = $get['orderStatus'];
 		$lotterystatus = $get['lotteryStatus'];
+		// $id = $get['id'];
 		// $page = $get['page'];
 		// $limit_start = ($page -1)*10;
 		$map['userid'] = $this ->userid;
+		// $map['id']  = ['>',$id];
 		if ($orderstatus >0)
 		$map['orderstatus'] = $orderstatus;	
 		if ($lotterystatus >0)
@@ -140,6 +159,7 @@ class DealController extends BaseController
 					// ->limit($limit_start,10)
 					->order('createtime desc')
 					->select();
+		// echo Db::getLastSql();			
 		if( $result && (count($result) != 0)){
 			$this->success("ok",$result);
 		}else{
@@ -259,7 +279,20 @@ class DealController extends BaseController
 		}
 	}
 	
-	
+	private function getCoinRecord($get){
+		$map['uid'] = $this ->userid;
+		$result	=	Db::name('lottery_coin')
+					->where($map)
+					->order('updatetime desc')
+					->select();
+					
+		if( $result && (count($result) != 0)){
+			$this->success("ok",$result);
+			
+		}else{
+            $this->error("暂时没有您的消费记录!");
+		}
+	}
 	
 
 }

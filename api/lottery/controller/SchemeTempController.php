@@ -90,16 +90,16 @@ class SchemeTempController extends BaseTempController
 		}
 		//对信息进行校验
 		$validate = new Validate([
-			'schemeid'   => 'unique:lottery_scheme',
             'lotterytype'	=> 'require',
             'shopid'        => 'require',
-            'schemeid'		=> 'require',
+            'schemeid'		=> 'require|unique:lottery_scheme',
             'endtime'		=> 'require',
             'tickets'		=> 'require',
             'totalamount'	=> 'require'
         ]);
 
         $validate->message([
+			'schemeid.unique'		=> '此方案已经上传',
 			'lotterytype.require'	=> '缺少彩票类型',
             'shopid.require'		=> '缺少彩店ID',
             'schemeid.require'		=> '缺少方案编号',

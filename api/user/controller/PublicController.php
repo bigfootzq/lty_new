@@ -238,9 +238,13 @@ class PublicController extends RestBaseController
 
         if (empty($result)) {
             $this->error("登录失败!");
-        }
-
-        $this->success("登录成功!", ['token' => $token, 'shopid' => $findUser['id']]);
+        }else{
+			session('ADMIN_ID', $findUser["id"]);
+			session('name', $findUser["user_login"]);
+			$this->success("登录成功!", ['token' => $token, 'shopid' => $findUser['id']]);
+		}
+		
+        
 	}
     // 用户退出
     public function logout()

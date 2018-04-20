@@ -74,12 +74,20 @@ class SchemeController extends BaseController
 					}
 		//根据彩店ID查询所有对应的status=1的方案
 		$map['shopid'] = $this->userid;
-		$map['status'] = 1;		
+		$map['status'] = 1;	
+		$map['endtime'] = ['>=',date("Y-m-d H:i:s")];
 		$result	=	Db::name('lottery_scheme')
 					->where($map)
+					->order('id desc')
 					->limit($limit_start,15)
 					->select();
+		$count = Db::name('lottery_scheme')
+					->where($map)
+					->count();
+		// dump($count);
 		// dump($result);
+		$totalpages = ceil($count/15);
+		// dump($totalpage);
 		if($result){
 			//每下发一次，计数器+1
 			Db::name('lottery_scheme')
@@ -98,13 +106,14 @@ class SchemeController extends BaseController
 		$validate = new Validate([
             'lotterytype'	=> 'require',
             'shopid'        => 'require',
-            'schemeid'		=> 'require',
+            'schemeid'		=> 'require|unique:lottery_scheme',
             'endtime'		=> 'require',
             'tickets'		=> 'require',
             'totalamount'	=> 'require'
         ]);
 
         $validate->message([
+			'schemeid.unique'		=> '此方案已经上传',
 			'lotterytype.require'	=> '缺少彩票类型',
             'shopid.require'		=> '缺少彩店ID',
             'schemeid.require'		=> '缺少方案编号',
@@ -202,9 +211,19 @@ class SchemeController extends BaseController
 		$tstatus = Db::name('lottery_scheme')->where($map)->value('tstatus');
 		// dump($tstatus);								
 		if($tstatus == 1){
-			$list = Db::name('lottery_scheme')->where('schemeid', $res["schemeid"])->setField('tstatus',$res['tstatus']);
-			//更新数据库，注意这里要锁表,暂时没写。
-			// dump($list);
+			//首先判断方案是否过期
+			$map['endtime'] = ['>=',date("Y-m-d H:i:s")];
+			$map['schemeid'] = $res['schemeid'];
+			$scheme = Db::name('lottery_scheme')->where($map)->find();
+			if ($scheme){
+					$list = Db::name('lottery_scheme')->where('schemeid', $res["schemeid"])->setField('tstatus',$res['tstatus']);
+				//更新数据库，注意这里要锁表,暂时没写。
+				$msg = '状态变更为出票中';
+			}else{
+				$list = Db::name('lottery_scheme')->where('schemeid', $res["schemeid"])->setField('tstatus',5);
+				$msg = '该方案已经过期';
+			}
+						// dump($list);
 			if ($list == false){//返回失败报文,
 				$this->error('变更失败');
 			}else{
@@ -220,7 +239,7 @@ class SchemeController extends BaseController
 						$de[$k2 ]['lotteryNumber'] = (array)json_decode($v2['lotteryNumber']);
 					}
 				//返回成功报文
-				$this->success('状态变更为出票中',['schemedetail'=>$de]);
+				$this->success($msg,['schemedetail'=>$de]);
 			}
 		}else if($tstatus == 2){
 			if($res['tstatus'] == 3 || $res['tstatus'] == 4){
