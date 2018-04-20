@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>口袋彩店</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="robots" content="all" />
+<meta name="copyright" content="口袋彩店" />
+<meta name="viewport" content="initial-scale=1,width=device-width,height=device-height,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="theme-color" content="#f2f2f2">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no, address=no">
+<meta name="keywords" content="口袋彩店" />
+<meta name="description" content="口袋彩店" />
+<link rel="apple-touch-icon-precomposed" href="../static3/images/wap/icon57x57-56115387d2.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../static3/images/wap/icon114x114-5360e08697.png">
+<link rel="apple-touch-icon-precomposed" sizes="171x171" href="../static3/images/wap/icon171x171-377dbe67af.png">
+<link href="../static3/css/base-d9e28a4a96.css" rel="stylesheet" type="text/css">
+<link href="../static3/css/main-2a6b252483.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="../static3/js/plugin/zepto-8be20a1345.min.js"></script>
+<script type="text/javascript" src="../static3/js/plugin/jweixin-1-3167c23e94.2.0.js"></script>
+<script type="text/javascript" src="../static3/js/plugin/alipayjsapi-40759f5254.min.js"></script>
+<script type="text/javascript" src="../static3/js/plugin/vue-f44ec077e1.min.js"></script>
+<script type="text/javascript" src="../static3/js/gray/main-5d0f5dce5c.js"></script>
+<script type="text/javascript" src="../static3/js/public/environment.js"></script>
+<script type="text/javascript" src="../static3/js/public/extend-8ef3b344a7.js"></script>
+<script type="text/javascript" src="../static3/js/public/service-a551fe1a98.js"></script>
+<script type="text/javascript" src="../static3/js/public/setting-a416966f7a.js"></script>
+<script type="text/javascript" src="../static3/js/plugin/sha1-f3deb72e14.js"></script>
+<script type="text/javascript" src="../static3/js/public/vueconfig-98cc3bfe98.js"></script>
+<script type="text/javascript" src="../static3/js/plugin/google-44c5152e39.js"></script>
+
+  <link href="../static3/css/jingcai-e2483e215d.css" rel="stylesheet" type="text/css">
+  <link href="../static3/css/dropload-2669c982ac.css" rel="stylesheet" type="text/css">
+  <style type="text/css">
+    *{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-o-user-select:none;}
+  </style>
+</head>
+<body class="jingcai" @click.stop="closeTopHelp">
+<header class="head prel">
+    <div class="back"><a class="backlink" @click="back"></a></div>
+    <div class="headertit"><h1>竞彩足球</h1></div>
+    <div class="headBtnbox topcenter"><a @click="showSearch" :class="{'jingcai_screensed': hasSearchOpts}"><em class="headicon icon_screen"></em></a><a @click.stop="showTopHelp"><em class="headicon icon_list"></em></a></div>
+    <!-- 链接层 -->
+    <div class="headerbtnlist" style="display:none;"  style="display:none;" v-show="helper.showTop">
+      <em class="headerbtnlist_icon"></em>
+      <a href="/jingcai/prize/" :backurl="backurl">开奖结果</a>
+      <div class="headerbtnlist2">
+        <a v-for="opt in helper.resultList" v-text="opt.t + '已结束' + opt.v + '场'" :href="'/jingcai/prize/?d=' + opt.i" :backurl="backurl">今天已结束12场</a>
+      </div>
+      <a href="/user/betlist/?type=JingCaiZuQiu" :backurl="backurl">投注记录</a>
+      <a href="/livescore/jingcai/" :backurl="backurl">即时比分</a>
+      <a href="/help/gameinfo/jingcai/" :backurl="backurl">玩法说明</a>
+    </div>
+</header>
+
+<div id="dropload-body">
+<section id="scrollBody" class="match bgf2" v-show="list.length > 0" style="display:none">
+  <div v-for="(index, days) in list">
+  <div class="topcenter matchtit" @click="showDays(index)">
+    <p class="boxflex gray8b"><span class="mr10" v-text="days.intro[0]">8月10日</span><span class="mr10" v-text="days.intro[1]">周四</span><span v-text="days.intro[2]">共4场比赛</span><span class="font12">（红色选项可投单关）</span></p>
+    <em class="icon_arrowgraydown" :class="{'icon_arrowgrayup': days.isShow}"></em>
+  </div>
+  <!-- matchtit over -->
+  <div class="matchlist" style="display:none" v-show="days.isShow">
+    <template v-for="item in days.items | orderBy 'info.sort'">
+    <div class="border_b flexbox matchitem">
+        <div class="matchitem_tit" @click="gotoMatch(item)">
+          <p class="gray8b font10" v-text="item.info.no">001</p>
+          <p class="saishi" style="background-color:{{item.info.saishiColor}};color:{{item.info.fontColor}}"><span class="font10" v-text="item.info.saishi">英超</span></p>
+          <p class="font10"  v-text="item.info.endTime">17:00</p>
+          <div class="fontblue font10">分析</div>
+        </div>
+        <div class="boxflex matchitem_cont">
+            <div class="topcenter team">
+              <p class="boxflex textr"><cite class="team_host"><span v-text="'[' + item.team.host.rank + ']'">[13]</span><span v-show="item.team.host.saishi" v-text="item.team.host.saishi">英超</span></cite>
+                <span v-text="item.team.host.name">阿森纳</span>
+              </p>
+              <p class="teambf"><span>VS</span></p>
+              <p class="boxflex textl">
+                <span v-text="item.team.guest.name">利物浦</span>
+                <cite class="team_guest"><span v-show="item.team.guest.saishi" v-text="item.team.guest.saishi">英超</span>
+                <span v-text="'[' + item.team.guest.rank + ']'">[113]</span></cite>
+              </p>
+
+
+            </div>
+            <div class="topcenter">
+                <div class="boxflex">
+
+                    <div class="topcenter dan"><cite class="rang rang0">0</cite>
+                      <p class="boxflex betbtn" :class="{'betbtn_dan': item.game.shengfu.danguan, 'betbtn_sed': o.s, 'betbtn_gray': isNaN(o.v)}" v-for="(k, o) in item.game.shengfu.peilv" @click="doSelectSaishi(item.info.no, 'shengfu', k)"><span v-text="k"></span><span v-text="!isNaN(o.v)?o.v.toFixed(2):o.v">1.85</span></p>
+                    </div>
+                    <div class="topcenter"><cite class="rang" :class="{'rangred': item.game.rangqiu.rangqiuNum < 0,'ranggreen': item.game.rangqiu.rangqiuNum >= 0}" v-text="item.game.rangqiu.rangqiuNum" @click="showRangqiuHelp(item.info.no)">-1</cite>
+                      <p class="boxflex betbtn" :class="{'betbtn_dan': item.game.rangqiu.danguan, 'betbtn_sed': o.s, 'betbtn_gray': isNaN(o.v)}" v-for="(k, o) in item.game.rangqiu.peilv" @click="doSelectSaishi(item.info.no, 'rangqiu', k)"><span v-text="k"></span><span v-text="!isNaN(o.v)?o.v.toFixed(2):o.v">1.85</span></p>
+                    </div>
+                </div>
+                <div class="morebtn topcenter" :class="{'sedbg': item.info.selectMore}" @click="showSaishiMore(item.info.no)">
+                  <p>更多玩法</p>
+                  <!-- <p v-text="item.info.selectNum"></p> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    </template>
+    <!-- moerdiv -->
+
+
+
+  </div>
+  <!-- matchlist over -->
+  </div>
+  <!-- 无赛程 -->
+  <div class="nulllotteryno" style="display:none;" v-show="list.length == 0">
+      <p class="nulllotterynoimg"><img src="../static3/images/nulllotteryno-83be1b1b40.png" alt=""></p>
+      <p class="font14 gray5">暂无比赛</p>
+  </div>
+
+  <div class="matchlist" style="display:none;">
+    <div class="border_b flexbox matchitem">
+        <div class="matchitem_tit">
+          <p class="gray8b">001</p><p class="fontwhite" style="background-color:#D22824;">英超</p><p>17:00</p>
+          <div class="xilink font12"><a href="">分析</a></div>
+        </div>
+        <div class="boxflex matchitem_cont">
+            <div class="topcenter team">
+              <p class="boxflex">阿森纳</p>
+              <p class="boxflex">VS</p>
+              <p class="boxflex">利物浦</p>
+            </div>
+            <div class="topcenter">
+                <div class="boxflex">
+
+                    <div class="topcenter dan"><cite class="rang rang0">0</cite>
+                      <p class="boxflex betbtn betbtn_dan betbtn_sed"><span>胜</span><span>1.85</span></p>
+                      <p class="boxflex betbtn betbtn_dan betbtn_sed"><span>平</span><span>1.85</span></p>
+                      <p class="boxflex betbtn betbtn_dan betbtn_sed"><span>负</span><span>1.85</span></p>
+                    </div>
+                    <div class="topcenter"><cite class="rang rangred">-1</cite>
+                      <p class="boxflex betbtn"><span>胜</span><span>1.85</span></p>
+                      <p class="boxflex betbtn"><span>平</span><span>1.85</span></p>
+                      <p class="boxflex betbtn"><span>负</span><span>1.85</span></p>
+                    </div>
+                </div>
+                <div class="morebtn"><p>更多玩法</p></div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <!-- matchlist over -->
+
+</section>
+</div>
+
+<section class="bottombet" style="display:none" v-show="showBody">
+  <!-- 没有选择比赛 默认  -->
+  <p class="bottombetno textc" style="display:none;" v-show="result.formated.intro.text" v-text="result.formated.intro.text">至少选择一场比赛</p>
+  <!-- 有选择比赛 -->
+  <div style="display:none;" v-else>
+    <div class="betmoney border_b_dotted topcenter">
+      <p class="boxflex textc">
+        <span class="mr10">共 <cite class="fontred" v-text="result.zhushu * selected.beishu * 2">12</cite> 元</span>
+        <span class="mr20">最高奖&nbsp;<cite class="fontred jiangjin" v-text="evaluate.max.toFixed(2)" @click="act.show('evaluate')">5558508.32</cite>&nbsp;元</span>
+      </p>
+      <a class="fontblue" @click="doOptimize" v-show="canOptimize">奖金优化</a>
+    </div>
+    <div class="topcenter bottombetbtn">
+      <p class="guoguanbtn " @click="act.show('guoguan')"><span v-html="result.guoguanHtml">3串1(<span class="fontred font12">胆</span>)</span>
+        <cite class="icon_reddot" v-text="result.formated.intro.nuNum">30</cite>
+      </p>
+      <p class="beishu" @click="act.show('jianpan')"><input type="text" v-model="selected.beishu" readonly="readonly" disabled="disabled"></p>
+      <span class="mr20">倍</span>
+      <p class="boxflex mr10"><a @click="act.doSubmit()" class="btn btn_blue">提交彩店</a></p>
+      <a @click="act.doSave()" class="savelink">保存</a>
+    </div>
+  </div>
+</section>
+<!-- 场次筛选 -->
+<div class="layerbox " style="display:none;" v-show="searchOpts.isShow">
+  <div class="layer_jingcai_screen">
+    <header class="head">
+      <a  class="closeball2"  @click="showSearch"></a>
+      <div class="headertit"><h1>赛事筛选</h1></div>
+      <div class="headBtnbox w40 topcenter"><a><em class="headicon icon_chart"></em></a></div>
+    </header>
+    <div class="jingcai_screenlist">
+        <p class="jcscreentit">胜平负低赔率区间</p>
+        <div class="clearfix jcscreena jcscreena_peilv">
+          <p v-for="opt in searchOpts.peilv.opts" @click="selectSearch('peilv', $index)"><a :class="{'sedbg': opt.s}" v-text="opt.t">1.50以下</a></p>
+        </div>
+        <div class="jcscreentit"><span class="mr20">赛事</span><a @click="doSelectAll">全选</a><a @click="doUnSelectAll">反选</a></div>
+        <div class="clearfix jcscreena jcscreena_caishi">
+          <a v-for="opt in searchOpts.saishi.opts" :class="{'sedbg': opt.s}" v-text="opt.t" @click="selectSearch('saishi', $index)">英超</a>
+        </div>
+    </div>
+
+    <div class="flexbox btnbox">
+      <p class="boxflex mr10"><a class="btn btn_gray" @click="showSearch">取消</a></p>
+      <p class="boxflex"><a class="btn btn_blue" @click="doSearch">确定</a></p>
+    </div>
+
+  </div>
+  <!-- layer_jingcai_screen  over-->
+
+</div>
+<!-- 更多彩种 -->
+<div class="layerbox" style="display:none;" v-show="currItem.show">
+    <div class="morediv">
+      <header class="head">
+        <a  class="closeball2" @click="currItem.cancel()"></a>
+        <div class="headertit"><h1>
+          <span class="font10" v-text="'[' + currItem.item.team.host.rank + ']'">[13]</span>
+          <span class="font10" v-show="currItem.item.team.host.saishi" v-text="item.team.host.saishi">英超</span>
+          <span v-text="currItem.item.team.host.name">阿森纳</span> 
+          VS 
+          <span v-text="currItem.item.team.guest.name">利物浦</span>
+          <span class="font10" v-show="item.team.guest.saishi" v-text="currItem.item.team.guest.saishi">英超</span>
+          <span class="font10" v-text="'[' + currItem.item.team.guest.rank + ']'">[113]</span>
+        </h1></div>
+        <div class="headBtnbox w40 topcenter"><a  @click="gotoMatch(item)"><em class="headicon icon_chart"></em></a></div>
+      </header>
+
+      <div class="moremain">
+          <div class="topcenter moremain_tit border_b"><p class="boxflex">胜平负/让球胜平负</p></div>
+          <div class="morebet_spf border_b" >
+            <div class="topcenter">
+              <div class="topcenter m_spf_tit"><cite>0</cite></div>
+              <div class="boxflex flexbox dan"><p class="boxflex betbtn" :class="{'betbtn_dan': currItem.item.game.shengfu.danguan, 'betbtn_sed': o.s, 'betbtn_gray': isNaN(o.v)}" v-for="(k, o) in currItem.item.game.shengfu.peilv" @click="currItem.doSelectSaishi('shengfu', k)"><span v-text="k"></span><span v-text="!isNaN(o.v)?o.v.toFixed(2):o.v">1.85</span></p></div>
+            </div>
+
+            <div class="topcenter">
+              <div class="topcenter m_spf_tit" :class="{'m_spf_titred': currItem.item.game.rangqiu.rangqiuNum < 0,'m_spf_titgreen': currItem.item.game.rangqiu.rangqiuNum >= 0}"><cite v-text="currItem.item.game.rangqiu.rangqiuNum" @click="showRangqiuHelp(currItem.item.info.no)">-1</cite></div>
+              <div class="boxflex flexbox">
+                <p class="boxflex betbtn" :class="{'betbtn_dan': currItem.item.game.rangqiu.danguan, 'betbtn_sed': o.s, 'betbtn_gray': isNaN(o.v)}" v-for="(k, o) in currItem.item.game.rangqiu.peilv" @click="currItem.doSelectSaishi('rangqiu', k)"><span v-text="k"></span><span v-text="!isNaN(o.v)?o.v.toFixed(2):o.v">1.85</span></p>
+              </div>
+            </div>
+
+          </div>
+          <!-- spf over -->
+
+          <div class="topcenter moremain_tit border_tb"><p class="boxflex">比分</p></div>
+          <div class="border_b m_bif" v-if="currItem.item.game.bifen.open">
+            <div class="topcenter m_bif_s">
+              <div class="bif_tit topcenter" @click="currItem.selectAll('bifen', 0)"><p class="boxflex">主胜比分</p></div>
+              <div class="boxflex flexbox">
+                <!--<p class="boxflex betbtn"><span>1-0</span><span>1.85</span></p>-->
+                <p class="boxflex betbtn" :class="{'betbtn_dan': currItem.item.game.bifen.danguan, 'betbtn_sed': o.s, 'betbtn_gray': isNaN(o.v)}" v-for="(k, o) in currItem.item.game.bifen.peilv[0]" @click="currItem.doSelectSaishi('bifen', k, 0)"><span v-text="k">1-0</span><span class="gray8b" v-text="o.v">3.00</span></p>
+              </div>
+            </div>
+
+            <div class="topcenter m_bif_p">
+              <div class="bif_tit topcenter" @click="currItem.selectAll('bifen', 1)"><p class="boxflex">平局</p></div>
+              <div class="boxflex flexbox">
+                <p class="boxflex betbtn" :class="{'betbtn_dan': currItem.item.game.bifen.danguan, 'betbtn_sed': o.s, 'betbtn_gray': isNaN(o.v)}" v-for="(k, o) in currItem.item.game.bifen.peilv[1]" @click="currItem.doSelectSaishi('bifen', k, 1)"><span v-text="k">1-0</span><span class="gray8b" v-text="o.v">3.00</span></p>
+              </div>
+            </div>
+
+            <div class="topcenter m_bif_f">
+              <div class="bif_tit topcenter" @click="currItem.selectAll('bifen', 2)"><p class="boxflex">主负比分</p></div>
+              <div class="boxflex flexbox">
+                <p class="boxflex betbtn" :class="{'betbtn_dan': currItem.item.game.bifen.danguan, 'betbtn_sed': o.s, 'betbtn_gray': isNaN(o.v)}" v-for="(k, o) in currItem.item.game.bifen.peilv[2]" @click="currItem.doSelectSaishi('bifen', k, 2)"><span v-text="k">1-0</span><span class="gray8b" v-text="o.v">3.00</span></p>
+              </div>
+            </div>
+
+          </div>
+          <div class="border_b m_half flexbox" v-else>未受注</div>
+          <!-- bif over -->
+          <div class="topcenter moremain_tit border_tb"><p class="boxflex">总进球数</p></div>
+          <div class="border_b m_zongjq flexbox" v-if="currItem.item.game.jinqiu.open">
+            <!--<p class="boxflex betbtn betbtn_dan"><span>0球</span><span>1.85</span></p>-->
+            <p class="boxflex betbtn" :class="{'betbtn_dan': currItem.item.game.jinqiu.danguan, 'betbtn_sed': o.s, 'betbtn_gray': isNaN(o.v)}" v-for="(k, o) in currItem.item.game.jinqiu.peilv" @click="currItem.doSelectSaishi('jinqiu', k)"><span v-text="k">1-0</span><span class="gray8b" v-text="o.v">3.00</span></p>
+          </div>
+          <div class="border_b m_zongjq flexbox" v-else>未受注</div>
+          <!-- zongjq over -->
+          <div class="topcenter moremain_tit border_tb"><p class="boxflex">半全场</p></div>
+          <div class="border_b m_half flexbox" v-if="currItem.item.game.banquanchang.open">
+            <!--<p class="boxflex betbtn betbtn_dan"><span>胜/胜</span><span>1.85</span></p>-->
+            <p class="boxflex betbtn" :class="{'betbtn_dan': currItem.item.game.banquanchang.danguan, 'betbtn_sed': o.s, 'betbtn_gray': isNaN(o.v)}" v-for="(k, o) in currItem.item.game.banquanchang.peilv" @click="currItem.doSelectSaishi('banquanchang', k)"><span v-text="k">1-0</span><span class="gray8b" v-text="o.v">3.00</span></p>
+          </div>
+          <div class="border_b m_half flexbox" v-else>未受注</div>
+          <!-- zongjq over -->
+      </div>
+      <!-- moremain over -->
+
+      <div class="topcenter morediv_bottom">
+        <p class="boxflex mr15"><a @click="currItem.cancel()" class="btn btn_gray">取消</a></p>
+        <p class="boxflex"><a @click="currItem.submit()" class="btn btn_blue">确定</a></p>
+      </div>
+    </div>
+</div>
+<!-- 奖金评测 -->
+<div class="layerbox layerbox_jincaibtm" style="display:none;" v-show="act.currAction == 'evaluate'" @click="act.show('evaluate')">
+    <div class="jincaibtmcon" @click.stop>
+        <a class="closeball" @click="act.show('evaluate')"></a>
+        <h2>奖金评测</h2>
+        <div class="jincaibtmcon_main" id="">
+          <table class="gray6 pincetable" width="100%">
+            <thead><tr>
+              <th v-show="evaluate.hasDan">胆中</th>
+              <th v-text="evaluate.hasDan? '拖中': '命中场次'">拖中</th>
+              <th width="28%" class="textr">最低奖金</th>
+              <th width="8%">~</th>
+              <th width="28%" class="textl">最高奖金</th>
+            </tr></thead>
+            <tbody>
+              <tr v-for="item in evaluate.list | orderBy 'max' -1">
+                <td v-show="evaluate.hasDan" v-text="item.dan">3</td>
+                <td v-text="item.tuo">3</td>
+                <td class="textr"><span :class="{'fontred': item.min > result.zhushu * selected.beishu * 2}" v-text="item.min.toFixed(2)">44.5</span></td>
+                <td>~</td>
+                <td class="textl"><span :class="{'fontred': item.max > result.zhushu * selected.beishu * 2}" v-text="item.max.toFixed(2)">181.5</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    </div>
+</div>
+<!-- 数字键盘 -->
+<div @touchmove.stop.prevent class="layerbox layer_numkey layerbox_jincaibtm" style="display:none;" v-show="act.currAction == 'jianpan'" @click="act.hide()">
+    <div class="jincaibtmcon numkeybox" @click.stop>
+        <div class="numkeyboxtit">
+          <div class="flexbox quick_multple">
+              <p class="boxflex numkeybtn" @click="jianpan.keyTop(10)">10倍</p>
+              <p class="boxflex numkeybtn" @click="jianpan.keyTop(20)">20倍</p>
+              <p class="boxflex numkeybtn" @click="jianpan.keyTop(50)">50倍</p>
+              <p class="boxflex numkeybtn" @click="jianpan.keyTop(100)">100倍</p>
+              <p class="boxflex numkeybtn" @click="jianpan.keyTop(500)">500倍</p>
+          </div>
+        </div>
+
+        <div class="mult_numkeyboard">
+            <ul class="clearfix">
+              <li><p class="numkeybtn" @tap="jianpan.keyNum(1)">1</p></li>
+              <li><p class="numkeybtn" @tap="jianpan.keyNum(2)">2</p></li>
+              <li><p class="numkeybtn" @tap="jianpan.keyNum(3)">3</p></li>
+              <li><p class="numkeybtn" @tap="jianpan.keyNum(4)">4</p></li>
+              <li><p class="numkeybtn" @tap="jianpan.keyNum(5)">5</p></li>
+              <li><p class="numkeybtn" @tap="jianpan.keyNum(6)">6</p></li>
+              <li><p class="numkeybtn" @tap="jianpan.keyNum(7)">7</p></li>
+              <li><p class="numkeybtn" @tap="jianpan.keyNum(8)">8</p></li>
+              <li><p class="numkeybtn" @tap="jianpan.keyNum(9)">9</p></li>
+              <li><p class="mult_del" @tap="jianpan.keydel()"><em class="mult_delicon"></em>删除</p></li>
+              <li><p class="numkeybtn" @tap="jianpan.keyNum(0)">0</p></li>
+              <li><p class="btn btn_blue" @click="act.hide()">确定</p></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- 过关方式 设胆 -->
+<div class="layerbox layerbox_jincaibtm" style="display:none;" v-show="act.currAction == 'guoguan' || act.currAction == 'dan'" @click="act.hide()">
+    <div class="jincaibtmcon" @click.stop>
+        <a class="closeball" @click="act.hide()"></a>
+        <div class="layermenu ">
+          <nav class="flexbox headermenu">
+            <p class="boxflex"><a @click="act.show('guoguan')" :class="{'sed': act.currAction == 'guoguan'}">过关</a></p>
+            <p class="boxflex"><a @click="act.show('dan')" :class="{'sed': act.currAction == 'dan'}">设胆<cite class="icon_reddot" v-text="result.formated.intro.Dan.length" v-show="result.formated.intro.Dan.length">3</cite></a></p>
+          </nav>
+        </div>
+
+        <div class="guoguan_list_wrap" style="display:none;" v-show="act.currAction == 'guoguan'">
+          <div class="jincaibtmcon_main">
+            <ul class="clearfix ">
+              <li class="betbtn" :class="{'betbtn_sed': selected.guoguan.contains(item + '_1')}" v-for="item in result.guoguan" v-text="item == '1'? '单关': item + '串1'" @click="act.selectGuoguan(item + '_1')">单关</li>
+            </ul>
+            <p class="mb6 gray8b font12" v-show="result.guoguanMore.length > 0">更多过关</p>
+            <ul class="clearfix ">
+              <li class="betbtn" :class="{'betbtn_sed': selected.guoguan.contains(item)}" v-for="item in result.guoguanMore" v-text="item.replace('_', '串')" @click="act.selectGuoguan(item)">2串1</li>
+
+            </ul>
+          </div>
+          <p class="font12 gray8b text" v-html="result.formatedGuoguan[0]? '命中' + result.formatedGuoguan[0] + '场可中奖': '&nbsp;'">命中4场可中奖</p>
+        </div>
+
+        <div class="dingdan_list_wrap" style="display:none;" v-show="act.currAction == 'dan'">
+          <div class="dingdan_list">
+              <div class="flexbox dingdan_list_item border_b" v-for="item in danList">
+                  <div class="xuhao"><p v-text="item.no">001</p></div>
+                  <div class="boxflex betsedlist">
+                    <div class="clearfix font12"><span class="fl" v-text="item.hostname">布莱克</span><span class="fl betw">VS</span><span class="fl" v-text="item.guestname">切尔腾</span></div>
+                    <div class="clearfix caidiv" v-for="s in item.list">
+                      <em class="rang ranggreen" v-text="s.pankou" v-show="s.pankou || s.pankou == '0'">+1</em>
+                      <p v-for="t in s" v-text="t">胜</p>
+                    </div>
+                  </div>
+                  <div class="dandef" :class="{'dansed': item.dan}" @click="doSetDan(item.no)">胆</div>
+              </div>
+              <!-- dingdan_list_item -->
+
+          </div>
+          <!-- dingdan_list over -->
+        </div>
+        <!-- dingdan_list_wrap over-->
+
+    </div>
+</div>
+
+
+<!-- 让球提示-客队让球 -->
+<div @touchmove.stop.prevent class="layerbox showRangqiuHelp" style="display:none;" v-show="helper.rangqiu.isShow">
+    <div class="alertlayer gray58" @click="showRangqiuHelp">
+      <h2 class="alertlayerh2"><span v-text="helper.rangqiu.info.host + ' VS ' + helper.rangqiu.info.guest">阿森纳 VS 利物浦</span>  让球(<span :class="{'fontgreen': helper.rangqiu.info.num >= 0, 'fontred': helper.rangqiu.info.num < 0}" v-text="helper.rangqiu.info.num">+1</span>)</h2>
+        <div class="alertlayercon textl mb10">
+          <p class="gray8b">90分钟比赛结束时:</p>
+          <p class="gray6">[<span v-text="helper.rangqiu.info.host"></span>]进球<cite :class="{'fontgreen': helper.rangqiu.info.num >= 0, 'fontred': helper.rangqiu.info.num < 0}" v-text="helper.rangqiu.info.num">+2</cite>＞[<span v-text="helper.rangqiu.info.guest"></span>]进球，则<cite class="fontred">[<span v-text="helper.rangqiu.info.host"></span>]胜</cite></p>
+          <p class="gray6">[<span v-text="helper.rangqiu.info.host"></span>]进球<cite :class="{'fontgreen': helper.rangqiu.info.num >= 0, 'fontred': helper.rangqiu.info.num < 0}" v-text="helper.rangqiu.info.num">+2</cite>＝[<span v-text="helper.rangqiu.info.guest"></span>]进球，则<cite class="fontred">两队平</cite></p>
+          <p class="gray6">[<span v-text="helper.rangqiu.info.host"></span>]进球<cite :class="{'fontgreen': helper.rangqiu.info.num >= 0, 'fontred': helper.rangqiu.info.num < 0}" v-text="helper.rangqiu.info.num">+2</cite>＜[<span v-text="helper.rangqiu.info.guest"></span>]进球，则<cite class="fontred">[<span v-text="helper.rangqiu.info.host"></span>]负</cite></p>
+        </div>
+        <a id="" class="closebtn">知道了</a>
+    </div>
+  </div>
+<!-- 让球提示-主队让球 -->
+<div  @touchmove.stop.prevent class="layerbox" style="display:none;">
+    <div class="alertlayer gray58">
+      <h2 class="alertlayerh2">阿森纳 VS 利物浦  让球(<span class="fontred">-1</span>)</h2>
+        <div class="alertlayercon textl mb10">
+          <p class="gray8b">90分钟比赛结束时:</p>
+          <p class="gray6">[埃奇沃]进球<cite class="fontred">-2</cite>＞[西悉尼]进球，则<cite class="fontred">[埃奇沃]胜</cite></p>
+          <p class="gray6">[埃奇沃]进球<cite class="fontred">-2</cite>＝[西悉尼]进球，则<cite class="fontred">两队平</cite></p>
+          <p class="gray6">[埃奇沃]进球<cite class="fontred">-2</cite>＜[西悉尼]进球，则<cite class="fontred">[埃奇沃]负</cite></p>
+        </div>
+        <a id="" class="closebtn">知道了</a>
+    </div>
+  </div>
+<!-- 没有选择方式提示框 -->
+<div  @touchmove.stop.prevent class="layerbox" style="display:none;">
+    <div class="alertlayer">
+        <div class="alertlayercon">
+           <p class="textc">请选择过关方式</p>
+        </div>
+        <a id="" class="closebtn">确定</a>
+    </div>
+  </div>
+<!-- 倍数设置错误提示框 -->
+<div  @touchmove.stop.prevent class="layerbox" style="display:none;">
+    <div class="alertlayer">
+        <div class="alertlayercon">
+           <p class="textc">倍数为1-50000，请修改</p>
+        </div>
+        <a id="" class="closebtn">确定</a>
+    </div>
+  </div>
+<!-- 比赛非在售提示框 -->
+<div  @touchmove.stop.prevent class="layerbox" style="display:none;">
+    <div class="alertlayer">
+        <div class="alertlayercon">
+           <p class="textl">比赛（周四001、周四003、周四004）已停售，请刷新页面重新投注</p>
+        </div>
+        <div class="clearfix alertbtn"><a   class="fl btn btn_gray">立即刷新</a><a class="fr btn btn_blue">确定</a></div>
+    </div>
+  </div>
+<!-- 重复提交 -->
+<div  @touchmove.stop.prevent class="layerbox" style="display:none;">
+    <div class="alertlayer">
+        <div class="alertlayercon">
+           <p class="textc">刚刚提交过同样的方案,是否再次提交!</p>
+        </div>
+        <div class="clearfix alertbtn"><a   class="fl btn btn_gray">取消</a><a class="fr btn btn_blue">继续</a></div>
+    </div>
+  </div>
+<!-- 下拉刷新提示 -->
+<div class="loadtips" style="display:none" v-show="showOpenMsg">
+  <p>下拉刷新比赛清空已选投注</p>
+  <em class="iconbg icon_remind"></em>
+</div>
+
+<footer>
+      <div style="display:none;" id="loaderbox"><div class="loader flexcenter">
+        <img src="../static3/images/koudailogo-b324c8e7cd.png" alt="爱投" />
+        <p class="gray5">努力加载中...</p>
+      </div></div>
+      <msgbox :msg="msg" :is_show="show_msgbox" :title="title" v-ref:msgbox></msgbox>
+      <numkeyboard  v-ref:numkeyboard></numkeyboard>
+</footer>
+
+<div style="display:none;" id=""><div class="loader flexcenter">
+  <img src="../static3/images/koudailogo-b324c8e7cd.png" alt="爱投" />
+  <p class="gray5">努力加载中...</p>
+</div></div>
+
+<!-- <link href="../static3/css/apphack-d03fbc16c2.css" rel="stylesheet" type="text/css"> -->
+
+<script type="text/javascript" src="../static3/js/plugin/dropload-d3b6874f27.min.js"></script>
+<script type="text/javascript" src="../static3/js/public/lottery-8b3a3d21f3.js"></script>
+<script type="text/javascript" src="../static3/js/business/jingcai-config-94fccdac39.js"></script>
+<script type="text/javascript" src="../static3/js/business/jingcai-compute-bedbec02f8.js"></script>
+<script type="text/javascript" src="../static3/js/business/jingcai-3409700f5c.js"></script>
+</body>
+</html>
