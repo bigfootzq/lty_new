@@ -9,7 +9,6 @@ composer.lock
 /data
 /public/plugins/
 /public/static/
-/public/themes/
 /public/upload/
 /public/.htaccess
 /public/index.php

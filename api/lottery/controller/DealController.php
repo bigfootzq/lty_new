@@ -144,11 +144,11 @@ class DealController extends BaseController
 	private function getbetOrderData($get){
 		$orderstatus = $get['orderStatus'];
 		$lotterystatus = $get['lotteryStatus'];
-		// $id = $get['id'];
+		$id = $get['id'];
 		// $page = $get['page'];
 		// $limit_start = ($page -1)*10;
 		$map['userid'] = $this ->userid;
-		// $map['id']  = ['>',$id];
+		$map['id']  = ['>',$id];
 		if ($orderstatus >0)
 		$map['orderstatus'] = $orderstatus;	
 		if ($lotterystatus >0)
