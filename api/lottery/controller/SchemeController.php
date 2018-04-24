@@ -102,6 +102,7 @@ class SchemeController extends BaseController
 	protected function addScheme($post_scheme){
 		// $res = json_decode ( $post_scheme, true);//对POST信息解码
 		$res = $post_scheme;
+		trace($post_scheme,'notice');
 		//对信息进行校验
 		$validate = new Validate([
             'lotterytype'	=> 'require',
@@ -135,11 +136,12 @@ class SchemeController extends BaseController
 
 		$new_scheme['lotterytype'] = $res['lotterytype'];
 		$new_scheme['shopid'] = $res['shopid'];
-		$new_scheme['mobile'] = $res['mobile'];
-		$new_scheme['username'] = $res['username'];
+		$new_scheme['mobile'] = isset($res['mobile'])?$res['mobile']:' ';
+		$new_scheme['username'] = isset($res['username'])?$res['username']:' ';
 		$new_scheme['schemeid'] = $res['schemeid'];
 		$new_scheme['endtime'] = $res['endtime'];
 		$new_scheme['tickets'] = $res['tickets'];
+		$new_scheme['source'] = isset($res['source'])?$res['source']:' ';
 		$new_scheme['totalamount'] = $res['totalamount'];
 		$new_scheme['tstatus'] = 1;
 		$new_scheme['status'] = 1;

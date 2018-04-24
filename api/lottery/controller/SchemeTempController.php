@@ -82,6 +82,7 @@ class SchemeTempController extends BaseTempController
 	protected function addScheme($post_scheme){
 		// $res = json_decode ( $post_scheme, true);//对POST信息解码
 		// $res = $post_scheme;
+		trace($post_scheme,'notice');
 		if(empty($post_scheme)){
 			$this->error('post数据为空');
 		}else{
@@ -95,7 +96,8 @@ class SchemeTempController extends BaseTempController
             'schemeid'		=> 'require|unique:lottery_scheme',
             'endtime'		=> 'require',
             'tickets'		=> 'require',
-            'totalamount'	=> 'require'
+            'totalamount'	=> 'require',
+            'schemedetail'	=> 'require'
         ]);
 
         $validate->message([
@@ -105,7 +107,8 @@ class SchemeTempController extends BaseTempController
             'schemeid.require'		=> '缺少方案编号',
             'endtime.require'		=> '缺少方案截止时间',
             'tickets.require'		=> '缺少总票数',
-            'totalamount.require'	=> '缺少总金额'
+            'totalamount.require'	=> '缺少总金额',
+            'schemedetail.require'	=> '缺少方案细节'
         ]);
 		$rule = [
 					['multiples','require|number|between:1,99','缺少倍数|倍数必须是数字|倍数必须在1~99之间'],
@@ -121,11 +124,12 @@ class SchemeTempController extends BaseTempController
 
 		$new_scheme['lotterytype'] = $res['lotterytype'];
 		$new_scheme['shopid'] = $res['shopid'];
-		$new_scheme['mobile'] = $res['mobile'];
-		$new_scheme['username'] = $res['username'];
+		$new_scheme['mobile'] = isset($res['mobile'])?$res['mobile']:' ';
+		$new_scheme['username'] = isset($res['username'])?$res['username']:' ';
 		$new_scheme['schemeid'] = $res['schemeid'];
 		$new_scheme['endtime'] = $res['endtime'];
 		$new_scheme['tickets'] = $res['tickets'];
+		$new_scheme['source'] = isset($res['source'])?$res['source']:' ';
 		$new_scheme['totalamount'] = $res['totalamount'];
 		$new_scheme['tstatus'] = 1;
 		$new_scheme['status'] = 1;
@@ -161,7 +165,7 @@ class SchemeTempController extends BaseTempController
 		if ($result1 && $result2){
 			//测试上传部分暂时不推送消息。
 			//$this->pushSchemeNum($new_scheme['shopid']);
-			$this->success('方案已经上传');
+			$this->success('方案上传成功');
 		}else{
 			$this->error('方案上传失败');
 		}
