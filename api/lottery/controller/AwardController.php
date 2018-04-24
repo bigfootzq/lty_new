@@ -26,35 +26,7 @@ class AwardController extends BaseController
      * 显示资源列表
      */
     public function index(){
-		$str = '{"endtime":"2018-02-03 20:00:00",
-		"lotteytype":"lottery",
-		"mobile":"1451",
-		"schemeid":"956489875257843712",
-		"shopid":"2",
-		"source":"58.com",
-		"tickets":"1",
-		"totalamount":"2",
-		"username":"邢博文"}';
-		// $data = (array)json_decode($str,true);
-		// dump($data);
-		$data = array(
-					 "endtime" => "2018-02-03 20:00:00",
-					  "mobile" =>  "1451",
-					  "schemeid" => 111,
-					  "shopid" =>  "2",
-					  "source" =>  "58.com",
-					  "tickets" =>  "1",
-					  "totalamount" => "2",
-					  "username" =>  "邢博文",
-					  "lotterytype" => "super_lottery"
-					);
-		for($i = 0;$i<1000;$i++){
-			$data['schemeid'] = $i*100+1;
-			// dump($data);
-			Db::name('lottery_scheme')->insert($data);
-			// echo Db::getLastSql();
-		}
-		
+	
     }
 	public function update(){
 		$get = input('get.');
@@ -152,50 +124,42 @@ class AwardController extends BaseController
 			$this->error('post数据为空');
 		}else{
 			// dump($postAward);
-			// $res = json_decode( $postAward, true);//对POST信息解码
-			$res = explode('#',$postAward);
+			$res = json_decode( $postAward, true);//对POST信息解码
 			// dump($res);
 		}
 		//对信息进行校验
 		$validate = new Validate([
-            'issue_number'	=> 'require',
+            'issue_number'	=> 'require|unique:lottery_k3_bonus|length:9',
             'bonus_code'        => 'require',
             'provid'		=> 'require',
+            'device_number'		=> 'require',
             'create_time'		=> 'require'
         ]);
 
         $validate->message([
-			'lotterytype.require'	=> '缺少期号',
-            'shopid.require'		=> '缺少开奖结果',
-            'schemeid.require'		=> '缺少开奖省份',
-            'endtime.require'		=> '缺少生成时间'
+			'issue_number.require'	=> '缺少期号',
+			'issue_number.unique'	=> '本次开奖结果已经上传',
+			'issue_number.length'	=> '期号长度必须为9位',
+            'bonus_code.require'		=> '缺少开奖结果',
+            'provid.require'		=> '缺少开奖省份',
+            'device_number.require'		=> '缺少设备号码',
+            'create_time.require'		=> '缺少生成时间'
         ]);
-		// $rule = [
-					// ['multiples','require|number|between:1,99','缺少倍数|倍数必须是数字|倍数必须在1~99之间'],
-					// ['amount','require|number|>:0','缺少单票金额|单票金额必须是数字|单票金额必须大于0'],
-					// ['type','require','缺少彩票玩法'],
-					// ['ticketno','require','缺少彩票序号'],
-					// ['lotteryNumber','require','缺少彩票号码']
-				// ];
-		// $validate_sd = new Validate($rule);
-		// if (!$validate->check($res)) {
-            // $this->error($validate->getError());
-        // }
 
-		// $newAward['issue_number'] = $res['issue_number'];
-		// $newAward['bonus_code'] = $res['bonus_code'];
-		// $newAward['provid'] = $res['provid'];
-		// $newAward['create_time'] = $res['create_time'];
-		// $newAward['status'] = 1;
-		$newAward['issue_number'] = $res[0];
-		$newAward['bonus_code'] = $res[1];
-		$newAward['provid'] = $res[2];
-		$newAward['create_time'] = $res[3];
+		if (!$validate->check($res)) {
+            $this->error($validate->getError());
+        }
+
+		$newAward['issue_number'] = $res['issue_number'];
+		$newAward['bonus_code'] = $res['bonus_code'];
+		$newAward['provid'] = $res['provid'];
+		$newAward['device_number'] = $res['device_number'];
+		$newAward['create_time'] = $res['create_time'];
 		$newAward['status'] = 1;
-		// dump($newAward);
-		$result = Db::name('lottery_k3_bonus_results')->insert($newAward);//scheme写入数据库
+		$result = Db::name('lottery_k3_bonus')->insert($newAward);//scheme写入数据库
 		if($result){
-			$this->success('本次开奖结果已经上传');
+			$this->bstatus($newAward);
+			$this->success('本次开奖结果上传成功');
 		}else{
 			$this->error('本次开奖结果上传失败');
 		}
@@ -206,19 +170,34 @@ class AwardController extends BaseController
 			case '111':
 				$table = 'lottery_k3_bonus_results';
 				$provid = 36;
+				$gamecode = 'JXKS';
+				$maxqi = 84;
+				$starhour = 8;
+				$starmiute = 55;//江西快三开奖时间8:55
 				break;
 		}
-		$Curqi = '180111083';
-		$endtime = $this->getEndtime('JXKS',$Curqi);
+		$today = date("ymd");
+		$minute = (date("G")-$starhour)*60+date("i")-$starmiute;//计算出当前时间与首次开奖时间的分钟差
+		// dump($minute);
+		$qi = ceil($minute/10);
+		if ($qi <= $maxqi){
+			$Curqi = $today.$qi;//当前期号=年月日+计算出来的期号,180411083
+		}else{
+			$tomorrow = $today+1;
+			$Curqi = $tomorrow.'001';//一天最多$maxqi期，超过跳到下一天第一期
+		}
+		$endtime = $this->getEndtime($gamecode,$Curqi);
 		$seconds = floor((strtotime($endtime)-time()));
 		// dump($endtime);
-		// dump($second);
+		// dump($seconds);
 		$map['provid'] = $provid;	
-		$map['issue_number'] = $Curqi -1;	
+		$map['issue_number'] = $Curqi -1;
+		// dump($map);
 		$preIssues	=	Db::name($table)
 							->where($map)
 							->field('issue_number,bonus_code,bstatus')
-							->find();	
+							->find();
+		// dump($preIssues);
 		$HistoryIssues	=	Db::name($table)
 							// ->where($map)
 							->field('issue_number,bonus_code,bstatus')
@@ -227,23 +206,26 @@ class AwardController extends BaseController
 
 		$data['CurIssueNumber'] = array(
 									"IssueStatus" 	=> 	0,
-									"IssueNumber"	=>	'180111083'
+									"IssueNumber"	=>	$Curqi
 									
 									);
+		$bonustime = $seconds-360;//开奖时间，上一期截止后的四分钟时间，以后可能会调整会三分钟
 		$data['PreIssueNumber'] = array(
 									"IssueStatus" 	=> 	0,
 									"IssueNumber" 	=> 	$preIssues['issue_number'],
-									"BonusTime" 	=> 	-297,
+									"BonusTime" 	=> 	$bonustime,
 									"bonus_code" 	=> 	$preIssues['bonus_code'],
 									"bstatus" 		=> 	$preIssues['bstatus']
 									
 									);
-		$data['Seconds'] =  $seconds;
+		$data['Seconds'] =  $seconds;//截止时间
 		$data['HistoryIssues'] = $HistoryIssues;
 		$this->success("",$data);;
 	
 	}
-	
+	/*
+		冷热数据接口
+	*/
 	public function getHotData(){
 		$result = Db::name('lottery_k3_bonus_results')
 					->field('bonus_code')
@@ -300,7 +282,9 @@ class AwardController extends BaseController
 		// dump($data);
 		$this->success('ok',$data);
 	}
-	
+	/*
+	*	图表走势接口
+	*/
 	public function getTongjiData(){
 		$maxissue = input('get.maxissue');
 		$provid = input('get.provid');
@@ -408,10 +392,9 @@ class AwardController extends BaseController
 	*/
 	public function betsToScheme(){
 		//读入投注记录，status:0为未提交记录
-		$map['status'] = 0;
-		// $map['id'] = 11;
+		$map['status'] = 0;	
+		$map['chaseid'] = 0;//因为目前只提交非追号方案，chaseid=0代表非追号方案
 		$result	=	Db::name('lottery_betorder_list')
-					// ->limit(1)
 					->where($map)
 					->select();
 		// dump($result);
@@ -635,5 +618,171 @@ class AwardController extends BaseController
 		
 		
 	}
+	
+	//开奖函数
+	public function openBonus($newAward){
+		
+		$map['status'] = 1;
+		$map['chaseid'] = 0;//目前只开非追号订单
+		$map['currentissue'] = $newAward['issue_number'];
+		//查询彩果
+		$bonus_info = Db::name('lottery_k3_bonus_results')->where('issue_number',$newAward['issue_number'])-find();
+		$res = $this->analyzeBonusCode($bonus_info['bonus_code']);
+		$barr = explode(',',$bonus_info['bonus_code']);
+		//查出当前期号的订单，status=1 为已经提交
+		$result	=	Db::name('lottery_betorder_list')
+					->where($map)
+					->select();
+		if($result){
+			$num = explode('.',$result['number']);
+				switch($num[0]){
+						case "HZ":
+							if ($num[1] == $res['hz']){
+								$brs['lotterystatus'] = 1;
+							}else{
+								$brs['lotterystatus'] = 2;//1为已中奖，2为未中奖
+							}
+							break;
+						case "3THTX":
+							if ($res['bstatus'] === '三同号'){
+								$brs['lotterystatus'] = 1;
+							}else{
+								$brs['lotterystatus'] = 2;//1为已中奖，2为未中奖
+							}
+							break;
+						case "3THDX":
+							if ($res['bstatus'] === '三同号'){
+								if(substr( $num[1], 0, 1 ) == substr( $bonus_info['bonus_code'], 0, 1 )){
+									$brs['lotterystatus'] = 1;
+								}else{
+									$brs['lotterystatus'] = 2;//1为已中奖，2为未中奖
+								}
+							}else{
+								$brs['lotterystatus'] = 2;//1为已中奖，2为未中奖
+							}
+							break;
+						case "3LHTX":
+							if ($res['bstatus'] === '三连号'){
+								$brs['lotterystatus'] = 1;
+							}else{
+								$brs['lotterystatus'] = 2;//1为已中奖，2为未中奖
+							}
+							break;
+						case "3BTH":
+							if ($res['bstatus'] === '三不同号'){
+								$brs['lotterystatus'] = 1;
+							}else{
+								$brs['lotterystatus'] = 2;//1为已中奖，2为未中奖
+							}
+							break;
+						case "3BTHDT":
+							//三不同号胆拖，备用
+							break;
+						case "2THFX":
+							//2THFX.11X,22X,33X,44X,55X,66X
+							$tfarr = explode(',',$num[1]);
+							if ($res['bstatus'] === '二同号'){
+								if ($barr[0] == $barr[1]){
+									$bcode = $barr[0];
+								}else{
+									$bcode = $barr[1];
+								}
+								foreach($tfarr as $th){
+									if(substr( $th, 0, 1 ) == $bcode){//只要有一个中了就行
+										$brs['lotterystatus'] = 1;
+									}else{
+										$brs['lotterystatus'] = 2;
+									}
+								}
+							}else{
+								$brs['lotterystatus'] = 2;
+							}
+							break;
+						case "2THDX":
+							//2THDX.11,22,33|4,5,6
+							$tdarr = explode('|',$num[1]);
+							$tarr = explode(',',$tdarr[0]);//同号
+							$narr = explode(',',$tdarr[1]);//不同号
+							if ($res['bstatus'] === '二同号'){
+								if ($barr[0] == $barr[1]){
+									$tcode = $barr[0];
+									$ncode = $barr[2];
+								}else{
+									$tcode = $barr[1];
+									$ncode = $barr[0];
+								}
+								foreach($tarr as $th){
+									if(substr( $th, 0, 1 ) == $tcode){//首先同号中
+										foreach($narr as $nh){
+											if ($nh == $ncode){//然后不同号也中，才算中奖
+												$brs['lotterystatus'] = 1;
+											}else{
+												$brs['lotterystatus'] = 2;
+											}
+										}
+									}else{
+										$brs['lotterystatus'] = 2;
+									}
+								}
+							}else{
+								$brs['lotterystatus'] = 2;
+							}
+							break;
+						case "2BTH":
+							//2BTH.1,2,3,4,5,6
+							$btharr = explode('|',$num[1]);
+							if($res['bstatus'] == '三同号'){
+								$brs['lotterystatus'] = 2;
+							}else{
+								$zcount = 0;
+								foreach($btharr as $bth){
+									if (strpos($bonus_info['bonus_code'],$bth) !== false){
+										$zcount++;
+									}
+								}
+								if ($zcount >= 2){//只要买的号码在彩果中出现两次即中奖
+									$brs['lotterystatus'] = 1;
+								}
+							}
+							
+							break;
+						case "2BTHDT":
+							//二不同号胆拖，备用
+							break;
+			}
+		}
+	}
+	
+	private function bstatus($postAward){
+		
+		$table = 'lottery_k3_bonus_results';
+		$res = $this->analyzeBonusCode($postAward['bonus_code']);
+		$value['bstatus']  = $res['bstatus'];
+		$value['bonus_code'] = $postAward['bonus_code'];
+		$value['create_time'] = $postAward['create_time'];
+		$value['issue_number'] = $postAward['issue_number'];
+		$value['provid'] = $postAward['provid'];
+ 		Db::name($table)->insert($value);
+   }
+   /*
+   * 	彩果解析函数
+   */
+   private function analyzeBonusCode($bonus_code){
+		$barr = explode(',',$bonus_code);
+		// dump($barr);
+		$value['hz'] = $barr[0] +$barr[1] +$barr[2];
+		if (($barr[0] ==$barr[1]) &&($barr[0]==$barr[2])){
+			$value['bstatus'] = "三同号";
+		}else if (($barr[0] !=$barr[1]) &&($barr[0]!=$barr[2]) &&($barr[1]!=$barr[2])){
+			$value['bstatus'] = "三不同号";
+			sort($barr);
+			if( ( $barr[0]+1 == $barr[1]) && ($barr[1]+1 == $barr[2])){
+				$value['bstatus'] = "三连号";
+			}
+		}else if(($barr[0] ==$barr[1]) ||($barr[0]==$barr[2]) ||($barr[1] == $barr[2])){
+			$value['bstatus'] = "二同号";
+		}
+		return $value;
+   }
 
 }

@@ -19,14 +19,16 @@ class PublicController extends RestBaseController
     {
         $validate = new Validate([
             'username'          => 'require',
-            'password'          => 'require'
-            // 'verification_code' => 'require'
+            'shopcode'          => 'require',
+            'password'          => 'require',
+            'vcode' 			=> 'require'
         ]);
 
         $validate->message([
-            'username.require'          => '请输入手机号,邮箱!',
-            'password.require'          => '请输入您的密码!'
-            // 'verification_code.require' => '请输入数字验证码!'
+            'shopcode.require'          => '请输入彩店代码',
+            'username.require'          => '请输入手机号',
+            'password.require'          => '请输入您的密码!',
+            'vcode.require' 			=> '请输入数字验证码!'
         ]);
 
         $data = $this->request->param();
@@ -48,17 +50,17 @@ class PublicController extends RestBaseController
             $this->error("请输入正确的手机或者邮箱格式!");
         }
 
-        // $errMsg = cmf_check_verification_code($data['username'], $data['verification_code']);
-        // if (!empty($errMsg)) {
-            // $this->error($errMsg);
-        // }
+        $errMsg = cmf_check_verification_code($data['username'], $data['vcode']);
+        if (!empty($errMsg)) {
+            $this->error($errMsg);
+        }
 
         $findUserCount = $userQuery->count();
 
         if ($findUserCount > 0) {
             $this->error("此账号已存在!");
         }
-
+		$user['shopid']     = $data['shopcode'];
         $user['create_time'] = time();
         $user['user_status'] = 1;
         $user['user_type']   = 2;
@@ -239,8 +241,7 @@ class PublicController extends RestBaseController
         if (empty($result)) {
             $this->error("登录失败!");
         }else{
-			session('ADMIN_ID', $findUser["id"]);
-			session('name', $findUser["user_login"]);
+
 			$this->success("登录成功!", ['token' => $token, 'shopid' => $findUser['id']]);
 		}
 		
@@ -313,4 +314,25 @@ class PublicController extends RestBaseController
         $this->success("密码重置成功,请使用新密码登录!");
 
     }
+	
+	public function smsSend()
+    {
+        if(request()->isPost()){
+            
+            $mobile =  input('post.mobile');//input助手函数	获取输入数据 支持默认值和过滤
+            $code = cmf_get_verification_code($mobile,6);  
+			// dump($code);
+            $result = sendMsg($mobile, $code); 
+			// dump($result);
+            //$result['Code'] = 'OK';  
+            if ($result['Code'] == 'OK') {  
+                //存到缓存当中,并且返回json数据给前端  
+                // cache('tel#' . $mobile, $code, 360);  
+				cmf_verification_code_log($mobile,$code,3600);
+                $this->success('ok',  $mobile);  
+            }  
+
+        }
+    }
+
 }

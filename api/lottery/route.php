@@ -24,4 +24,6 @@ Route::patch('scheme','lottery/Scheme/scheme');
 
 
 Route::post('user/logon','User/public/logon');
+Route::post('smstest','User/Sms/smstest');
 Route::post('order','lottery/Deal/order');
+Route::post('award','lottery/Award/Award');

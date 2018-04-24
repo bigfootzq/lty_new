@@ -23,6 +23,7 @@ Route::post([
     'user/favorites'        => 'user/favorites/setFavorites', //添加收藏
     'user/comments'         => 'user/comments/setComments', //添加评论
 	'user/reg'				=> 'user/public/register',//注册
+	'user/sms'				=> 'user/public/smsSend',//注册验证码发送
 	'user/login'			=> 'user/public/login',//登录
 ]);
 

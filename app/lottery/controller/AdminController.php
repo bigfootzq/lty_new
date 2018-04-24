@@ -24,6 +24,55 @@ class AdminController extends AdminBaseController
 	public function index(){
 		
     }
+	//彩果列表
+	public function AwardList(){
+		$where   = [];
+        $request = input('request.');
+
+        $keywordComplex = [];
+        if (!empty($request['keyword'])) {
+            $keyword = $request['keyword'];
+
+            $keywordComplex['issue_number']    = ['like', "%$keyword%"];
+        }
+        $AwardQuery = Db::name('lottery_k3_bonus_results');
+
+        $list = $AwardQuery->whereOr($keywordComplex)->where($where)->order("create_time DESC")->paginate(10);
+        // 获取分页显示
+        $page = $list->render();
+        $this->assign('list', $list);
+        $this->assign('page', $page);
+        // 渲染模板输出
+        return $this->fetch();
+	}
+	//人工更正彩果
+	public function alterAward(){
+		if($this->request->isPost()){
+			
+			$result = $this->validate($this->request->param(), 'Admin');
+			if ($result !== true) {
+                    // 验证失败 输出错误信息
+                    $this->error($result);
+                } else {
+                    $result = DB::name('lottery_k3_bonus_results')->where('id',$_POST['id'])->setField('bonus_code',$_POST['bonus_code']);
+                    if ($result !== false) { 
+                        $this->success("彩果变更成功！");
+                    } else {
+                        $this->error("彩果变更失败！");
+                    }
+                }
+		}else{
+			$id    = $this->request->param('id', 0, 'intval');
+			$bouns = DB::name('lottery_k3_bonus_results')->where(["id" => $id])->find();
+			$this->assign($bouns);
+			// 渲染模板输出
+			return $this->fetch();
+		}
+	}
+	//人工开奖
+	public function openBonus(){
+		
+	}
 	//店主充值
 	public function shopmanRecharge(){
 		
