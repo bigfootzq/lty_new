@@ -21,7 +21,16 @@ class IndexController extends AdminBaseController
     {
         $adminSettings = cmf_get_option('admin_settings');
         if (empty($adminSettings['admin_password']) || $this->request->path() == $adminSettings['admin_password']) {
-            $adminId = cmf_get_current_admin_id();
+            //这一段if/else是新加的用于显式传递sessionId
+			if(isset($_GET['sid'])){
+				$sid = $_GET['sid'];
+				session_id($sid);
+				// session_start();
+				$adminId = session('ADMIN_ID');
+			}else{
+				$adminId = cmf_get_current_admin_id();
+			}
+			// $adminId = cmf_get_current_admin_id();
             if (empty($adminId)) {
                 session("__LOGIN_BY_CMF_ADMIN_PW__", 1);//设置后台登录加密码
             }
@@ -37,7 +46,6 @@ class IndexController extends AdminBaseController
     {
         $adminMenuModel = new AdminMenuModel();
         $menus          = $adminMenuModel->menuTree();
-
         $this->assign("menus", $menus);
 
         $admin = Db::name("user")->where('id', cmf_get_current_admin_id())->find();

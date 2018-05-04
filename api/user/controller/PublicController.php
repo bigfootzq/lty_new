@@ -241,8 +241,11 @@ class PublicController extends RestBaseController
         if (empty($result)) {
             $this->error("登录失败!");
         }else{
-
-			$this->success("登录成功!", ['token' => $token, 'shopid' => $findUser['id']]);
+			session_start();
+			session('ADMIN_ID', $findUser['id']);
+			session('name',$data['username'] );
+			$sessionId= session_id();  //这里增加了几句用于显式传递sessionId
+			$this->success("登录成功!", ['token' => $token, 'shopid' => $findUser['id'],'sid'=>$sessionId]);
 		}
 		
         
@@ -318,7 +321,6 @@ class PublicController extends RestBaseController
 	public function smsSend()
     {
         if(request()->isPost()){
-            
             $mobile =  input('post.mobile');//input助手函数	获取输入数据 支持默认值和过滤
             $code = cmf_get_verification_code($mobile,6);  
 			// dump($code);
@@ -326,8 +328,7 @@ class PublicController extends RestBaseController
 			// dump($result);
             //$result['Code'] = 'OK';  
             if ($result['Code'] == 'OK') {  
-                //存到缓存当中,并且返回json数据给前端  
-                // cache('tel#' . $mobile, $code, 360);  
+                //存到数据库中  
 				cmf_verification_code_log($mobile,$code,3600);
                 $this->success('ok',  $mobile);  
             }  

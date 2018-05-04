@@ -5,6 +5,7 @@ namespace app\lottery\controller;
 use cmf\controller\AdminBaseController;
 use think\Request;
 use think\Db;
+use app\lottery\model\AdminModel;
 
 /**
  * Class AdminController
@@ -25,7 +26,7 @@ class AdminController extends AdminBaseController
 		
     }
 	//彩果列表
-	public function AwardList(){
+	public function awardList(){
 		$where   = [];
         $request = input('request.');
 
@@ -45,6 +46,52 @@ class AdminController extends AdminBaseController
         // 渲染模板输出
         return $this->fetch();
 	}
+	//每日彩果列表
+	public function todayAwardList(){
+		$gameid = '111';
+		switch($gameid){
+			case '111':
+				$table = 'lottery_k3_bonus_results';
+				$provid = 36;
+				$gamecode = 'JXKS';
+				$maxqi = 84;
+				$startime = '08:55:00';
+				$interval_time = 596;//每期时间，暂定为596秒
+				break;
+		}
+		$today = date("ymd");
+		$qi = 0;
+		$data = array();
+		while ($qi < $maxqi) {
+			$qi++;
+			$endtime = strtotime($startime) +$qi*$interval_time = 596;
+			$bonustime = $endtime + 60;
+			$data['id'] = $qi-1;
+			$data['qi'] = $qi;
+			$data['endtime'] = date("H:i:s",$endtime); 
+			$data['bonustime'] = date("H:i:s",$bonustime); 
+			$data2[] = $data;
+		}
+		$where   = [];
+        $request = input('request.');
+
+        $keywordComplex = [];
+        if (!empty($request['keyword'])) {
+            $keyword = $request['keyword'];
+
+            $keywordComplex['issue_number']    = ['like', "%$keyword%"];
+        }
+        $AwardQuery = Db::name('lottery_k3_bonus_results');
+
+        // $list = $AwardQuery->whereOr($keywordComplex)->where($where)->order("create_time DESC")->paginate(10);
+        // 获取分页显示
+        // $page = $list->render();
+		// dump($data2);
+        $this->assign('list', $data2);
+        // 渲染模板输出
+        return $this->fetch();
+	}
+	
 	//人工更正彩果
 	public function alterAward(){
 		if($this->request->isPost()){
@@ -69,9 +116,44 @@ class AdminController extends AdminBaseController
 			return $this->fetch();
 		}
 	}
-	//人工开奖
-	public function openBonus(){
+	//投注列表
+	public function orderList(){
+		if($this->request->isPost()){
+
+		}else{
+			$issue_number    = $this->request->param('currentissue', 0, 'intval');
+			$list = DB::name('lottery_betorder_list')->where(["currentissue" => $issue_number])->order("createtime DESC")->paginate(20);
+			// 获取分页显示
+			$page = $list->render();
+			$this->assign('list', $list);
+			$this->assign('page', $page);
+			// 渲染模板输出
+			return $this->fetch();
+		}
 		
+	}
+	public function openBonus(){
+			$issue_number    = $this->request->param('issue_number', 0, 'intval');
+			$where['issue_number'] = $issue_number;
+			// dump($where);
+			$bonus = DB::name('lottery_k3_bonus_results')->where($where)->find();//查询彩果
+			// dump($bonus);
+			if($bonus){
+				$bonus_results = openBonus($bonus);
+				// dump($bonus_results);
+				if($bonus_results){
+					
+					$admin = new AdminModel();
+					$info = $admin->saveAll($bonus_results);//更新开奖结果
+					if($info){
+						$this->success('开奖成功');
+					}else{
+						$this->error('开奖失败');
+					}
+				}else{
+						$this->error('开奖失败');
+				}
+			}
 	}
 	//店主充值
 	public function shopmanRecharge(){
