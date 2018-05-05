@@ -268,6 +268,8 @@ class SchemeController extends BaseController
 				}else{
 					$this->success('结账成功,请刷新！');	
 				}
+			}else{
+				$this->error('方案已经过期');
 			}
 		}
 	
