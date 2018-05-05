@@ -112,6 +112,7 @@ class AwardController extends BaseController
 		$result	=	Db::name($table)
 					->where($map)
 					->field('issue_number,create_time,bonus_code')
+					->order('issue_number desc')
 					->limit($limit_start,10)
 					->select();
 		if($result){
@@ -452,6 +453,12 @@ class AwardController extends BaseController
 				switch($num[0]){
 						case "HZ":
 								$data2['type'] = "和值";
+								$data2['lotteryNumber'] = $num[1];
+								$data2['amount'] = 2;
+								// array_push($data2['lotteryNumber'],$num[1]);
+							break;
+						case "KD":
+								$data2['type'] = "跨度";
 								$data2['lotteryNumber'] = $num[1];
 								$data2['amount'] = 2;
 								// array_push($data2['lotteryNumber'],$num[1]);

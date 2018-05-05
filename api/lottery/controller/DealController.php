@@ -168,7 +168,7 @@ class DealController extends BaseController
 	}
 
 	/*
-	*请求订单记录
+	*请求追号订单记录
 	*    orderstatus 
         "-1": "已撤销",
         "0": "等待中",

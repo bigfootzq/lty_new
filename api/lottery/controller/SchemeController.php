@@ -175,7 +175,7 @@ class SchemeController extends BaseController
 		}
 		
 		if ($result1 && $result2){
-			$this->pushSchemeNum($new_scheme['shopid']);
+			// $this->pushSchemeNum($new_scheme['shopid']);
 			$this->success('方案上传成功');
 		}else{
 			$this->error('方案上传失败');
@@ -272,7 +272,7 @@ class SchemeController extends BaseController
 			// 建立socket连接到内部推送端口
 			$client = stream_socket_client('tcp://127.0.0.1:5678', $errno, $errmsg, 1);
 			// 推送的数据，包含uid字段，表示是给这个uid推送
-			$data = array('shopid'=>$shopid, 'code'=>1,'msg'=>'有新方案');
+			$data = array('shopid'=>$shopid, 'code'=>2,'msg'=>'有新方案');
 			// dump($data);
 			// 发送数据，注意5678端口是Text协议的端口，Text协议需要在数据末尾加上换行符
 			fwrite($client, json_encode($data)."\n");

@@ -8,8 +8,10 @@
 namespace app\push\controller;
 
 use think\worker\Server;
-use think\Db;
+// use think\Db;
 use Workerman\Worker;
+use Workerman\MySQL;
+// require_once VENDOR_PATH.'/workerman/workerman/mysql-master/src/Connection.php';
 
 class WorkerController extends Server
 {
@@ -24,27 +26,34 @@ class WorkerController extends Server
      * @param $data
      */
     public function onMessage($connection, $data)
-    {
-		
+    {	
+		global $db;
+		$db = new \Workerman\Connection('localhost', '3306', 'root', 'kof3306', 'lty');
+		// dump($db);
         // 判断当前客户端是否已经验证,既是否设置了uid
 		if(!isset($connection->uid))
 		{
 		   // 读取上传的data，验证token
-			$res =  json_decode($data,true);
-			$token = $res['token'];
-			if ($token){
-				$user_id = Db::name('user_token')
-				->where(['token' => $token])
-				->value('user_id');
+		    trace($data,'notice');
+			// dump($data);
+			if (isset($data) && $data){
+				$res =  json_decode( $data,true);
+				// dump($res);
+				$token = isset($res['token'])?$res['token']:null;
 			}else{
-				$connection->send(json_encode(array('code'=>0,'msg'=>'token failure')));
+				$connection->send(json_encode(array('code'=>0,'msg'=>'data null')));
+			}
+			if ($token){
+				$user_id = $db->single("SELECT user_id FROM `lty_user_token` WHERE token = '$token' ") || null;
+			}else{
+				$connection->send(json_encode(array('code'=>0,'msg'=>'token null')));
 			}
 			
 			if (!empty($user_id) && ($user_id == (int)$res['shopid'])){
 				$connection->uid = (int)$res['shopid'];
 				$connection->send(json_encode(array('code'=>1,'msg'=>'Authentication ok')));
 			}else{
-				$connection->send(json_encode(array('code'=>0,'msg'=>'shopid error')));
+				$connection->send(json_encode(array('code'=>0,'msg'=>'Authentication fail')));
 			}
 
 		   /* 保存uid到connection的映射，这样可以方便的通过uid查找connection，
@@ -105,6 +114,7 @@ class WorkerController extends Server
 			$news = json_encode(array('code'=>1,'msg'=>'有新方案'));
 			// 通过workerman，向uid的页面推送数据
 			$ret = $this->sendMessageByUid($shopid, $news);
+			// dump($ret);
 			// 返回推送结果
 			$connection->send($ret ? 'ok' : 'fail');
 		};
