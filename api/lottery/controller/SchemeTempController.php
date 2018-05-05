@@ -224,8 +224,11 @@ class SchemeTempController extends BaseTempController
 		}else if($tstatus == 2){
 			if($res['tstatus'] == 3 || $res['tstatus'] == 4){
 				$list = Db::name('lottery_scheme')->where('schemeid', $res["schemeid"])->setField('tstatus',$res['tstatus']);//更新数据库，注意这里要锁表,暂时没写。
-				
-				$this->success('状态变更已经提交,请刷新！');
+				if ($list == 0){//返回失败报文,
+					$this->error('结账失败');
+				}else{
+					$this->success('结账成功,请刷新！');	
+				}
 			}
 			if($res['tstatus'] == 2){
 				
@@ -235,6 +238,15 @@ class SchemeTempController extends BaseTempController
 			$this->success('方案已经出票成功');
 		}else if($tstatus == 4 ){
 			$this->success('方案已经出票失败');
+		}else if($tstatus == 5){
+			if($res['tstatus'] == 3 || $res['tstatus'] == 4){
+				$list = Db::name('lottery_scheme')->where('schemeid', $res["schemeid"])->setField('tstatus',$res['tstatus']);
+				if ($list == 0){//返回失败报文,
+					$this->error('结账失败');
+				}else{
+					$this->success('结账成功,请刷新！');	
+				}
+			}
 		}
 	
 	}
