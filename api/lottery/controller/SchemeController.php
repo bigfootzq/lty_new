@@ -135,7 +135,7 @@ class SchemeController extends BaseController
         }
 
 		$new_scheme['lotterytype'] = $res['lotterytype'];
-		$new_scheme['shopid'] = $res['shopid'];
+		$new_scheme['shopid'] = (int)$res['shopid'];
 		$new_scheme['mobile'] = isset($res['mobile'])?$res['mobile']:' ';
 		$new_scheme['username'] = isset($res['username'])?$res['username']:' ';
 		$new_scheme['schemeid'] = $res['schemeid'];
@@ -210,25 +210,29 @@ class SchemeController extends BaseController
 				}
 			$this->success('请求成功',['schemedetail'=>$de]);
 		}
-		$tstatus = Db::name('lottery_scheme')->where($map)->value('tstatus');
+		$scheme = Db::name('lottery_scheme')->where($map)->find();
+		$tstatus = $scheme['tstatus'];
+		$id = $scheme['id'];
 		// dump($tstatus);								
 		if($tstatus == 1){
-			//首先判断方案是否过期
-			$map['endtime'] = ['>=',date("Y-m-d H:i:s")];
-			$map['schemeid'] = $res['schemeid'];
-			$scheme = Db::name('lottery_scheme')->where($map)->find();
-			if ($scheme){
-					$list = Db::name('lottery_scheme')->where('schemeid', $res["schemeid"])->setField('tstatus',$res['tstatus']);
-				//更新数据库，注意这里要锁表,暂时没写。
+			
+			if ($res['tstatus'] == 2){
+				Db::startTrans();
+				try{
+					Db::name('lottery_scheme')->lock(true)->where('id',$id)->find();
+					$list = Db::name('lottery_scheme')->where('id', $scheme["id"])->setField('tstatus',$res['tstatus']);
+					// 提交事务
+					Db::commit();    
+				} catch (\Exception $e) {
+					// 回滚事务
+					Db::rollback();
+				}
 				$msg = '状态变更为出票中';
 			}else{
-				$list = Db::name('lottery_scheme')->where('schemeid', $res["schemeid"])->setField('tstatus',5);
-				$msg = '该方案已经过期';
+				$this->error('该方案未出票不能直接结账');
 			}
 						// dump($list);
-			if ($list == 0){//返回失败报文,
-				$this->error('变更失败');
-			}else{
+			if ($list != 0){
 				$de = array();
 				$map2['sid'] = $res['schemeid'];
 				$detail = Db::name('lottery_scheme_detail')->where($map2)->select();
@@ -245,11 +249,20 @@ class SchemeController extends BaseController
 			}
 		}else if($tstatus == 2){
 			if($res['tstatus'] == 3 || $res['tstatus'] == 4){
-				$list = Db::name('lottery_scheme')->where('schemeid', $res["schemeid"])->setField('tstatus',$res['tstatus']);//更新数据库，注意这里要锁表,暂时没写。
-				if ($list == 0){//返回失败报文,
-					$this->error('结账失败');
-				}else{
+				Db::startTrans();
+				try{
+					Db::name('lottery_scheme')->lock(true)->where('id',$id)->find();
+					$list = Db::name('lottery_scheme')->where('id',$id)->setField('tstatus',$res['tstatus']);
+					// 提交事务
+					Db::commit();    
+				} catch (\Exception $e) {
+					// 回滚事务
+					Db::rollback();
+				}
+				if (isset($list)&&$list != 0){
 					$this->success('结账成功,请刷新！');	
+				}else{
+					$this->error('结账失败');
 				}
 			}
 			if($res['tstatus'] == 2){
@@ -262,11 +275,20 @@ class SchemeController extends BaseController
 			$this->success('方案已经出票失败');
 		}else if($tstatus == 5){
 			if($res['tstatus'] == 3 || $res['tstatus'] == 4){
-				$list = Db::name('lottery_scheme')->where('schemeid', $res["schemeid"])->setField('tstatus',$res['tstatus']);
-				if ($list == 0){//返回失败报文,
-					$this->error('结账失败');
-				}else{
+				Db::startTrans();
+				try{
+					Db::name('lottery_scheme')->lock(true)->where('id',$id)->find(1);
+					$list = Db::name('lottery_scheme')->where('id',$id)->setField('tstatus',$res['tstatus']);
+					// 提交事务
+					Db::commit();    
+				} catch (\Exception $e) {
+					// 回滚事务
+					Db::rollback();
+				}
+				if (isset($list)&&$list != 0){
 					$this->success('结账成功,请刷新！');	
+				}else{
+					$this->error('结账失败');
 				}
 			}else{
 				$this->error('方案已经过期');

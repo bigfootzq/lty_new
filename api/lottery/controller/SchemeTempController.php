@@ -123,7 +123,7 @@ class SchemeTempController extends BaseTempController
         }
 
 		$new_scheme['lotterytype'] = $res['lotterytype'];
-		$new_scheme['shopid'] = $res['shopid'];
+		$new_scheme['shopid'] = (int)$res['shopid'];
 		$new_scheme['mobile'] = isset($res['mobile'])?$res['mobile']:' ';
 		$new_scheme['username'] = isset($res['username'])?$res['username']:' ';
 		$new_scheme['schemeid'] = $res['schemeid'];
