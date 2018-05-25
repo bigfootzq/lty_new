@@ -38,7 +38,7 @@ class StatisticsController extends AdminBaseController
         $SchemeQuery = Db::name('lottery_scheme');
 		// $where['createtime'] = null;
 		$post = input('post.');
-		$selectTime = $post["selectTime"]?$post["selectTime"]:'today';
+		$selectTime = isset($post["selectTime"])?$post["selectTime"]:'today';
 		
 		// dump($selectTime);
         // $list = $SchemeQuery->whereTime('create_time', $selectTime)->whereOr($keywordComplex)->where($where)->order("create_time DESC")->paginate(10);
