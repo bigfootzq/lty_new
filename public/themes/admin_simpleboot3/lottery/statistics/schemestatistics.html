@@ -1,0 +1,49 @@
+<include file="public@header"/>
+</head>
+<body>
+<div class="wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a>方案出票统计</a></li>
+    </ul>
+	<form class="well form-inline margin-top-20" method="post" action="{:url('lottery/statistics/schemeStatistics')}">
+        时间选择：
+		<select name="selectTime">
+			<option value = 'yesterday'>昨天</option>
+			<option value = 'today' selected = "selected">今天</option>
+			<option value = 'week'>本周</option>
+			<option value = 'month'>本月</option>
+		</select>
+        <input type="submit" class="btn btn-primary" value="提交"/>
+    </form>
+	<table class="table table-hover table-bordered">
+            <thead>
+            <tr>
+                <th>全部</th>
+                <th>出票</th>
+                <th>成功</th>
+                <th>失败</th>
+                <th>过期</th>
+            </tr>
+            </thead>
+            <tbody>
+					<tr>
+                    <td>{$allCount}</td>
+					<td>{$saleCount}</td>
+					<td>{$successCount}</td>
+					<td>{$failCount}</td>
+					<td>{$expireCount}</td>
+                </tr>
+            </tbody>
+	</table>
+    <form class="well form-inline margin-top-20" method="post" action="{:url('lottery/')}">
+        方案编号：
+        <input class="form-control" type="text" name="uid" style="width: 200px;" value="{:input('request.uid')}"
+               placeholder="请输入方案编号">
+        <input type="submit" class="btn btn-primary" value="搜索"/>
+        <a class="btn btn-danger" href="{:url('lottery/')}">清空</a>
+    </form>
+
+</div>
+<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

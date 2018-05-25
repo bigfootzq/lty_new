@@ -10,13 +10,17 @@ namespace app\push\controller;
 use think\worker\Server;
 // use think\Db;
 use Workerman\Worker;
+use Workerman\Lib\Timer;
 use Workerman\MySQL;
 // require_once VENDOR_PATH.'/workerman/workerman/mysql-master/src/Connection.php';
+// 心跳间隔50秒
+define('HEARTBEAT_TIME', 50);
 
 class WorkerController extends Server
 {
     protected $socket = 'tcp://0.0.0.0:1234';
 	protected $db = NULL;
+
 	
     /**
      * 收到信息
@@ -27,14 +31,16 @@ class WorkerController extends Server
      */
     public function onMessage($connection, $data)
     {	
+		$connection->lastMessageTime = time();
 		global $db;
 		$db = new \Workerman\Connection('localhost', '3306', 'root', 'kof3306', 'lty');
 		// dump($db);
+		trace($data,'notice');
         // 判断当前客户端是否已经验证,既是否设置了uid
 		if(!isset($connection->uid))
 		{
 		   // 读取上传的data，验证token
-		    trace($data,'notice');
+		  
 			// dump($data);
 			if (isset($data) && $data){
 				$res =  json_decode( $data,true);
@@ -45,22 +51,30 @@ class WorkerController extends Server
 			}
 			if ($token){
 				$user_id = $db->single("SELECT user_id FROM `lty_user_token` WHERE token = '$token' ") || null;
+				if (!empty($user_id) && ($user_id == (int)$res['shopid'])){
+					$connection->uid = (int)$res['shopid'];
+					$connection->send(json_encode(array('code'=>1,'msg'=>'Authentication ok')));
+				}else{
+					$connection->send(json_encode(array('code'=>0,'msg'=>'Authentication fail')));
+				}
 			}else{
 				$connection->send(json_encode(array('code'=>0,'msg'=>'token null')));
 			}
-			
-			if (!empty($user_id) && ($user_id == (int)$res['shopid'])){
-				$connection->uid = (int)$res['shopid'];
-				$connection->send(json_encode(array('code'=>1,'msg'=>'Authentication ok')));
-			}else{
-				$connection->send(json_encode(array('code'=>0,'msg'=>'Authentication fail')));
-			}
+
 
 		   /* 保存uid到connection的映射，这样可以方便的通过uid查找connection，
 			* 实现针对特定uid推送数据
 			*/
 		   $this->worker->uidConnections[$connection->uid] = $connection;
 		   return;
+		}else{
+			$res =  json_decode( $data,true);
+			$heartticket = isset($res['heartticket'])?$res['heartticket']:null;
+			// dump($heartticket);
+			if($heartticket){
+				$connection->uid = (int)$res['shopid'];
+				$connection->send(json_encode(array('code'=>1,'msg'=>'heartticket ok')));
+			}
 		}
     }
 
@@ -103,6 +117,23 @@ class WorkerController extends Server
      */
     public function onWorkerStart($worker)
     {
+		Timer::add(1, function()use($worker){
+			$time_now = time();
+			foreach($worker->connections as $connection) {
+				// 有可能该connection还没收到过消息，则lastMessageTime设置为当前时间
+				if (empty($connection->lastMessageTime)) {
+					$connection->lastMessageTime = $time_now;
+					continue;
+				}
+				// echo $time_now - $connection->lastMessageTime;
+				// 上次通讯时间间隔大于心跳间隔，则认为客户端已经下线，关闭连接
+				if ($time_now - $connection->lastMessageTime > HEARTBEAT_TIME) {
+					
+					// echo 'close';
+					$connection->close();
+				}
+			}
+		});
 		// 开启一个内部端口，方便内部系统推送数据，Text协议格式 文本+换行符
 		$inner_text_worker = new Worker('Text://0.0.0.0:5678');
 		$inner_text_worker->onMessage = function($connection, $buffer)

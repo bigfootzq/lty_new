@@ -13,6 +13,8 @@ use cmf\controller\RestBaseController;
 use think\Request;
 use think\Response;
 use think\Db;
+use think\Cache;
+use think\cache\driver\Redis; 
 use think\Validate;
 
 class SchemeController extends BaseController
@@ -101,8 +103,9 @@ class SchemeController extends BaseController
 	
 	protected function addScheme($post_scheme){
 		// $res = json_decode ( $post_scheme, true);//对POST信息解码
-		$res = $post_scheme;
+		
 		trace($post_scheme,'notice');
+		$res = $post_scheme;
 		//对信息进行校验
 		$validate = new Validate([
             'lotterytype'	=> 'require',
@@ -133,7 +136,18 @@ class SchemeController extends BaseController
 		if (!$validate->check($res)) {
             $this->error($validate->getError());
         }
+		// $scheme_save = json_encode($post_scheme,true);
+		// dump($scheme_save);
+		$redis = new Redis();
+		// 加上时间戳存入队列
 
+		// $now_time = date("Y-m-d H:i:s");
+
+		// $redis->handler()->rPush("post_secheme", $scheme_save . "%" . $now_time);
+		
+		// $max = $redis->handler()->lLen("post_secheme");
+		// dump($max);
+		
 		$new_scheme['lotterytype'] = $res['lotterytype'];
 		$new_scheme['shopid'] = (int)$res['shopid'];
 		$new_scheme['mobile'] = isset($res['mobile'])?$res['mobile']:' ';
@@ -175,7 +189,7 @@ class SchemeController extends BaseController
 		}
 		
 		if ($result1 && $result2){
-			// $this->pushSchemeNum($new_scheme['shopid']);
+			$this->pushSchemeNum($new_scheme['shopid']);
 			$this->success('方案上传成功');
 		}else{
 			$this->error('方案上传失败');
