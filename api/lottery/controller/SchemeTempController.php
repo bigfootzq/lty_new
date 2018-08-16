@@ -58,7 +58,7 @@ class SchemeTempController extends BaseTempController
         }
     }
 	
-	protected function getScheme($scheme_id){
+	private function getScheme($scheme_id){
 		if (!empty($scheme_id)){
 						$map['schemeid'] = $scheme_id;
 					}
@@ -79,7 +79,7 @@ class SchemeTempController extends BaseTempController
 		}
 	}
 	
-	protected function addScheme($post_scheme){
+	private function addScheme($post_scheme){
 		// $res = json_decode ( $post_scheme, true);//对POST信息解码
 		// $res = $post_scheme;
 		trace($post_scheme,'notice');
@@ -93,7 +93,7 @@ class SchemeTempController extends BaseTempController
 		$validate = new Validate([
             'lotterytype'	=> 'require',
             'shopid'        => 'require',
-            'schemeid'		=> 'require|unique:lottery_scheme',
+            'schemeid'		=> 'require|unique:lottery_scheme|unique:lottery_spl_scheme',
             'endtime'		=> 'require',
             'tickets'		=> 'require',
             'totalamount'	=> 'require',
@@ -110,67 +110,129 @@ class SchemeTempController extends BaseTempController
             'totalamount.require'	=> '缺少总金额',
             'schemedetail.require'	=> '缺少方案细节'
         ]);
-		$rule = [
+		
+		
+		if($res['lotterytype'] == 'SPLF'){
+			$rule = [
+					['multiples','require|number|between:1,99','缺少倍数|倍数必须是数字|倍数必须在1~99之间'],
+					['amount','require|number|>:0','缺少单票金额|单票金额必须是数字|单票金额必须大于0'],
+					['type','require','缺少彩票玩法'],
+					['ticketno','require','缺少彩票序号'],
+					['splNumber','require','缺少彩票号码']
+				];
+			$validate_sd = new Validate($rule);
+			if (!$validate->check($res)) {
+				$this->error($validate->getError());
+			}
+
+			$new_scheme['lotterytype'] = $res['lotterytype'];
+			$new_scheme['shopid'] = (int)$res['shopid'];
+			$new_scheme['mobile'] = isset($res['mobile'])?$res['mobile']:' ';
+			$new_scheme['username'] = isset($res['username'])?$res['username']:' ';
+			$new_scheme['schemeid'] = $res['schemeid'];
+			$new_scheme['endtime'] = $res['endtime'];
+			$new_scheme['tickets'] = $res['tickets'];
+			$new_scheme['source'] = isset($res['source'])?$res['source']:' ';
+			$new_scheme['totalamount'] = $res['totalamount'];
+			$new_scheme['totalmultiple'] = $res['totalmultiple'];
+			$new_scheme['totaltype'] = $res['totaltype'];
+			$new_scheme['totalmode'] = $res['totalmode'];
+			$new_scheme['tstatus'] = 1;
+			$new_scheme['status'] = 1;
+			// dump($new_scheme);
+			
+			$scheme_detail = array();
+			foreach($res['schemedetail'] as $key=>$value){ 
+				if (!$validate_sd->check($value)){
+					$this->error($validate_sd->getError());
+				}
+				// $value["lotteryNumber"]= addslashes(json_encode($value["lotteryNumber"]));
+				$value["splNumber"]= $value["splNumber"];
+				$value["sid"] = $res['schemeid'];
+				$value["status"] = 1;
+				// dump($value);
+				$scheme_detail[$key] = $value;
+				// array_push($scheme_detail, $value);
+			} 
+			
+			// dump($scheme_detail);
+			//信息入库,启动事务
+			Db::startTrans();
+			try{
+				$result1 = Db::name('lottery_spl_scheme')->insert($new_scheme);//scheme写入数据库
+				
+				$result2 = Db::name('lottery_spl_scheme_detail')->insertAll($scheme_detail);//detail写入数据库
+	
+				// 提交事务
+				Db::commit();    
+			} catch (\Exception $e) {
+				
+				// 回滚事务
+				Db::rollback();
+			}
+		}else{
+			$rule = [
 					['multiples','require|number|between:1,99','缺少倍数|倍数必须是数字|倍数必须在1~99之间'],
 					['amount','require|number|>:0','缺少单票金额|单票金额必须是数字|单票金额必须大于0'],
 					['type','require','缺少彩票玩法'],
 					['ticketno','require','缺少彩票序号'],
 					['lotteryNumber','require','缺少彩票号码']
 				];
-		$validate_sd = new Validate($rule);
-		if (!$validate->check($res)) {
-            $this->error($validate->getError());
-        }
+				$validate_sd = new Validate($rule);
+				if (!$validate->check($res)) {
+					$this->error($validate->getError());
+				}
 
-		$new_scheme['lotterytype'] = $res['lotterytype'];
-		$new_scheme['shopid'] = (int)$res['shopid'];
-		$new_scheme['mobile'] = isset($res['mobile'])?$res['mobile']:' ';
-		$new_scheme['username'] = isset($res['username'])?$res['username']:' ';
-		$new_scheme['schemeid'] = $res['schemeid'];
-		$new_scheme['endtime'] = $res['endtime'];
-		$new_scheme['tickets'] = $res['tickets'];
-		$new_scheme['source'] = isset($res['source'])?$res['source']:' ';
-		$new_scheme['totalamount'] = $res['totalamount'];
-		$new_scheme['tstatus'] = 1;
-		$new_scheme['status'] = 1;
-		// dump($new_scheme);
-		
-		$scheme_detail = array();
-		foreach($res['schemedetail'] as $key=>$value){ 
-			if (!$validate_sd->check($value)){
-				$this->error($validate_sd->getError());
-			}
-			// $value["lotteryNumber"]= addslashes(json_encode($value["lotteryNumber"]));
-			$value["lotteryNumber"]= json_encode($value["lotteryNumber"]);
-			$value["sid"] = $res['schemeid'];
-			$value["status"] = 1;
-			// dump($value);
-			$scheme_detail[$key] = $value;
-			// array_push($scheme_detail, $value);
-		} 
-		
-		// dump($scheme_detail);
-		//信息入库,启动事务
-		Db::startTrans();
-		try{
-			$result1 = Db::name('lottery_scheme')->insert($new_scheme);//scheme写入数据库
-			$result2 = Db::name('lottery_scheme_detail')->insertAll($scheme_detail);//detail写入数据库
-		    // 提交事务
-		    Db::commit();    
-		} catch (\Exception $e) {
-		    // 回滚事务
-		    Db::rollback();
+				$new_scheme['lotterytype'] = $res['lotterytype'];
+				$new_scheme['shopid'] = (int)$res['shopid'];
+				$new_scheme['mobile'] = isset($res['mobile'])?$res['mobile']:' ';
+				$new_scheme['username'] = isset($res['username'])?$res['username']:' ';
+				$new_scheme['schemeid'] = $res['schemeid'];
+				$new_scheme['endtime'] = $res['endtime'];
+				$new_scheme['tickets'] = $res['tickets'];
+				$new_scheme['source'] = isset($res['source'])?$res['source']:' ';
+				$new_scheme['totalamount'] = $res['totalamount'];
+				$new_scheme['tstatus'] = 1;
+				$new_scheme['status'] = 1;
+				// dump($new_scheme);
+				
+				$scheme_detail = array();
+				foreach($res['schemedetail'] as $key=>$value){ 
+					if (!$validate_sd->check($value)){
+						$this->error($validate_sd->getError());
+					}
+					// $value["lotteryNumber"]= addslashes(json_encode($value["lotteryNumber"]));
+					$value["lotteryNumber"]= json_encode($value["lotteryNumber"]);
+					$value["sid"] = $res['schemeid'];
+					$value["status"] = 1;
+					// dump($value);
+					$scheme_detail[$key] = $value;
+					// array_push($scheme_detail, $value);
+				} 
+				
+				// dump($scheme_detail);
+				//信息入库,启动事务
+				Db::startTrans();
+				try{
+					$result1 = Db::name('lottery_scheme')->insert($new_scheme);//scheme写入数据库
+					$result2 = Db::name('lottery_scheme_detail')->insertAll($scheme_detail);//detail写入数据库
+					// 提交事务
+					Db::commit();    
+				} catch (\Exception $e) {
+					// 回滚事务
+					Db::rollback();
+				}
 		}
 		
 		if ($result1 && $result2){
 			//测试上传部分暂时不推送消息。
-			$this->pushSchemeNum($new_scheme['shopid']);
+			// $this->pushSchemeNum($new_scheme['shopid']);
 			$this->success('方案上传成功');
 		}else{
 			$this->error('方案上传失败');
 		}
 	}
-	protected function updateScheme($patch_scheme){
+	private function updateScheme($patch_scheme){
 		$res = $patch_scheme;
 		// dump($res);
 		//对信息进行校验
@@ -253,7 +315,7 @@ class SchemeTempController extends BaseTempController
 	
 	}
 	
-	protected function pushSchemeNum($shopid){
+	private function pushSchemeNum($shopid){
 		
 		// dump($shopid);
 		$map['shopid'] = $shopid;
