@@ -25,6 +25,7 @@ Route::post([
 	'user/reg'				=> 'user/public/register',//注册
 	'user/sms'				=> 'user/public/smsSend',//注册验证码发送
 	'user/login'			=> 'user/public/login',//登录
+	'user/changePassword'	=> 'user/profile/changePassword',//修改密码
 ]);
 
 Route::delete([

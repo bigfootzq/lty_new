@@ -115,8 +115,8 @@ class RestBaseController
         $user = Db::name('user_token')
             ->alias('a')
             ->field('b.*')
-            ->where(['token' => $token, 'device_type' => $deviceType])
-            // ->where(['token' => $token])
+            // ->where(['token' => $token, 'device_type' => $deviceType])//2018/08/21修改，暂时不检测deviceType
+            ->where(['token' => $token])
             ->join('__USER__ b', 'a.user_id = b.id')
             ->find();
 
