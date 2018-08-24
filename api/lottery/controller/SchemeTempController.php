@@ -114,8 +114,8 @@ class SchemeTempController extends BaseTempController
 		
 		if($res['lotterytype'] == 'SPLF'){
 			$rule = [
-					['multiples','require|number|between:1,99','缺少倍数|倍数必须是数字|倍数必须在1~99之间'],
-					['amount','require|number|>:0','缺少单票金额|单票金额必须是数字|单票金额必须大于0'],
+					['multiples','require','缺少倍数'],
+					['amount','require','缺少单票金额'],
 					['type','require','缺少彩票玩法'],
 					['ticketno','require','缺少彩票序号'],
 					['splNumber','require','缺少彩票号码']

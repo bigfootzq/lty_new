@@ -132,6 +132,10 @@ class AdminController extends AdminBaseController
 		}
 		
 	}
+	
+	/**
+	*这个函数可能是用于人工开奖的，但是我暂时想不起来了。
+	*/
 	public function openBonus(){
 			$issue_number    = $this->request->param('issue_number', 0, 'intval');
 			$where['issue_number'] = $issue_number;
@@ -139,7 +143,7 @@ class AdminController extends AdminBaseController
 			$bonus = DB::name('lottery_k3_bonus_results')->where($where)->find();//查询彩果
 			// dump($bonus);
 			if($bonus){
-				$bonus_results = openBonus($bonus);
+				$bonus_results = lty_openBonus($bonus);
 				// dump($bonus_results);
 				if($bonus_results){
 					

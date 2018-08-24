@@ -145,8 +145,8 @@ class DealController extends BaseController
 		$orderstatus = $get['orderStatus'];
 		$lotterystatus = $get['lotteryStatus'];
 		$id = $get['id'];
-		// $page = $get['page'];
-		// $limit_start = ($page -1)*10;
+		$page = $get['page'];
+		$limit_start = ($page -1)*10;
 		$map['userid'] = $this ->userid;
 		$map['id']  = ['>',$id];
 		if ($orderstatus >0)
@@ -156,7 +156,7 @@ class DealController extends BaseController
 		$result	=	Db::name('lottery_betorder_list')
 					->where($map)
 					// ->field('issuenumber,createtime,')
-					// ->limit($limit_start,10)
+					->limit($limit_start,10)
 					->order('createtime desc')
 					->select();
 		// echo Db::getLastSql();			
@@ -281,8 +281,11 @@ class DealController extends BaseController
 	
 	private function getCoinRecord($get){
 		$map['uid'] = $this ->userid;
+		$page = $get['page'];
+		$limit_start = ($page -1)*10;
 		$result	=	Db::name('lottery_coin')
 					->where($map)
+					->limit($limit_start,10)
 					->order('updatetime desc')
 					->select();
 					

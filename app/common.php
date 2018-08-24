@@ -3,7 +3,7 @@
 use think\Db;
 	//开奖函数
 	//2BTH.1,2,3,4,5,6#2THDX.11,22,33|4,5,6#2THFX.11X,22X,33X,44X,55X,66X#3LHTX.XYZ#3BTH.1,2,3,4,5,6#3THDX.111#3THTX.XXX#HZ.4
-	function openBonus($newAward){
+	function lty_openBonus($newAward){
 		
 		$map['status'] = 1;
 		// $map['chaseid'] = 0;//目前只开非追号订单
