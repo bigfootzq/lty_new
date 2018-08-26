@@ -3,6 +3,7 @@
 use think\Route;
 
 Route::get('scheme','lottery/Scheme/scheme');
+Route::get('splfScheme','lottery/Scheme/splfScheme');
 Route::get('award','lottery/Award/Award');
 Route::get('period','lottery/Award/period');
 Route::get('getHotData','lottery/Award/getHotData');
@@ -21,6 +22,7 @@ Route::get('match/selectlist','lottery/Match/selectlist');
 Route::post('scheme','lottery/SchemeTemp/scheme');
 Route::post('scheme2','lottery/Scheme/scheme');
 Route::patch('scheme','lottery/Scheme/scheme');
+Route::patch('splfScheme','lottery/Scheme/splfScheme');
 
 
 Route::post('user/logon','User/public/logon');

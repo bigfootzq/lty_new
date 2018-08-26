@@ -61,6 +61,20 @@ class SchemeController extends BaseController
 				break;
         }
     }
+	public function splfScheme(Request	$request){
+		switch ($request->method()){
+			case 'GET': // get请求处理代码
+				$get = input('get.');
+				 
+				$this->getSplfScheme($get);
+				break;
+			case 'PATCH': // patch请求处理代码
+				$patch_scheme = input('patch.');
+				$this->updateSplfScheme($patch_scheme);
+				break;
+
+        }
+    }
 	
 	protected function getScheme($get){
 		// dump($get);
@@ -77,17 +91,25 @@ class SchemeController extends BaseController
 		//根据彩店ID查询所有对应的status=1的方案
 		$map['shopid'] = $this->userid;
 		$map['status'] = 1;	
-		$map['endtime'] = ['>=',date("Y-m-d H:i:s")];
+		// $map['endtime'] = ['>=',date("Y-m-d H:i:s")];
 		$result	=	Db::name('lottery_scheme')
 					->where($map)
 					->order('id desc')
-					->limit($limit_start,15)
+					->limit($limit_start,10)
 					->select();
+		// $result2	=	Db::name('lottery_spl_scheme')
+					// ->where($map)
+					// ->order('id desc')
+					// ->limit($limit_start,10)
+					// ->select()
+					// ->toArray();
 		$count = Db::name('lottery_scheme')
 					->where($map)
 					->count();
+		// $count2 = Db::name('lottery_spl_scheme')
+					// ->where($map)
+					// ->count();
 		// dump($count);
-		// dump($result);
 		$totalpages = ceil($count/15);
 		// dump($totalpage);
 		if($result){
@@ -95,7 +117,46 @@ class SchemeController extends BaseController
 			Db::name('lottery_scheme')
 					->where($map)
 					->setInc('getcounter');
-			$this->success('方案下发',$result);
+			$this->success($totalpages,$result);
+		}else{
+            $this->error("请求失败!");
+		}
+	}	
+	private function getSplfScheme($get){
+		// dump($get);
+		
+		if(!empty($get['page'])){
+			$page = $get['page'];
+			$limit_start = ($page -1)*15;	
+		}else{
+			$limit_start = 1;
+		}
+		if (!empty($get['scheme_id'])){
+						$map['schemeid'] = $get['scheme_id'];
+					}
+		//根据彩店ID查询所有对应的status=1的方案
+		$map['shopid'] = $this->userid;
+		$map['status'] = 1;	
+		// $map['endtime'] = ['>=',date("Y-m-d H:i:s")];
+		$result	=	Db::name('lottery_spl_scheme')
+					->where($map)
+					->order('id desc')
+					->limit($limit_start,15)
+					->select();
+		$count = Db::name('lottery_spl_scheme')
+					->where($map)
+					->count();
+		// dump($map);
+		// dump($count);
+		// dump($result);
+		$totalpages = ceil($count/15);
+		// dump($totalpage);
+		if($result){
+			//每下发一次，计数器+1
+			Db::name('lottery_spl_scheme')
+					->where($map)
+					->setInc('getcounter');
+			$this->success($totalpages ,$result);
 		}else{
             $this->error("请求失败!");
 		}
@@ -293,6 +354,127 @@ class SchemeController extends BaseController
 				try{
 					Db::name('lottery_scheme')->lock(true)->where('id',$id)->find(1);
 					$list = Db::name('lottery_scheme')->where('id',$id)->setField('tstatus',$res['tstatus']);
+					// 提交事务
+					Db::commit();    
+				} catch (\Exception $e) {
+					// 回滚事务
+					Db::rollback();
+				}
+				if (isset($list)&&$list != 0){
+					$this->success('结账成功,请刷新！');	
+				}else{
+					$this->error('结账失败');
+				}
+			}else{
+				$this->error('方案已经过期');
+			}
+		}
+	
+	}
+	
+	private function updateSplfScheme($patch_scheme){
+		$res = $patch_scheme;
+		// dump($res);
+		//对信息进行校验
+		$rule = [
+					['shopid','require|number|>:0','缺少店铺id|店铺id必须是数字|店铺id必须大于0'],
+					['schemeid','require','缺少方案编号'],
+					['tstatus','require|number|in:2,3,4,6','缺少方案状态|方案状态必须是数字|提交的方案状态只能是2,3,4,6']
+				];
+		$validate = new Validate($rule);
+		if ( !$validate->check($res) ){
+			$this->error($validate->getError());
+		}
+		$map['schemeid'] = $res['schemeid'];
+		if ($res['tstatus'] == 6){
+			$de = array();
+			$map2['sid'] = $res['schemeid'];
+			$detail = Db::name('lottery_spl_scheme_detail')->where($map2)->select();
+			foreach ($detail as $k2 =>$v2){
+					$de[$k2 ]['multiples'] = $v2['multiples'];
+					$de[$k2 ]['amount'] = $v2['amount'];
+					$de[$k2 ]['mode'] = $v2['mode'];
+					$de[$k2 ]['type'] = $v2['type'];
+					$de[$k2 ]['ticketno'] = $v2['ticketno'];
+					$de[$k2 ]['splNumber'] = $v2['splNumber'];
+					
+				}
+			$this->success('请求成功',['schemedetail'=>$de]);
+		}
+		$scheme = Db::name('lottery_spl_scheme')->where($map)->find();
+		$tstatus = $scheme['tstatus'];
+		$id = $scheme['id'];
+		// dump($tstatus);								
+		if($tstatus == 1){
+			
+			if ($res['tstatus'] == 2){
+				$list = 0;
+				Db::startTrans();
+				try{
+					Db::name('lottery_spl_scheme')->lock(true)->where('id',$id)->find();
+					$list = Db::name('lottery_spl_scheme')->where('id', $id)->setField('tstatus',$res['tstatus']);
+					// echo Db::getLastSql();
+					// 提交事务
+					Db::commit();    
+				} catch (\Exception $e) {
+					// 回滚事务
+					Db::rollback();
+				}
+				$msg = '状态变更为出票中';
+			}else{
+				$this->error('该方案未出票不能直接结账');
+			}
+			// dump($list);
+			if ($list != 0){
+				$de = array();
+				$map2['sid'] = $res['schemeid'];
+				$detail = Db::name('lottery_spl_scheme_detail')->where($map2)->select();
+				foreach ($detail as $k2 =>$v2){
+						$de[$k2 ]['multiples'] = $v2['multiples'];
+						$de[$k2 ]['amount'] = $v2['amount'];
+						$de[$k2 ]['mode'] = $v2['mode'];
+						$de[$k2 ]['type'] = $v2['type'];
+						$de[$k2 ]['ticketno'] = $v2['ticketno'];
+						$de[$k2 ]['splNumber'] = $v2['splNumber'];
+					}
+				//返回成功报文
+				$this->success($msg,['schemedetail'=>$de]);
+			}else{
+				//返回失败报文
+				$this->error('更改失败');
+			}
+		}else if($tstatus == 2){
+			if($res['tstatus'] == 3 || $res['tstatus'] == 4){
+				Db::startTrans();
+				try{
+					Db::name('lottery_spl_scheme')->lock(true)->where('id',$id)->find();
+					$list = Db::name('lottery_spl_scheme')->where('id',$id)->setField('tstatus',$res['tstatus']);
+					// 提交事务
+					Db::commit();    
+				} catch (\Exception $e) {
+					// 回滚事务
+					Db::rollback();
+				}
+				if (isset($list)&&$list != 0){
+					$this->success('结账成功,请刷新！');	
+				}else{
+					$this->error('结账失败');
+				}
+			}
+			if($res['tstatus'] == 2){
+				
+				$this->success('方案正在出票中');
+			}
+		}else if($tstatus == 3 ){
+			$this->success('方案已经出票成功');
+		}else if($tstatus == 4 ){
+			$this->success('方案已经出票失败');
+		}else if($tstatus == 5){
+			if($res['tstatus'] == 3 || $res['tstatus'] == 4){
+				Db::startTrans();
+				try{
+					Db::name('lottery_spl_scheme')->lock(true)->where('id',$id)->find(1);
+					$list = Db::name('lottery_spl_scheme')->where('id',$id)->setField('tstatus',$res['tstatus']);
 					// 提交事务
 					Db::commit();    
 				} catch (\Exception $e) {
